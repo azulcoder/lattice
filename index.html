@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lattice</title>
+  <meta name="theme-color" content="#1a1614">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lattice">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <script>
+    /* No-FOUC: apply the saved theme before first paint (Phase S11). */
+    try { var __t = JSON.parse(localStorage.getItem('lattice-v3')||'{}').settings?.appearance?.theme; if (__t === 'dark' || __t === 'sepia') document.documentElement.dataset.theme = __t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="vendor/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <!-- Populated by app.js: Lattice wordmark + active domain badge + switcher dropdown -->
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <!-- Populated by app.js: EN | ID pills with active state -->
+    </div>
+    <nav class="view-tabs">
+      <button class="tab active" data-view="review">Review <kbd>R</kbd></button>
+      <button class="tab" data-view="library">Library <kbd>L</kbd></button>
+      <button class="tab" data-view="reference">Reference <kbd>G</kbd></button>
+      <button class="tab" data-view="map">Map <kbd>M</kbd></button>
+    </nav>
+    <div class="topbar-actions">
+      <button class="ghost-btn icon-btn" data-search title="Search all cards (/)">🔍</button>
+      <button class="ghost-btn" data-export title="Download all state as JSON">Export</button>
+      <button class="ghost-btn" data-import title="Restore from a previous export">Import</button>
+      <button class="ghost-btn icon-btn" data-settings title="Settings (coming in Phase 0.3)">⚙</button>
+      <input type="file" id="import-file" accept="application/json" hidden>
+    </div>
+  </header>
+
+  <div id="context-bar" class="context-bar"></div>
+
+  <main>
+    <section id="review-view" class="view active"></section>
+    <section id="library-view" class="view"></section>
+    <section id="reference-view" class="view"></section>
+    <section id="map-view" class="view"></section>
+  </main>
+
+  <div id="flash" class="flash"></div>
+  <div id="settings-root"></div>
+  <div id="help-root"></div>
+  <div id="search-root"></div>
+
+  <script src="vendor/katex.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+  <!-- PWA: service-worker registration + install prompt + update toast (Phase S6/S10) -->
+  <script type="module" src="js/pwa.js"></script>
+</body>
+</html>

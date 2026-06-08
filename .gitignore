@@ -1,0 +1,10 @@
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# One-off content/audit generator scripts (not part of the app or test suite)
+scripts/*-workflow.mjs
+scripts/*-module-workflow.mjs
+scripts/glossary-notation-expand.mjs
+scripts/trading-correctness-audit.mjs
