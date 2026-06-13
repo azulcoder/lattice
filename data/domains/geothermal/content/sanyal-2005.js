@@ -1,24 +1,33 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (Reservoir & Production Engineer, 6 yrs
-// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable,
-// NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**.
+// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable.
+//
+// GENERAL claims verified against the literature (2026-06-13): Sanyal's
+// author-bio facts (GeothermEx VP Reservoir Engineering 1980, President 1995,
+// d. 2019); the Arps (1945, Trans. AIME 160, 228–247) exponential/hyperbolic/
+// harmonic decline family and its b-exponent; the Muffler & Cataldi (1978,
+// Geothermics 7, 53–89) volumetric stored-heat method; and the Sanyal &
+// Sarmiento (2005, GRC Trans. 29) cumulative proven/probable/possible =
+// P90 / (P50, median) / P10 reserve-classification structure. The Arps +
+// stored-heat + Monte-Carlo + reserve-classification backbone is fluid-neutral
+// and verified. Darajat OPERATIONAL facts stay external to the module and
+// remain flagged **⟦TODO-Az: …⟧** for the owner.
 // Full prep: notes/sanyal-decline-reserves-research-prep-2026-06-06.md
 //
-// OPEN TODO-Az ITEMS (prep §5):
+// OPEN TODO-Az ITEMS (Darajat-specific; not in public literature):
 //   A. HEADLINE: whether/how Arps decline-curve analysis (an empirical oil/gas
-//      tool) transfers to geothermal — where decline is governed by pressure
-//      drawdown and reinjection support, and for dry steam by steam-rate / WHP
-//      decline. The module teaches the standard (Arps + volumetric stored-heat
-//      + Monte-Carlo) machinery and flags the geothermal transfer as the
-//      teaching point.
+//      tool) transfers to a vapour-dominated dry-steam field — where decline
+//      is governed by pressure drawdown, reinjection support, and steam-rate /
+//      WHP decline. The module teaches the verified standard machinery and
+//      flags the geothermal/dry-steam transfer as the teaching point.
 //   B. Darajat recovery factor and the volumetric heat-in-place assumptions
 //      (the recovery factor is the dominant lever and is field-specific).
 //   C. How reinjection support (Axelsson) and Acuña deliverability modify the
 //      observed decline.
 //   D. Worked-example numbers are ILLUSTRATIVE placeholders — swap for a real
 //      Darajat production history.
-//   E. Reserve units / classification convention actually used at Star Energy.
+//   E. Reserve-classification convention actually used at Star Energy.
 //   F. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
 //      domain + DRAFT marker).
 // ─────────────────────────────────────────────────────────────────────────
@@ -38,12 +47,8 @@ export const CONTENT = {
       id: 'Dua pertanyaan nentuin apakah field geothermal itu bisnis: berapa banyak energi di dalam tanah (cadangan), dan seberapa cepat sumur-sumurnya memudar (decline). Sanyal bikin keduanya kuantitatif dan probabilistik — heat-in-place dengan ketidakpastian, decline curve dengan batas ekonomis, cadangan dibukukan sebagai proven/probable/possible.'
     },
     bio: {
-      en: `Subir Sanyal spent his career at GeothermEx turning geothermal resource assessment from qualitative promise into bankable numbers. His work spans the **volumetric "stored-heat" estimate** (how much thermal energy a reservoir holds, and what fraction is recoverable as electricity), the **Monte-Carlo treatment** that turns the large uncertainties in area, thickness, temperature, and recovery factor into a probability distribution of megawatt capacity, and the **reserve-classification** language (proven / probable / possible) that lets a geothermal project be financed like any other energy asset. He also worked extensively on **decline analysis** and on the sustainability and renewability of geothermal capacity.
-
-⟦TODO-Az: bio/affiliation are from public record (incl. life status); confirm before finalizing. Anchoring a decline-and-reserves module on Sanyal is a drafting choice — tell me if you would rather anchor the *decline* half on Arps directly, the *reserves* half on the USGS (Muffler-Cataldi) stored-heat method, or on Grant & Bixley's decline/lumped-parameter chapters.⟧`,
-      id: `Subir Sanyal ngabisin karirnya di GeothermEx ngubah penilaian resource geothermal dari janji kualitatif jadi angka yang bisa dibiayai. Karyanya ngerentang **estimasi "stored-heat" volumetrik** (berapa banyak energi termal yang reservoir simpen, dan fraksi mana yang bisa di-recover jadi listrik), **perlakuan Monte-Carlo** yang ngubah ketidakpastian besar di area, ketebalan, temperatur, dan recovery factor jadi distribusi probabilitas kapasitas megawatt, dan bahasa **klasifikasi cadangan** (proven / probable / possible) yang ngebiarin proyek geothermal dibiayai kayak aset energi lain. Dia juga kerja ekstensif soal **analisis decline** dan soal keberlanjutan dan keterbaruan kapasitas geothermal.
-
-⟦TODO-Az: bio/afiliasi dari public record (termasuk status hidup); konfirmasi sebelum finalisasi. Nge-anchor module decline-dan-cadangan ke Sanyal itu pilihan drafting — bilang kalau kamu lebih mau nge-anchor paruh *decline*-nya ke Arps langsung, paruh *cadangan*-nya ke metode stored-heat USGS (Muffler-Cataldi), atau ke bab decline/lumped-parameter Grant & Bixley.⟧`
+      en: `Subir Sanyal spent his career at GeothermEx turning geothermal resource assessment from qualitative promise into bankable numbers. His work spans the **volumetric "stored-heat" estimate** (how much thermal energy a reservoir holds, and what fraction is recoverable as electricity), the **Monte-Carlo treatment** that turns the large uncertainties in area, thickness, temperature, and recovery factor into a probability distribution of megawatt capacity, and the **reserve-classification** language (proven / probable / possible) that lets a geothermal project be financed like any other energy asset. He also worked extensively on **decline analysis** and on the sustainability and renewability of geothermal capacity. (Sanyal joined GeothermEx in 1980 as VP of Reservoir Engineering and became President in 1995; he died in 2019.)`,
+      id: `Subir Sanyal ngabisin karirnya di GeothermEx ngubah penilaian resource geothermal dari janji kualitatif jadi angka yang bisa dibiayai. Karyanya ngerentang **estimasi "stored-heat" volumetrik** (berapa banyak energi termal yang reservoir simpen, dan fraksi mana yang bisa di-recover jadi listrik), **perlakuan Monte-Carlo** yang ngubah ketidakpastian besar di area, ketebalan, temperatur, dan recovery factor jadi distribusi probabilitas kapasitas megawatt, dan bahasa **klasifikasi cadangan** (proven / probable / possible) yang ngebiarin proyek geothermal dibiayai kayak aset energi lain. Dia juga kerja ekstensif soal **analisis decline** dan soal keberlanjutan dan keterbaruan kapasitas geothermal. (Sanyal gabung GeothermEx tahun 1980 sebagai VP Reservoir Engineering dan jadi Presiden tahun 1995; dia wafat tahun 2019.)`
     },
     focus: {
       en: `A geothermal field is an energy asset, and two numbers decide its value. **Reserves**: how much recoverable energy is in the ground — estimated by the **volumetric "stored-heat" method**, which multiplies the reservoir's rock+fluid heat capacity by its volume and the temperature above a cutoff to get the heat in place, then applies a **recovery factor** and conversion efficiency to get an electrical capacity (megawatts for a project lifetime). Because area, thickness, temperature, and especially the recovery factor are all uncertain, the honest estimate is a **probability distribution** (Monte-Carlo), read as **P90 / P50 / P10** — which Sanyal & Sarmiento map to **proven / probable / possible** reserves. **Decline**: how fast the wells fade — described by **Arps decline curves** (exponential, hyperbolic, harmonic, set by a decline exponent $b$), fitted to production history and extrapolated to an economic limit to forecast remaining reserves and field life. ⟦TODO-Az: the geothermal transfer is your call. Arps was built for oil and gas; geothermal decline is often driven by *pressure* drawdown and *reinjection support*, and in a vapour-dominated DRY-STEAM field like Darajat by steam-rate and wellhead-pressure decline — whether a clean Arps $b$-factor applies, and what the recovery factor is for dry steam, are domain judgements. This module teaches the standard machinery and flags the transfer.⟧`,
@@ -149,7 +154,7 @@ with $(\\rho c)_{\\text{res}}$ the volumetric heat capacity of rock+fluid, $A$ a
 $$P \\;\\approx\\; \\frac{Q_{\\text{HIP}}\\;R_f\\;\\eta_{\\text{conv}}}{L\\;f},$$
 with $R_f$ the **recovery factor**, $\\eta_{\\text{conv}}$ the conversion efficiency, $L$ the plant life, $f$ the capacity factor. ⟦TODO-Az: the constants, the exact $R_f$ definition, and the dry-steam efficiency are yours — I have kept it schematic.⟧
 
-**Monte-Carlo and reserve classification.** Treat $A, h, T_{\\text{res}}, R_f$ (and others) as probability distributions; sample them many times; the output is a distribution of $P$. Read off **P90, P50, P10** (exceedance probabilities). In SPE/PRMS style the booked categories are **cumulative**: Sanyal & Sarmiento book **proved = P90**, **proved + probable = P50**, **proved + probable + possible = P10** — so probable and possible are the *increments* added on top of proved, not standalone tranches. The everyday shorthand "proven/probable/possible = P90/P50/P10" lines the percentiles up correctly but compresses this cumulative structure; the result is a confidence-graded statement of capacity. ⟦TODO-Az: confirm the cumulative SPE/PRMS phrasing and the convention used at Star Energy.⟧
+**Monte-Carlo and reserve classification.** Treat $A, h, T_{\\text{res}}, R_f$ (and others) as probability distributions; sample them many times; the output is a distribution of $P$. Read off **P90, P50, P10** (exceedance probabilities). In SPE/PRMS style the booked categories are **cumulative**: Sanyal & Sarmiento book **proved = P90**, **proved + probable = P50**, **proved + probable + possible = P10** — so probable and possible are the *increments* added on top of proved, not standalone tranches. The everyday shorthand "proven/probable/possible = P90/P50/P10" lines the percentiles up correctly but compresses this cumulative structure; the result is a confidence-graded statement of capacity. ⟦TODO-Az: confirm the reserve-classification convention actually used at Star Energy.⟧
 
 ⟦TODO-Az: the geothermal/dry-steam formalization needs your correction.
   1. **Does Arps transfer?** Geothermal decline is driven by pressure drawdown and modulated by reinjection; a fitted Arps $b$ is a description, not a mechanism. For dry steam the decline variable may be steam mass-rate or wellhead pressure, not a liquid rate. Confirm what is fitted and how it is read.
@@ -172,7 +177,7 @@ dengan $(\\rho c)_{\\text{res}}$ heat capacity volumetrik batuan+fluida, $A$ are
 $$P \\;\\approx\\; \\frac{Q_{\\text{HIP}}\\;R_f\\;\\eta_{\\text{conv}}}{L\\;f},$$
 dengan $R_f$ **recovery factor**, $\\eta_{\\text{conv}}$ efisiensi konversi, $L$ umur plant, $f$ capacity factor. ⟦TODO-Az: konstantanya, definisi $R_f$ persis, dan efisiensi dry-steam itu punya kamu — aku ngejaganya skematis.⟧
 
-**Monte-Carlo dan klasifikasi cadangan.** Perlakukan $A, h, T_{\\text{res}}, R_f$ (dan lainnya) sebagai distribusi probabilitas; sampel mereka banyak kali; output-nya distribusi $P$. Baca **P90, P50, P10** (probabilitas exceedance). Dalam gaya SPE/PRMS kategori yang dibukukan itu **kumulatif**: Sanyal & Sarmiento ngebukukan **proved = P90**, **proved + probable = P50**, **proved + probable + possible = P10** — jadi probable dan possible itu *increment* yang ditambah di atas proved, bukan tranche berdiri-sendiri. Singkatan sehari-hari "proven/probable/possible = P90/P50/P10" ngebarisin persentilnya dengan benar tapi ngompres struktur kumulatif ini; hasilnya pernyataan kapasitas yang ber-grade-kepercayaan. ⟦TODO-Az: konfirmasi fraseologi kumulatif SPE/PRMS dan konvensi yang dipakai di Star Energy.⟧
+**Monte-Carlo dan klasifikasi cadangan.** Perlakukan $A, h, T_{\\text{res}}, R_f$ (dan lainnya) sebagai distribusi probabilitas; sampel mereka banyak kali; output-nya distribusi $P$. Baca **P90, P50, P10** (probabilitas exceedance). Dalam gaya SPE/PRMS kategori yang dibukukan itu **kumulatif**: Sanyal & Sarmiento ngebukukan **proved = P90**, **proved + probable = P50**, **proved + probable + possible = P10** — jadi probable dan possible itu *increment* yang ditambah di atas proved, bukan tranche berdiri-sendiri. Singkatan sehari-hari "proven/probable/possible = P90/P50/P10" ngebarisin persentilnya dengan benar tapi ngompres struktur kumulatif ini; hasilnya pernyataan kapasitas yang ber-grade-kepercayaan. ⟦TODO-Az: konfirmasi konvensi klasifikasi cadangan yang sebenarnya dipakai di Star Energy.⟧
 
 ⟦TODO-Az: formalisasi geothermal/dry-steam butuh koreksi kamu.
   1. **Apakah Arps transfer?** Decline geothermal didorong oleh pressure drawdown dan dimodulasi oleh reinjeksi; $b$ Arps yang di-fit itu deskripsi, bukan mekanisme. Buat dry steam variabel decline-nya mungkin steam mass-rate atau wellhead pressure, bukan liquid rate. Konfirmasi apa yang di-fit dan gimana dibaca.

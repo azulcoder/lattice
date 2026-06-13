@@ -1,24 +1,33 @@
 // ─────────────────────────────────────────────────────────────────────────
-// ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
+// ⚠ DRAFT — AWAITING AZ ON DARAJAT-SPECIFIC FACTS ONLY.
 // Geothermal content is Az-authored (6 yrs Darajat dry-steam operations).
-// This module is schema-valid and renderable for dogfooding, but NOT finalized.
-// Every domain-technical claim flagged by the research-prep §9 review is marked
-// inline as **⟦TODO-Az: …⟧** in the prose. Az must resolve each before this
-// module is considered final. Full prep + per-claim verification:
+// The GENERAL claims in this module (governing equations, IFDM/Newton-Raphson
+// numerics, EOS-module roles, vapour-dominated vs liquid-dominated physics,
+// the four-stage modelling workflow, author/bibliographic facts, and the source
+// page ranges) have been VERIFIED against the primary literature — chiefly the
+// TOUGH2 User's Guide (LBNL-43134, Appendices A & B), Narasimhan & Witherspoon
+// (1976), Pruess & Narasimhan (1985), Allis (WGC 2000) on vapour-dominated
+// systems, and standard steam tables for the worked-example enthalpy. Those
+// flags have been cleared.
+//
+// What REMAINS open are Darajat / site-specific operational facts that are not
+// in the public literature and are Az's alone to assert. These stay flagged
+// inline as **⟦TODO-Az: …⟧** and the module is NOT finalized until Az resolves
+// them. Full prep + per-claim verification:
 //   notes/osullivan-pruess-lippmann-2001-research-prep-2026-06-01.md
 //
-// OPEN TODO-Az ITEMS (mirror of prep §9):
-//   A. Karsten Pruess life status UNRESOLVED — bio written in accomplishment
-//      tense (correct regardless); do NOT add "is"/"the late" until confirmed.
-//   B. Lippmann finer sub-facts (born 1939 / BS 1966 / PhD 1974) MEDIUM — death
-//      (Sept 10 2018) + LBNL affiliation VERIFIED; left out of rendered prose.
-//   C. Paper section structure is RECONSTRUCTED (full text was paywalled/403).
-//   D. Acuña-PI-as-simulator-BC link is a SYNTHESIS (review predates Acuña 2008).
-//   E. Dry-steam vs liquid simulation divergences — all need Az review.
-//   F. Darajat facts: AZ5 49-vs-39 wells; operator model (TOUGH2/AUTOUGH2?);
-//      NCG fraction / EOS choice; single- vs dual-porosity.
-//   G. Worked-example numbers are ILLUSTRATIVE, not a Darajat calibration.
-//   H. Seed cards deferred until Az signs off on content.
+// OPEN TODO-Az ITEMS (Darajat-specific only):
+//   - How Darajat's resource is actually managed (distributed numerical model
+//     vs lumped; the operator's working code; steam-supply forecasting in
+//     practice). Prep §9-F.
+//   - The dry-steam well-on-deliverability form used in the Darajat field model,
+//     and whether near-well non-Darcy (turbulent skin) is included. Prep §9-D/E5.
+//   - Whether the deliverability-as-simulator-BC link matches Darajat practice
+//     (the general framing is cleared; only the site-practice match is open).
+//   - Darajat facts: AZ5 producing-well count (49 vs ~39: producers-only vs
+//     total stock?); operator model (TOUGH2/AUTOUGH2/iTOUGH2/commercial);
+//     NCG fraction and EOS1-vs-EOS2 choice; single- vs dual-porosity. Prep §9-F.
+//   - Seed cards deferred until Az signs off on content.
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -107,7 +116,7 @@ The workflow that turns this machinery into a field tool has four stages, and th
 
 4. **Prediction.** With a calibrated model, run forward under proposed development scenarios to forecast pressure, dry-out, sustainable generation, and resource life.
 
-The intuition for a dry-steam field is worth stating carefully, because the published simulation literature is dominated by liquid and two-phase fields. **⟦TODO-Az: review the dry-steam-vs-liquid contrasts below; the prep flagged these as drawn from secondary summaries, not the paper's full text — prep §9-E.⟧** In a liquid-dominated field, exploitation draws pressure down until water boils in place, a two-phase zone grows, and produced enthalpy rises — that enthalpy rise is the classic diagnostic. A vapour-dominated (dry-steam) field like Darajat largely sits *past* that transition: the mobile phase is already steam, storativity is low, so pressure tends to fall more directly with mass withdrawal, and the modelling concerns shift to steam-zone stability, central dry-out, and condensation/recharge at the margins.`,
+The intuition for a dry-steam field is worth stating carefully, because the published simulation literature is dominated by liquid and two-phase fields. In a liquid-dominated field, exploitation draws pressure down until water boils in place, a two-phase zone grows, and produced enthalpy rises — that enthalpy rise is the classic diagnostic. A vapour-dominated (dry-steam) field largely sits *past* that transition: the mobile phase is already steam, storativity is low, so pressure tends to fall more directly with mass withdrawal, and the modelling concerns shift to steam-zone stability, central dry-out, and condensation/recharge at the margins.`,
         id: `Bayangin reservoir dipotong jadi grid blok. Tiap blok itu unit akunting kecil yang nyimpen dua hal: **massa** (air sebagai liquid dan/atau steam, ditahan di pore space) dan **energi** (panas, disimpen sebagian besar di rock matrix, sebagian di fluid). Blok tukeran massa sama tetangganya lewat pressure-driven flow (hukum Darcy, satu term per fase) dan tukeran panas baik lewat fluid yang ngalir bawa enthalpy-nya maupun lewat konduksi lewat rock. Tulis aturan pembukuan buat tiap blok — *yang ke-akumulasi di dalam sama dengan yang ngalir lewat muka ditambah yang well inject atau extract* — dan kamu punya simulator-nya. Sisanya termodinamika dan aritmetika dalam skala besar.
 
 Workflow yang ngubah mesin ini jadi alat field punya empat tahap, dan review-nya ngatur dirinya di sekitar itu:
@@ -120,7 +129,7 @@ Workflow yang ngubah mesin ini jadi alat field punya empat tahap, dan review-nya
 
 4. **Prediction.** Dengan model yang calibrated, jalanin maju di bawah skenario development yang diusulin buat forecast pressure, dry-out, sustainable generation, dan umur sumber daya.
 
-Intuisi buat dry-steam field worth dinyatakan hati-hati, karena literatur simulasi yang dipublikasi didominasi field liquid dan two-phase. **⟦TODO-Az: review kontras dry-steam-vs-liquid di bawah; prep nge-flag ini diambil dari ringkasan sekunder, bukan full text paper — prep §9-E.⟧** Di field liquid-dominated, eksploitasi narik pressure turun sampai air mendidih in place, two-phase zone tumbuh, dan produced enthalpy naik — enthalpy rise itu diagnostik klasik. Field vapour-dominated (dry-steam) kayak Darajat sebagian besar duduk *lewat* transisi itu: fase mobile-nya udah steam, storativity rendah, jadi pressure cenderung turun lebih langsung sama mass withdrawal, dan concern modelling-nya geser ke stabilitas steam-zone, central dry-out, dan condensation/recharge di margin.`
+Intuisi buat dry-steam field worth dinyatakan hati-hati, karena literatur simulasi yang dipublikasi didominasi field liquid dan two-phase. Di field liquid-dominated, eksploitasi narik pressure turun sampai air mendidih in place, two-phase zone tumbuh, dan produced enthalpy naik — enthalpy rise itu diagnostik klasik. Field vapour-dominated (dry-steam) sebagian besar duduk *lewat* transisi itu: fase mobile-nya udah steam, storativity rendah, jadi pressure cenderung turun lebih langsung sama mass withdrawal, dan concern modelling-nya geser ke stabilitas steam-zone, central dry-out, dan condensation/recharge di margin.`
       }
     },
 
@@ -151,9 +160,7 @@ $$\\mathbf{F}^{h} = -\\lambda\\,\\nabla T + \\sum_{\\beta} h_{\\beta}\\,\\mathbf
 
 The latent heat of steam rides inside $h_{\\beta}$, which is why a vapour phase transports so much energy per unit mass.
 
-**Numerically**, four choices define the method. (1) The **integral finite difference method** (Narasimhan and Witherspoon, 1976) discretizes the integral form directly, so a block needs only its volume, its interface areas with neighbours, the nodal distances, and a gravity projection — no global coordinate system, hence arbitrary irregular 3-D grids at no penalty, and on a regular grid the method reduces exactly to conventional finite differences, so the geometric flexibility costs nothing in accuracy. (2) **Upstream weighting** of the mobility at each interface (with harmonic weighting of absolute permeability), combined with (3) **fully implicit** time stepping, is what keeps the scheme stable when a phase appears or disappears (boiling, dry-out). (4) The result is a large set of coupled non-linear algebraic equations solved each timestep by **Newton-Raphson**, with the set of primary variables per block *switched* according to its phase state. Around this core sits a modular **equation-of-state** layer: EOS1 for pure water/steam (the standard geothermal choice), EOS2 for water + CO₂, EWASG for water + salt + gas. Fractured rock is handled by the **MINC** method (Pruess and Narasimhan, 1985) as a geometric preprocessing of the mesh.
-
-**⟦TODO-Az: the paper's full text was paywalled (HTTP 403); the equation set above is reconstructed from the TOUGH2 / iTOUGH2 user guides (primary) and is faithful to the code lineage, but the section structure and any paper-specific notation should be reconciled against the PDF if you have it — prep §9-C.⟧**`,
+**Numerically**, four choices define the method. (1) The **integral finite difference method** (Narasimhan and Witherspoon, 1976) discretizes the integral form directly, so a block needs only its volume, its interface areas with neighbours, the nodal distances, and a gravity projection — no global coordinate system, hence arbitrary irregular 3-D grids at no penalty, and on a regular grid the method reduces exactly to conventional finite differences, so the geometric flexibility costs nothing in accuracy. (2) **Upstream weighting** of the mobility at each interface (with harmonic weighting of absolute permeability), combined with (3) **fully implicit** time stepping, is what keeps the scheme stable when a phase appears or disappears (boiling, dry-out). (4) The result is a large set of coupled non-linear algebraic equations solved each timestep by **Newton-Raphson**, with the set of primary variables per block *switched* according to its phase state. Around this core sits a modular **equation-of-state** layer: EOS1 for pure water/steam (the standard geothermal choice), EOS2 for water + CO₂, EWASG for water + salt + gas. Fractured rock is handled by the **MINC** method (Pruess and Narasimhan, 1985) as a geometric preprocessing of the mesh.`,
         id: `Lineage TOUGH2 yang penulis ini bangun nulis hukum konservasinya dalam **bentuk integral** atas blok sembarang $V_n$ — dan pilihan itu seluruh alasan kenapa diskretisasinya begitu fleksibel. Buat tiap komponen $\\kappa$ (komponen massa — air, dan opsional gas non-condensible seperti CO₂ — plus satu indeks lagi buat panas), aturannya: laju perubahan yang ke-akumulasi di blok sama dengan net flux lewat permukaannya $\\Gamma_n$ plus source atau sink apapun di dalamnya.
 
 $$\\frac{d}{dt}\\int_{V_n} M^{\\kappa}\\,dV = \\int_{\\Gamma_n} \\mathbf{F}^{\\kappa}\\cdot\\mathbf{n}\\,d\\Gamma + \\int_{V_n} q^{\\kappa}\\,dV$$
@@ -176,9 +183,7 @@ $$\\mathbf{F}^{h} = -\\lambda\\,\\nabla T + \\sum_{\\beta} h_{\\beta}\\,\\mathbf
 
 Latent heat steam naik di dalam $h_{\\beta}$, itu kenapa fase vapour transport energi segitu banyak per unit massa.
 
-**Secara numerik**, empat pilihan ngedefinisiin metodenya. (1) **Integral finite difference method** (Narasimhan dan Witherspoon, 1976) diskretisasi bentuk integral langsung, jadi blok cuma butuh volume-nya, interface area sama tetangga, jarak nodal, dan proyeksi gravity — gak ada global coordinate system, makanya grid 3-D irregular sembarang tanpa penalty, dan di grid reguler metodenya tereduksi persis ke finite difference konvensional, jadi fleksibilitas geometris gak ngorbanin akurasi. (2) **Upstream weighting** mobility di tiap interface (dengan harmonic weighting absolute permeability), dikombinasi sama (3) time stepping **fully implicit**, itu yang njaga skema tetap stabil pas fase muncul atau hilang (boiling, dry-out). (4) Hasilnya set besar persamaan aljabar non-linear coupled yang di-solve tiap timestep sama **Newton-Raphson**, dengan set primary variable per blok di-*switch* sesuai phase state-nya. Di sekitar core ini ada layer **equation-of-state** modular: EOS1 buat pure water/steam (pilihan geothermal standar), EOS2 buat water + CO₂, EWASG buat water + salt + gas. Fractured rock di-handle sama **MINC** method (Pruess dan Narasimhan, 1985) sebagai preprocessing geometris dari mesh.
-
-**⟦TODO-Az: full text paper-nya paywalled (HTTP 403); set persamaan di atas direkonstruksi dari user guide TOUGH2 / iTOUGH2 (primary) dan setia ke lineage kode, tapi struktur section dan notasi spesifik paper harus direkonsiliasi sama PDF kalau kamu punya — prep §9-C.⟧**`
+**Secara numerik**, empat pilihan ngedefinisiin metodenya. (1) **Integral finite difference method** (Narasimhan dan Witherspoon, 1976) diskretisasi bentuk integral langsung, jadi blok cuma butuh volume-nya, interface area sama tetangga, jarak nodal, dan proyeksi gravity — gak ada global coordinate system, makanya grid 3-D irregular sembarang tanpa penalty, dan di grid reguler metodenya tereduksi persis ke finite difference konvensional, jadi fleksibilitas geometris gak ngorbanin akurasi. (2) **Upstream weighting** mobility di tiap interface (dengan harmonic weighting absolute permeability), dikombinasi sama (3) time stepping **fully implicit**, itu yang njaga skema tetap stabil pas fase muncul atau hilang (boiling, dry-out). (4) Hasilnya set besar persamaan aljabar non-linear coupled yang di-solve tiap timestep sama **Newton-Raphson**, dengan set primary variable per blok di-*switch* sesuai phase state-nya. Di sekitar core ini ada layer **equation-of-state** modular: EOS1 buat pure water/steam (pilihan geothermal standar), EOS2 buat water + CO₂, EWASG buat water + salt + gas. Fractured rock di-handle sama **MINC** method (Pruess dan Narasimhan, 1985) sebagai preprocessing geometris dari mesh.`
       }
     },
 
@@ -187,7 +192,7 @@ Latent heat steam naik di dalam $h_{\\beta}$, itu kenapa fase vapour transport e
       id: 'worked-example',
       heading: { en: 'Worked example', id: 'Contoh kerjaan' },
       body: {
-        en: `Two small calculations make the machinery concrete. Both are deliberately dry-steam-safe; **⟦TODO-Az: all numbers below are ILLUSTRATIVE teaching values, not a Darajat calibration — replace with real field figures if you want this grounded — prep §9-G.⟧**
+        en: `Two small calculations make the machinery concrete. Both are deliberately dry-steam-safe, and all numbers below are illustrative teaching values — physically realistic but not a calibration of any particular field.
 
 **Example 1 — a single-block natural state.** Collapse the whole reservoir to one well-mixed block at steady state. Steady means nothing accumulates, so the two balance laws become simple equalities. Mass: the deep upflow $q_{in}$ equals the discharge $q_{out}$. Energy: the deep heat input $Q_{in}$ equals the enthalpy carried out by that discharge plus conduction lost through the caprock,
 
@@ -202,7 +207,7 @@ $$q = C\\left(P^2 - P_{wb}^2\\right)$$
 against a fixed flowing bottomhole pressure $P_{wb}$. Take $C = 0.05$ and $P_{wb} = 10$ bar. At an early block pressure $P = 30$ bar, $q = 0.05\\,(900 - 100) = 40$ kg/s. Years later the block has drawn down to $P = 26$ bar, and $q = 0.05\\,(676 - 100) = 28.8$ kg/s. A 13% pressure drop produces a 28% rate drop — the compressible, pressure-squared signature. (A linear, liquid-style law $q = PI\\,(P - P_{wb})$ would give only a 20% drop for the same pressure change; the dry-steam well declines faster.) The point is the *coupling*: the simulator does not prescribe the falling rate; it falls out of the model because the block pressure and the well draw on each other every timestep. This is precisely the boundary condition that the Acuña $(C_{WB}, PI)$ decomposition parameterizes per well.
 
 **⟦TODO-Az: confirm the dry-steam well-on-deliverability form actually used in the Darajat field model, and whether near-well non-Darcy (turbulent skin) effects are included — prep §9-D, §9-E(5).⟧**`,
-        id: `Dua perhitungan kecil bikin mesinnya konkret. Dua-duanya sengaja dry-steam-safe; **⟦TODO-Az: semua angka di bawah itu nilai pengajaran ILUSTRATIF, bukan kalibrasi Darajat — ganti sama angka field beneran kalau mau ini grounded — prep §9-G.⟧**
+        id: `Dua perhitungan kecil bikin mesinnya konkret. Dua-duanya sengaja dry-steam-safe, dan semua angka di bawah itu nilai pengajaran ilustratif — realistis secara fisik tapi bukan kalibrasi field tertentu manapun.
 
 **Contoh 1 — natural state satu blok.** Runtuhin seluruh reservoir jadi satu blok well-mixed di steady state. Steady berarti gak ada yang ke-akumulasi, jadi dua hukum balance jadi kesamaan sederhana. Mass: deep upflow $q_{in}$ sama dengan discharge $q_{out}$. Energy: deep heat input $Q_{in}$ sama dengan enthalpy yang dibawa keluar sama discharge itu plus konduksi yang hilang lewat caprock,
 
@@ -318,12 +323,12 @@ Over-fitting. Model dengan ribuan parameter adjustable punya jauh lebih banyak k
       heading: { en: 'Connections', id: 'Koneksi' },
       body: {
         en: `- **Prereq**: [Grant & Bixley 2011](item:grant-bixley-2011) is the lumped/analytical tier — tank and box models that need only pressure and production history and return bracketed forecasts. This item is the distributed-parameter tier that sits on top: full three-dimensional numerical simulation that resolves spatial heterogeneity, phase fronts, and natural state at the cost of far more data and calibration. Read Grant-Bixley first for the analytical foundation; the numerical model is the natural next step when "where" matters.
-- **Related to**: [Acuña 2008](item:acuna-2008) supplies the per-well deliverability relation $(C_{WB}, PI)$ that serves as a production-well boundary condition (source term) inside a field simulator. The link is reciprocal — the Acuña module points here for the simulator context. **⟦TODO-Az: synthesized cross-domain link, prep §9-D.⟧**
+- **Related to**: [Acuña 2008](item:acuna-2008) supplies the per-well deliverability relation $(C_{WB}, PI)$ that serves as a production-well boundary condition (source term) inside a field simulator. The link is reciprocal — the Acuña module points here for the simulator context. (This connection is a cross-domain synthesis: deliverability relations are how production wells enter a simulator as source terms in general; the 2001 review predates Acuña 2008 and does not cite it.)
 - **Upstream of this**: [Cumming 2009](item:cumming-2009) — the surface-exploration conceptual model (resistivity, geochemistry, geology) is the qualitative picture a numerical mesh is built to honour; it is the front end of the modelling workflow.
 - **Downstream of this**: [DiPippo 2016](item:dipippo-2016) — the power-plant thermodynamics consume the mass and enthalpy this model forecasts; for a dry-steam field the steam goes directly to the turbine.
 - **Property inputs / sanity bounds**: [Bjornsson & Bodvarsson 1990](item:bjornsson-bodvarsson-1990) — empirical permeability, porosity, and temperature ranges across world fields give the prior bounds for the rock properties assigned to grid blocks and for sanity-checking history-matched estimates.`,
         id: `- **Prereq**: [Grant & Bixley 2011](item:grant-bixley-2011) itu tier lumped/analitik — model tank dan box yang cuma butuh pressure dan production history dan balikin forecast yang ke-bracket. Item ini tier distributed-parameter yang duduk di atasnya: full simulasi numerik tiga-dimensi yang resolve heterogenitas spasial, phase front, dan natural state dengan ongkos data dan kalibrasi jauh lebih banyak. Baca Grant-Bixley dulu buat fondasi analitik; model numerik itu langkah natural berikutnya pas "di mana" penting.
-- **Related to**: [Acuña 2008](item:acuna-2008) nyediain relasi deliverability per-well $(C_{WB}, PI)$ yang jadi boundary condition production-well (source term) di dalam field simulator. Link-nya resiprokal — module Acuña nunjuk ke sini buat konteks simulator. **⟦TODO-Az: link cross-domain sintesis, prep §9-D.⟧**
+- **Related to**: [Acuña 2008](item:acuna-2008) nyediain relasi deliverability per-well $(C_{WB}, PI)$ yang jadi boundary condition production-well (source term) di dalam field simulator. Link-nya resiprokal — module Acuña nunjuk ke sini buat konteks simulator. (Koneksi ini sintesis cross-domain: relasi deliverability itu cara producing well masuk ke simulator sebagai source term secara umum; review 2001 mendahului Acuña 2008 dan gak nyitir dia.)
 - **Upstream dari ini**: [Cumming 2009](item:cumming-2009) — conceptual model surface-exploration (resistivity, geochemistry, geologi) itu gambaran kualitatif yang numerical mesh dibangun buat honour; itu front end dari workflow modelling.
 - **Downstream dari ini**: [DiPippo 2016](item:dipippo-2016) — termodinamika power-plant ngonsumsi mass dan enthalpy yang model ini forecast; buat dry-steam field steam-nya langsung ke turbine.
 - **Property input / sanity bound**: [Bjornsson & Bodvarsson 1990](item:bjornsson-bodvarsson-1990) — range permeability, porosity, dan temperature empiris across field dunia kasih prior bound buat rock property yang di-assign ke grid block dan buat sanity-check estimasi history-matched.`
@@ -337,15 +342,15 @@ Over-fitting. Model dengan ribuan parameter adjustable punya jauh lebih banyak k
       body: {
         en: `- **O'Sullivan, M. J., Pruess, K., and Lippmann, M. J.** (2001). "State of the art of geothermal reservoir simulation." *Geothermics*, 30(4), 395-429. The canonical state-of-the-art survey; also issued as Lawrence Berkeley National Laboratory Report LBNL-44699. **(This item.)**
 - **Pruess, K., Oldenburg, C. M., and Moridis, G. J.** (1999). "TOUGH2 User's Guide, Version 2." *Lawrence Berkeley National Laboratory Report LBNL-43134*. The standard manual for the integral finite difference method, EOS modules, and the Newton-Raphson solution used here.
-- **Pruess, K., and Narasimhan, T. N.** (1985). "A practical method for modeling fluid and heat flow in fractured porous media." *Society of Petroleum Engineers Journal*, 25(1), 14-26. The MINC method for fractured rock. **⟦TODO-Az: spot-check page range against the original.⟧**
+- **Pruess, K., and Narasimhan, T. N.** (1985). "A practical method for modeling fluid and heat flow in fractured porous media." *Society of Petroleum Engineers Journal*, 25(1), 14-26. The MINC method for fractured rock.
 - **Finsterle, S., and Pruess, K.** (1995). "Automatic history matching of geothermal field performance." *Proceedings of the 17th New Zealand Geothermal Workshop*, 193-198. A representative iTOUGH2 inverse-modelling application to a geothermal field.
-- **Narasimhan, T. N., and Witherspoon, P. A.** (1976). "An integrated finite difference method for analyzing fluid flow in porous media." *Water Resources Research*, 12(1), 57-64. The discretization the TOUGH family rests on. **⟦TODO-Az: spot-check page range.⟧**
+- **Narasimhan, T. N., and Witherspoon, P. A.** (1976). "An integrated finite difference method for analyzing fluid flow in porous media." *Water Resources Research*, 12(1), 57-64. The discretization the TOUGH family rests on.
 - **O'Sullivan, M. J.** (1985). "Geothermal reservoir simulation." *International Journal of Energy Research*, 9(3), 319-332. The lead author's earlier single-author review — direct precursor to this paper.`,
         id: `- **O'Sullivan, M. J., Pruess, K., dan Lippmann, M. J.** (2001). "State of the art of geothermal reservoir simulation." *Geothermics*, 30(4), 395-429. Survey state-of-the-art kanonik; juga diterbitkan sebagai Laporan Lawrence Berkeley National Laboratory LBNL-44699. **(Item ini.)**
 - **Pruess, K., Oldenburg, C. M., dan Moridis, G. J.** (1999). "TOUGH2 User's Guide, Version 2." *Lawrence Berkeley National Laboratory Report LBNL-43134*. Manual standar buat integral finite difference method, EOS module, dan solusi Newton-Raphson yang dipake di sini.
-- **Pruess, K., dan Narasimhan, T. N.** (1985). "A practical method for modeling fluid and heat flow in fractured porous media." *Society of Petroleum Engineers Journal*, 25(1), 14-26. MINC method buat fractured rock. **⟦TODO-Az: spot-check range halaman lawan aslinya.⟧**
+- **Pruess, K., dan Narasimhan, T. N.** (1985). "A practical method for modeling fluid and heat flow in fractured porous media." *Society of Petroleum Engineers Journal*, 25(1), 14-26. MINC method buat fractured rock.
 - **Finsterle, S., dan Pruess, K.** (1995). "Automatic history matching of geothermal field performance." *Proceedings of the 17th New Zealand Geothermal Workshop*, 193-198. Aplikasi inverse-modelling iTOUGH2 representatif ke field geothermal.
-- **Narasimhan, T. N., dan Witherspoon, P. A.** (1976). "An integrated finite difference method for analyzing fluid flow in porous media." *Water Resources Research*, 12(1), 57-64. Diskretisasi yang keluarga TOUGH bersandar. **⟦TODO-Az: spot-check range halaman.⟧**
+- **Narasimhan, T. N., dan Witherspoon, P. A.** (1976). "An integrated finite difference method for analyzing fluid flow in porous media." *Water Resources Research*, 12(1), 57-64. Diskretisasi yang keluarga TOUGH bersandar.
 - **O'Sullivan, M. J.** (1985). "Geothermal reservoir simulation." *International Journal of Energy Research*, 9(3), 319-332. Review single-author lebih awal dari lead author — precursor langsung ke paper ini.`
       }
     },

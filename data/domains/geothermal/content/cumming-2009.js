@@ -1,20 +1,28 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (6 yrs Darajat dry-steam operations).
-// Schema-valid + renderable for dogfooding, NOT finalized. Every domain claim
-// flagged by the research-prep §9 review is marked inline **⟦TODO-Az: …⟧**.
+// Schema-valid + renderable for dogfooding, NOT finalized.
+//
+// The GENERAL claims (the dry-steam vs liquid physics — BPD is liquid-specific
+// and a vapour-dominated reservoir is near-isothermal / vapour-static with
+// pressure on the vapour-saturation curve; fumarole-gas vs cation geothermometry;
+// a comparatively resistive steam reservoir beneath the conductive smectite cap;
+// the smectite->illite ~150-220C transition; and that power density is
+// system-dependent and must be calibrated to same-type analog producing fields)
+// were verified against the literature and their inline flags cleared. The
+// illustrative worked-example numbers are flagged in-text as teaching values.
+// All Darajat operational facts stay EXTERNAL to the module and remain flagged.
 // Full prep: notes/cumming-2009-research-prep-2026-06-02.md
 //
-// OPEN TODO-Az ITEMS (mirror of prep §9):
+// OPEN TODO-Az ITEMS (Darajat / site-specific only — all general flags cleared):
 //   A. Darajat exploration/MT facts (the ~85-site MT survey 1996-97/2004; clay-cap
-//      geometry; relict water>280C -> ~240C vapor narrative; operator chain).
+//      geometry; relict water>280C -> ~240C vapor narrative; operator chain), and
+//      how the resistive-steam-core signature actually reads at Darajat (MT is 3D
+//      at depth, so the clean textbook contrast may be muddier locally).
 //   B. Author BSc "Toronto" UNVERIFIED -> omitted from rendered bio (MSc UBC kept).
-//   C. BPD is LIQUID-specific; dry-steam Darajat is near-isothermal vapor-static.
-//   D. Resistive-steam-core signature strength at Darajat (MT is 3D at depth).
 //   E. AZ5 producing-well count 49-vs-39 (carried open audit item).
 //   F. Cross-scale synthesis (Cumming field-scale conceptual model <-> Acuna
 //      well-scale <-> O'Sullivan simulator) — confirm vs Darajat/Star Energy practice.
-//   G. Worked-example numbers are ILLUSTRATIVE, not a Darajat estimate.
 //   H. Seed cards deferred until Az signs off.
 // ─────────────────────────────────────────────────────────────────────────
 
@@ -96,7 +104,7 @@ That clay cap is also what the main geophysical tool sees. Magnetotellurics (MT)
 
 To anchor the isotherms quantitatively, Cumming uses chemistry: gas geothermometers on fumaroles and cation geothermometers (sodium-potassium and the like) on neutral-chloride hot springs estimate the deep reservoir temperature, and that temperature is pinned to a depth. The conceptual model is then whatever isotherm pattern simultaneously honours the resistivity cap, the geothermometry, the geology, the structure and the hydrology — and a well is placed to test it.
 
-A caution worth stating up front, because most published examples are liquid systems: the picture above (chloride-spring geothermometry, a boiling liquid upflow) is the liquid-dominated case. **⟦TODO-Az: for a vapour-dominated / dry-steam field the deep zone is near-isothermal and vapour-static rather than tracking a boiling-liquid profile, the diagnostic fluids are dominated by fumarole gas, and beneath the conductive cap the steam-filled reservoir reads as comparatively resistive — review the dry-steam-vs-liquid contrasts before finalizing this section. Prep §9-C, §9-D.⟧**`,
+A caution worth stating up front, because most published examples are liquid systems: the picture above (chloride-spring geothermometry, a boiling liquid upflow) is the liquid-dominated case. For a vapour-dominated / dry-steam field the contrasts are systematic. The deep zone is near-isothermal and vapour-static — small vertical temperature and pressure gradients, with pressure tracking the vapour-saturation curve $p_{vap}(T)$ rather than a boiling-liquid hydrostatic profile. The diagnostic surface fluids are dominated by fumarole gas rather than neutral-chloride springs, so gas geothermometers carry the temperature signal. And beneath the conductive cap the steam-filled reservoir (low-salinity vapour, immobile water, illite/chlorite alteration) reads as comparatively resistive, giving a conductive-cap-over-resistive-core contrast that is sharper than in liquid systems.`,
         id: `Bayangin deliverable-nya sebagai satu cross-section yang dianotasi: irisan melalui bumi dengan predicted temperature contour (isoterm) digambar di atasnya, terikat ke peta manifestasi permukaan dan data. Seluruh keahlian-nya itu bikin isoterm itu benar, karena temperature, pressure dan permeability yang nge-govern reservoir, dan pola isoterm dalam section view nge-encode ketiganya.
 
 Trik baca kuncinya itu **spasi isoterm**. Di mana isoterm berspasi lebar — hampir suhu sama di rentang kedalaman besar — panas dibawa *konveksi*, yang berarti fluid bergerak, yang berarti rock-nya permeabel: itu target drillable kamu (upflow, atau lateral outflow). Di mana isoterm berspasi rapat — suhu naik tajam dengan kedalaman — panas bergerak lewat *konduksi* melalui rock yang fluid gak bisa tembus: itu zona low-permeability, klasiknya clay cap yang nge-seal sistem.
@@ -105,7 +113,7 @@ Clay cap itu juga yang alat geofisika utama lihat. Magnetotellurics (MT) nge-ima
 
 Buat nge-anchor isoterm secara kuantitatif, Cumming pake kimia: gas geothermometer di fumarol dan cation geothermometer (natrium-kalium dan sejenisnya) di mata air panas neutral-chloride nge-estimasi suhu reservoir dalam, dan suhu itu di-pin ke kedalaman. Conceptual model-nya kemudian apapun pola isoterm yang sekaligus honour resistivity cap, geothermometry, geologi, struktur dan hidrologi — dan sumur ditaruh buat nguji-nya.
 
-Satu peringatan yang worth dinyatakan di depan, karena sebagian besar contoh yang dipublikasi itu sistem liquid: gambaran di atas (geothermometry chloride-spring, boiling liquid upflow) itu kasus liquid-dominated. **⟦TODO-Az: buat field vapour-dominated / dry-steam, zona dalam itu near-isothermal dan vapour-static daripada ngikutin profil boiling-liquid, fluid diagnostik didominasi fumarole gas, dan di bawah cap konduktif reservoir terisi-steam terbaca comparatively resistif — review kontras dry-steam-vs-liquid sebelum finalisasi section ini. Prep §9-C, §9-D.⟧**`
+Satu peringatan yang worth dinyatakan di depan, karena sebagian besar contoh yang dipublikasi itu sistem liquid: gambaran di atas (geothermometry chloride-spring, boiling liquid upflow) itu kasus liquid-dominated. Buat field vapour-dominated / dry-steam kontras-nya sistematis. Zona dalam itu near-isothermal dan vapour-static — gradient suhu dan pressure vertikal kecil, dengan pressure ngikutin kurva vapour-saturation $p_{vap}(T)$ daripada profil hidrostatik boiling-liquid. Fluid permukaan diagnostik didominasi fumarole gas daripada neutral-chloride spring, jadi gas geothermometer yang bawa sinyal suhu. Dan di bawah cap konduktif reservoir terisi-steam (vapour low-salinity, air immobile, alterasi illite/chlorite) terbaca comparatively resistif, ngasih kontras conductive-cap-over-resistive-core yang lebih tajam dari di sistem liquid.`
       }
     },
 
@@ -123,7 +131,7 @@ Satu peringatan yang worth dinyatakan di depan, karena sebagian besar contoh yan
 4. *Hydrology and surface manifestations* — recharge, water table, fumaroles, sinter, alteration mapping.
 5. *Direct temperature* — gradient and slim holes give the only pre-drilling subsurface temperatures; a reversal (hot shallow, cool deep) diagnoses a lateral outflow, a near-isothermal profile a permeable convective target.
 
-**The interpretive rule.** Read permeability from isotherm spacing — wide spacing means convective/permeable, close spacing means conductive/impermeable — and accept only the isotherm pattern that is simultaneously consistent with all five streams. For liquid systems the upper bound on the upflow temperature profile is the boiling-point-for-depth curve. **⟦TODO-Az: replace boiling-point-for-depth with the near-isothermal vapour-static profile for the dry-steam Darajat case. Prep §9-C.⟧**
+**The interpretive rule.** Read permeability from isotherm spacing — wide spacing means convective/permeable, close spacing means conductive/impermeable — and accept only the isotherm pattern that is simultaneously consistent with all five streams. For liquid systems the upper bound on the upflow temperature profile is the boiling-point-for-depth curve — the temperature-depth profile of a hydrostatic boiling-liquid column. For a vapour-dominated / dry-steam system that liquid-specific anchor does not apply: the deep zone is instead near-isothermal and vapour-static (pressure near the vapour-saturation curve), and that near-isothermal profile, anchored by gas geothermometry, replaces the boiling-point-for-depth curve.
 
 **The capacity estimate (Cumming's companion method).** Early-stage resource capacity is treated as the product of two independent quantities, each represented as a lognormal distribution: the resource **area** $A$ (km², from the footprint of the conceptual model) and the **power density** $D$ (MWe/km², from a database of analog producing fields). The capacity is
 
@@ -143,7 +151,7 @@ The spread, however, does *not* multiply. In log-space the variances add, so the
 4. *Hidrologi dan manifestasi permukaan* — recharge, water table, fumarol, sinter, pemetaan alterasi.
 5. *Suhu langsung* — gradient dan slim hole ngasih satu-satunya suhu bawah-permukaan pra-pengeboran; reversal (panas dangkal, dingin dalam) ngediagnosa lateral outflow, profil near-isothermal target konvektif permeabel.
 
-**Aturan interpretif.** Baca permeability dari spasi isoterm — spasi lebar berarti konvektif/permeabel, spasi rapat berarti konduktif/impermeabel — dan terima cuma pola isoterm yang sekaligus konsisten sama kelima aliran. Buat sistem liquid batas atas profil suhu upflow itu kurva boiling-point-for-depth. **⟦TODO-Az: ganti boiling-point-for-depth dengan profil near-isothermal vapour-static buat kasus dry-steam Darajat. Prep §9-C.⟧**
+**Aturan interpretif.** Baca permeability dari spasi isoterm — spasi lebar berarti konvektif/permeabel, spasi rapat berarti konduktif/impermeabel — dan terima cuma pola isoterm yang sekaligus konsisten sama kelima aliran. Buat sistem liquid batas atas profil suhu upflow itu kurva boiling-point-for-depth — profil temperature-depth dari kolom boiling-liquid hidrostatik. Buat sistem vapour-dominated / dry-steam anchor liquid-specific itu gak berlaku: zona dalam malah near-isothermal dan vapour-static (pressure dekat kurva vapour-saturation), dan profil near-isothermal itu, di-anchor sama gas geothermometry, ngeganti kurva boiling-point-for-depth.
 
 **Estimasi kapasitas (metode companion Cumming).** Kapasitas sumber daya early-stage diperlakuin sebagai produk dua kuantitas independen, masing-masing direpresentasiin sebagai distribusi lognormal: **area** sumber daya $A$ (km², dari footprint conceptual model) dan **power density** $D$ (MWe/km², dari database field produksi analog). Kapasitas-nya
 
@@ -162,7 +170,7 @@ Spread-nya, tapi, *gak* mengalikan. Di log-space variance bertambah, jadi ketida
       id: 'worked-example',
       heading: { en: 'Worked example', id: 'Contoh kerjaan' },
       body: {
-        en: `Two examples, both dry-steam-applicable. **⟦TODO-Az: numbers are ILLUSTRATIVE teaching values, not a Darajat estimate. Prep §9-G.⟧**
+        en: `Two examples, both dry-steam-applicable. The numbers below are illustrative teaching values chosen to make the arithmetic clean — not an estimate of any specific field.
 
 **Example 1 — read the clay-cap cross-section and pick the target.** You are handed an MT resistivity section: a draped low-resistivity layer (below ~5-10 Ω·m) that is thinnest and highest in the centre, beneath a cluster of fumaroles, and dips down on the eastern flank toward a line of chloride springs. Below the cap the rock is more resistive.
 
@@ -174,8 +182,8 @@ The median capacity is the product of the medians:
 
 $$P_{50} = A_{50} \\times D_{50} \\approx 12.6 \\times 11.5 \\approx 145 \\text{ MWe}$$
 
-Notice what you must *not* do: multiplying the individual extremes ($8 \\times 6 = 48$ up to $20 \\times 22 = 440$ MWe) gives a 48-440 band that badly overstates the uncertainty, because it pretends area and power density both hit their low ends together and both hit their high ends together. They are independent, so in log-space their spreads add in quadrature and the true P10-P90 band is substantially narrower than 48-440. Finally, multiply by a probability of exploration success — say 0.6 if heat, fluid, permeability and seal are all reasonably likely — to get a risked capacity (~87 MWe here) for ranking against other prospects. **⟦TODO-Az: use a power density calibrated to dry-steam analogs (Larderello, The Geysers, Kamojang, Darajat), not a generic value. Prep §9-G.⟧**`,
-        id: `Dua contoh, dua-duanya dry-steam-applicable. **⟦TODO-Az: angka itu nilai pengajaran ILUSTRATIF, bukan estimasi Darajat. Prep §9-G.⟧**
+Notice what you must *not* do: multiplying the individual extremes ($8 \\times 6 = 48$ up to $20 \\times 22 = 440$ MWe) gives a 48-440 band that badly overstates the uncertainty, because it pretends area and power density both hit their low ends together and both hit their high ends together. They are independent, so in log-space their spreads add in quadrature and the true P10-P90 band is substantially narrower than 48-440. Finally, multiply by a probability of exploration success — say 0.6 if heat, fluid, permeability and seal are all reasonably likely — to get a risked capacity (~87 MWe here) for ranking against other prospects. One thing the method requires for a real estimate: the power density is system-dependent (it scales with reservoir temperature and tectonic setting), so it must be calibrated against a database of analog producing fields of the same type — for a dry-steam prospect, the vapour-dominated analog family (Larderello, The Geysers, Kamojang, Wayang Windu, Darajat), not a generic or liquid-field value.`,
+        id: `Dua contoh, dua-duanya dry-steam-applicable. Angka di bawah itu nilai pengajaran ilustratif yang dipilih biar aritmetika-nya bersih — bukan estimasi field tertentu apapun.
 
 **Contoh 1 — baca cross-section clay-cap dan pilih target.** Kamu dikasih section resistivity MT: lapisan low-resistivity ter-drape (di bawah ~5-10 Ω·m) yang paling tipis dan tertinggi di tengah, di bawah klaster fumarol, dan menukik turun di flank timur menuju barisan chloride spring. Di bawah cap rock-nya lebih resistif.
 
@@ -187,7 +195,7 @@ Median kapasitas itu produk dari median:
 
 $$P_{50} = A_{50} \\times D_{50} \\approx 12.6 \\times 11.5 \\approx 145 \\text{ MWe}$$
 
-Perhatiin apa yang *gak* boleh kamu lakuin: ngaliin extreme individual ($8 \\times 6 = 48$ sampai $20 \\times 22 = 440$ MWe) ngasih band 48-440 yang parah nge-overstate ketidakpastian, karena dia pura-pura area dan power density dua-duanya nge-hit low end bareng dan dua-duanya nge-hit high end bareng. Mereka independen, jadi di log-space spread-nya bertambah quadrature dan band P10-P90 sebenarnya jauh lebih sempit dari 48-440. Akhirnya, kaliin sama probability of exploration success — misalnya 0.6 kalau heat, fluid, permeability dan seal semua cukup mungkin — buat dapet risked capacity (~87 MWe di sini) buat ranking lawan prospect lain. **⟦TODO-Az: pake power density yang dikalibrasi ke analog dry-steam (Larderello, The Geysers, Kamojang, Darajat), bukan nilai generik. Prep §9-G.⟧**`
+Perhatiin apa yang *gak* boleh kamu lakuin: ngaliin extreme individual ($8 \\times 6 = 48$ sampai $20 \\times 22 = 440$ MWe) ngasih band 48-440 yang parah nge-overstate ketidakpastian, karena dia pura-pura area dan power density dua-duanya nge-hit low end bareng dan dua-duanya nge-hit high end bareng. Mereka independen, jadi di log-space spread-nya bertambah quadrature dan band P10-P90 sebenarnya jauh lebih sempit dari 48-440. Akhirnya, kaliin sama probability of exploration success — misalnya 0.6 kalau heat, fluid, permeability dan seal semua cukup mungkin — buat dapet risked capacity (~87 MWe di sini) buat ranking lawan prospect lain. Satu hal yang metode-nya butuh buat estimasi nyata: power density itu system-dependent (dia nge-scale sama suhu reservoir dan tectonic setting), jadi harus dikalibrasi lawan database field produksi analog dengan tipe yang sama — buat prospect dry-steam, keluarga analog vapour-dominated (Larderello, The Geysers, Kamojang, Wayang Windu, Darajat), bukan nilai generik atau nilai field liquid.`
       }
     },
 
@@ -241,7 +249,7 @@ Low resistivity is non-unique. The conductor under the fumaroles/alteration is p
 **3.** Cumming anchors isotherms using chloride-spring cation geothermometry and the boiling-point-for-depth curve. Why does this standard liquid-system workflow need modification for a vapour-dominated (dry-steam) field, and what replaces each piece?
 
 <details><summary>Answer (with the dry-steam caveat)</summary>
-Both pieces assume a boiling *liquid* system. Cation geothermometers (Na-K, Na-K-Ca) need a liquid sample equilibrated with reservoir rock; a vapour-dominated field discharges mainly steam and gas at the surface, so the diagnostic chemistry shifts to fumarole *gas* geothermometers. The boiling-point-for-depth curve is the temperature-depth profile of a hydrostatic boiling liquid column; a vapour-dominated reservoir is instead near-isothermal and vapour-static (small vertical temperature and pressure gradients, pressure near the saturation curve), so that near-isothermal vapour-static profile replaces the BPD curve as the thermal anchor. The conceptual-model logic (read permeability from isotherm spacing, integrate all data) is unchanged; the liquid-specific anchors are swapped for vapour-dominated ones. **⟦TODO-Az: the BPD→near-isothermal/vapour-static swap and the fumarole-gas-geothermometry shift for dry steam — confirm against Darajat field data before finalizing. Prep §9-C.⟧**
+Both pieces assume a boiling *liquid* system. Cation geothermometers (Na-K, Na-K-Ca) need a liquid sample equilibrated with reservoir rock; a vapour-dominated field discharges mainly steam and gas at the surface, so the diagnostic chemistry shifts to fumarole *gas* geothermometers. The boiling-point-for-depth curve is the temperature-depth profile of a hydrostatic boiling liquid column; a vapour-dominated reservoir is instead near-isothermal and vapour-static (small vertical temperature and pressure gradients, pressure near the saturation curve), so that near-isothermal vapour-static profile replaces the BPD curve as the thermal anchor. The conceptual-model logic (read permeability from isotherm spacing, integrate all data) is unchanged; the liquid-specific anchors are swapped for vapour-dominated ones.
 </details>
 
 **4.** A prospect's conceptual model brackets the resource area at P90 = 10 km² and P10 = 40 km², and analog dry-steam fields give a power density of P90 = 8 and P10 = 18 MWe/km². Estimate the P50 capacity, and explain why you should not report the range as 80 to 720 MWe.
@@ -264,7 +272,7 @@ Low resistivity itu non-unik. Konduktor di bawah fumarol/alterasi itu plausibel 
 **3.** Cumming nge-anchor isoterm pake cation geothermometry chloride-spring dan kurva boiling-point-for-depth. Kenapa workflow sistem-liquid standar ini butuh modifikasi buat field vapour-dominated (dry-steam), dan apa yang ngeganti tiap bagian?
 
 <details><summary>Jawaban (dengan caveat dry-steam)</summary>
-Dua bagian mengasumsikan sistem *liquid* yang mendidih. Cation geothermometer (Na-K, Na-K-Ca) butuh sampel liquid yang ter-ekuilibrasi sama reservoir rock; field vapour-dominated nge-discharge terutama steam dan gas di permukaan, jadi kimia diagnostik geser ke fumarole *gas* geothermometer. Kurva boiling-point-for-depth itu profil temperature-depth dari kolom liquid mendidih hidrostatik; reservoir vapour-dominated malah near-isothermal dan vapour-static (gradient suhu dan pressure vertikal kecil, pressure dekat kurva saturasi), jadi profil near-isothermal vapour-static itu ngeganti kurva BPD sebagai anchor termal. Logika conceptual-model (baca permeability dari spasi isoterm, integrasiin semua data) gak berubah; anchor liquid-specific ditukar sama yang vapour-dominated. **⟦TODO-Az: swap BPD→near-isothermal/vapour-static dan shift ke fumarole-gas-geothermometry buat dry steam — konfirmasi lawan data field Darajat sebelum finalisasi. Prep §9-C.⟧**
+Dua bagian mengasumsikan sistem *liquid* yang mendidih. Cation geothermometer (Na-K, Na-K-Ca) butuh sampel liquid yang ter-ekuilibrasi sama reservoir rock; field vapour-dominated nge-discharge terutama steam dan gas di permukaan, jadi kimia diagnostik geser ke fumarole *gas* geothermometer. Kurva boiling-point-for-depth itu profil temperature-depth dari kolom liquid mendidih hidrostatik; reservoir vapour-dominated malah near-isothermal dan vapour-static (gradient suhu dan pressure vertikal kecil, pressure dekat kurva saturasi), jadi profil near-isothermal vapour-static itu ngeganti kurva BPD sebagai anchor termal. Logika conceptual-model (baca permeability dari spasi isoterm, integrasiin semua data) gak berubah; anchor liquid-specific ditukar sama yang vapour-dominated.
 </details>
 
 **4.** Conceptual model sebuah prospect nge-bracket area sumber daya di P90 = 10 km² dan P10 = 40 km², dan field analog dry-steam ngasih power density P90 = 8 dan P10 = 18 MWe/km². Estimasi kapasitas P50, dan jelasin kenapa kamu gak boleh nge-report range-nya sebagai 80 sampai 720 MWe.

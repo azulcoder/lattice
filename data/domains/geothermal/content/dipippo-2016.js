@@ -1,18 +1,31 @@
 // ─────────────────────────────────────────────────────────────────────────
-// ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
-// Geothermal content is Az-authored. Schema-valid + renderable, NOT finalized.
-// Domain claims flagged inline **⟦TODO-Az: …⟧**.
-// Full prep: notes/dipippo-2016-research-prep-2026-06-02.md
+// ⚠ DRAFT — DARAJAT-SPECIFIC ITEMS STILL AWAIT AZ. Geothermal content is
+// Az-authored. Schema-valid + renderable.
 //
-// OPEN TODO-Az ITEMS (prep §9):
-//   A. 1st-ed ISBN 9780750686204 REFUTED (it's the 2nd ed); DOI uncertain → not cited.
-//   B. Whether DiPippo Ch.14 (Indonesia) names Darajat — confirm; cite a Darajat
-//      primary source for any Darajat specific, not DiPippo.
-//   C. Darajat operational facts (271 MWe split; PLN/Indonesia Power vs Star Energy
-//      ownership; operator lineage; ~240C relict-vapour reservoir; NCG) are EXTERNAL.
-//   D. AZ5 well count 49-vs-39 — don't repeat a well count until resolved.
-//   E. Worked-example numbers are illustrative/author-generated, NOT Darajat data.
-//   F. Seed cards deferred until Az signs off.
+// GENERAL CLAIMS VERIFIED against the literature (2026-06-13): the dry-steam /
+// flash / binary cycle physics, the turbine + exergy equations, the steam-table
+// values and arithmetic in both worked examples and the practice set, the Baumann
+// moisture-correction convention, η_t≈0.82–0.85, and the DiPippo bibliography/bio
+// were confirmed across multiple independent sources. Two pure framing flags (the
+// "flash machinery is the liquid case, not Darajat" notes in §formalization and
+// §worked-example) were resolved into prose. CORRECTION: dry-steam utilization
+// (second-law) efficiency was overstated as "half to two-thirds (50–60%)"; sourced
+// values (The Geysers ~46–47%, Kamojang ~40–51%; DiPippo ≥40%) put it at ~45–55%,
+// now used in §intuition, §formalization and practice #3.
+//
+// REMAINING DARAJAT OPERATIONAL FACTS — EXTERNAL TO THIS MODULE, Az's alone:
+//   • Darajat plant trains (Units I/II/III) conversion + ownership split
+//     (Unit I plant PLN/Indonesia Power w/ Star Energy steam; Units II & III Star Energy).
+//   • Real Darajat turbine-inlet/condenser conditions + NCG (CO₂/H₂S) fraction and
+//     gas-extraction design (worked-example inlet values are illustrative only).
+//   • Darajat 271 MWe capacity staging (55→95→121) — cite a Darajat primary source,
+//     not DiPippo — and resolve the AZ5 well count (49 vs ~39) before quoting one.
+//   • Darajat vapour-dominated / dry-steam classification — confirm + cite a Darajat
+//     source rather than asserting it here.
+//   Bibliography note: 1st-ed ISBN 9780750686204 is refuted (it is the 2nd ed) and
+//   the DOI is uncertain — body cites only the 4th-ed + prior-edition years (safe).
+//   Seed cards deferred until Az signs off.
+// Full prep: notes/dipippo-2016-research-prep-2026-06-02.md
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -89,7 +102,7 @@ Buat field dry-steam — kelas yang owner katalog ini kerjain — cerita permuka
 
 **The one real complication of a dry-steam plant is gas.** Geothermal steam carries non-condensable gases — mostly CO₂, with some H₂S. They do not condense in the condenser, so if you let them accumulate they destroy the vacuum that the turbine's power depends on. So a dry-steam plant runs continuous gas extraction (steam-jet ejectors or vacuum pumps), which is a *parasitic* load — it costs power to make power — and that load grows with the gas fraction. H₂S then usually needs abatement before release.
 
-**Exergy is the right scorecard.** First-law (thermal) efficiency makes all geothermal plants look poor, because the heat source is lukewarm by power-station standards. DiPippo's contribution is to score plants by **exergy** (Second-Law) — the *useful work potential* of the fluid relative to the ambient dead state — so the question becomes "of the work that was thermodynamically available in this steam, how much did the plant actually capture?" By that measure dry-steam units do very well (roughly half to two-thirds of the wellhead exergy), and different cycles become comparable on a common, physically honest footing.`,
+**Exergy is the right scorecard.** First-law (thermal) efficiency makes all geothermal plants look poor, because the heat source is lukewarm by power-station standards. DiPippo's contribution is to score plants by **exergy** (Second-Law) — the *useful work potential* of the fluid relative to the ambient dead state — so the question becomes "of the work that was thermodynamically available in this steam, how much did the plant actually capture?" By that measure dry-steam units do very well (roughly half of the wellhead exergy — on the order of 45–55%), and different cycles become comparable on a common, physically honest footing.`,
         id: `Tiga ide bawa DiPippo.
 
 **Pemilihan cycle ngikutin sumber daya.** Reservoir nyerahin kamu fluid dalam suatu thermodynamic state, dan state itu milih plant-nya. Dry steam (quality pada dasarnya 1) → kirim langsung ke turbine. Pressurized hot liquid → *flash* dia: turunin pressure biar sebagian mendidih, pisahin steam itu, dan turbine-in (single-flash; lakuin dua atau tiga kali buat meres lebih banyak — double/triple-flash). Liquid terlalu dingin buat flash dengan berguna → *binary*: lewatin geofluid lewat heat exchanger yang ngedidihin working fluid terpisah yang lebih rendah titik didihnya (organic Rankine cycle) yang ngedrive turbine, dan reinject geofluid yang masih liquid. Seluruh buku diatur begini, satu cycle per chapter.
@@ -98,7 +111,7 @@ Buat field dry-steam — kelas yang owner katalog ini kerjain — cerita permuka
 
 **Satu komplikasi nyata dari dry-steam plant itu gas.** Steam geothermal bawa non-condensable gas — sebagian besar CO₂, dengan sedikit H₂S. Mereka gak condense di condenser, jadi kalau kamu biarin mereka ke-akumulasi mereka ngancurin vacuum yang power turbine-nya tergantung. Jadi dry-steam plant jalanin gas extraction kontinu (steam-jet ejector atau vacuum pump), yang itu beban *parasitic* — dia ngabisin power buat bikin power — dan beban itu tumbuh dengan gas fraction. H₂S terus biasanya butuh abatement sebelum dilepas.
 
-**Exergy itu scorecard yang benar.** First-law (thermal) efficiency bikin semua plant geothermal keliatan jelek, karena heat source-nya suam-suam kuku menurut standar power-station. Kontribusi DiPippo itu nge-score plant by **exergy** (Second-Law) — *useful work potential* fluid relatif ke ambient dead state — jadi pertanyaannya jadi "dari kerja yang secara termodinamik tersedia di steam ini, berapa banyak yang plant beneran tangkep?" Dengan ukuran itu dry-steam unit jalan sangat bagus (kira-kira setengah sampai dua-pertiga exergy wellhead), dan cycle berbeda jadi comparable di pijakan bersama yang physically honest.`
+**Exergy itu scorecard yang benar.** First-law (thermal) efficiency bikin semua plant geothermal keliatan jelek, karena heat source-nya suam-suam kuku menurut standar power-station. Kontribusi DiPippo itu nge-score plant by **exergy** (Second-Law) — *useful work potential* fluid relatif ke ambient dead state — jadi pertanyaannya jadi "dari kerja yang secara termodinamik tersedia di steam ini, berapa banyak yang plant beneran tangkep?" Dengan ukuran itu dry-steam unit jalan sangat bagus (kira-kira setengah exergy wellhead — di kisaran 45–55%), dan cycle berbeda jadi comparable di pijakan bersama yang physically honest.`
       }
     },
 
@@ -121,7 +134,7 @@ The condenser is held under vacuum (e.g. ~0.10 bara) because a lower exhaust pre
 
 $$x = \\frac{h_1 - h_f}{h_{fg}}\\bigg|_{p_{sep}}$$
 
-so $x\\,\\dot m$ goes to the turbine as steam and $(1-x)\\,\\dot m$ is reinjected as brine. A dry-steam reservoir arrives at $x \\approx 1$ and skips this entirely — there is no separator. **⟦TODO-Az: the flash machinery is the liquid/two-phase case, NOT Darajat; keep it clearly separated from the dry-steam path. Prep §9.⟧**
+so $x\\,\\dot m$ goes to the turbine as steam and $(1-x)\\,\\dot m$ is reinjected as brine. This flash machinery is the liquid/two-phase case, kept separate from the dry-steam path: a dry-steam reservoir arrives at $x \\approx 1$ and skips it entirely — there is no separator.
 
 **Exergy / utilization efficiency.** The useful work potential of a stream relative to the ambient dead state $(T_0, p_0)$ is its specific exergy:
 
@@ -131,7 +144,7 @@ and the **utilization (second-law) efficiency** is the net work captured divided
 
 $$\\eta_u = \\frac{W_{net}}{\\dot m\\,e_{in}}$$
 
-This — not first-law thermal efficiency — is the figure that lets dry-steam, flash and binary plants be compared honestly; dry-steam units typically reach $\\eta_u \\approx 50\\text{–}60\\%$ on wellhead exergy.`,
+This — not first-law thermal efficiency — is the figure that lets dry-steam, flash and binary plants be compared honestly; dry-steam units typically reach $\\eta_u \\approx 45\\text{–}55\\%$ on wellhead exergy.`,
         id: `**Kerja turbine dry-steam.** Steam masuk turbine di state 1 (enthalpy $h_1$, entropy $s_1$, dari kondisi wellhead/throttle) dan expand ke condenser pressure. Exit ideal (isentropic) punya $s_{2s} = s_1$; baca steam table di condenser pressure ngasih exit quality $x_{2s} = (s_1 - s_f)/s_{fg}$ dan enthalpy $h_{2s} = h_f + x_{2s}\\,h_{fg}$. Specific work aktual itu isentropic drop di-scale sama turbine efficiency:
 
 $$w = h_1 - h_2 = \\eta_t\\,(h_1 - h_{2s})$$
@@ -146,7 +159,7 @@ Condenser ditahan di bawah vacuum (misalnya ~0.10 bara) karena exhaust pressure 
 
 $$x = \\frac{h_1 - h_f}{h_{fg}}\\bigg|_{p_{sep}}$$
 
-jadi $x\\,\\dot m$ ke turbine sebagai steam dan $(1-x)\\,\\dot m$ direinject sebagai brine. Reservoir dry-steam datang di $x \\approx 1$ dan ngelewatin ini sepenuhnya — gak ada separator. **⟦TODO-Az: mesin flash itu kasus liquid/two-phase, BUKAN Darajat; jaga terpisah jelas dari path dry-steam. Prep §9.⟧**
+jadi $x\\,\\dot m$ ke turbine sebagai steam dan $(1-x)\\,\\dot m$ direinject sebagai brine. Mesin flash ini kasus liquid/two-phase, dijaga terpisah dari path dry-steam: reservoir dry-steam datang di $x \\approx 1$ dan ngelewatin ini sepenuhnya — gak ada separator.
 
 **Exergy / utilization efficiency.** Useful work potential sebuah stream relatif ke ambient dead state $(T_0, p_0)$ itu specific exergy-nya:
 
@@ -156,7 +169,7 @@ dan **utilization (second-law) efficiency** itu net work yang ditangkep dibagi e
 
 $$\\eta_u = \\frac{W_{net}}{\\dot m\\,e_{in}}$$
 
-Ini — bukan first-law thermal efficiency — yang ngebikin dry-steam, flash dan binary plant bisa dibandingin dengan jujur; dry-steam unit biasanya nyampe $\\eta_u \\approx 50\\text{–}60\\%$ di wellhead exergy.`
+Ini — bukan first-law thermal efficiency — yang ngebikin dry-steam, flash dan binary plant bisa dibandingin dengan jujur; dry-steam unit biasanya nyampe $\\eta_u \\approx 45\\text{–}55\\%$ di wellhead exergy.`
       }
     },
 
@@ -171,26 +184,26 @@ Isentropic exit: $x_{2s} = (s_1 - s_f)/s_{fg} = (6.663 - 0.649)/7.501 \\approx 0
 
 $$w = \\eta_t\\,(h_1 - h_{2s}) = 0.82 \\times 659 \\approx 540\\ \\text{kJ/kg}$$
 
-For a steam supply of $\\dot m = 50$ kg/s (a few productive wells), gross power $W_{gt} = 50 \\times 540 \\approx 27$ MW, and the (gross) specific steam consumption is $\\mathrm{SSC} = 3600/540 \\approx 6.7$ kg/kWh — right in the dry-steam band. The net SSC is somewhat higher once the non-condensable-gas extraction parasitic load is subtracted. **⟦TODO-Az: numbers illustrative/author-generated; the exhaust is wet ($x_{2s}<1$) so a Baumann correction is folded into $\\eta_t$; use real Darajat inlet conditions + NCG fraction when authoring. Prep §9-E.⟧**
+For a steam supply of $\\dot m = 50$ kg/s (a few productive wells), gross power $W_{gt} = 50 \\times 540 \\approx 27$ MW, and the (gross) specific steam consumption is $\\mathrm{SSC} = 3600/540 \\approx 6.7$ kg/kWh — right in the dry-steam band. The net SSC is somewhat higher once the non-condensable-gas extraction parasitic load is subtracted. These numbers are illustrative and author-generated, not plant data; note also that the exhaust here is wet ($x_{2s}<1$), so in practice a Baumann-rule correction for moisture is folded into the single value $\\eta_t$. **⟦TODO-Az: replace the illustrative inlet conditions and NCG fraction with the real Darajat turbine-inlet/condenser values when authoring. Prep §9-E.⟧**
 
 **Example 2 — a single flash, for contrast (LIQUID, not dry-steam).** A liquid-dominated geofluid at a reservoir temperature of $250\\,^{\\circ}$C (saturated-liquid enthalpy $h_1 \\approx 1086$ kJ/kg) is throttled to a separator at $8$ bara ($h_f = 720.9$, $h_{fg} = 2047.5$). The flash fraction is
 
 $$x = \\frac{h_1 - h_f}{h_{fg}} = \\frac{1086 - 720.9}{2047.5} \\approx 0.18$$
 
-so only ~18% of the produced mass becomes turbine steam and ~82% is reinjected as brine — the liquid exergy that a flash plant must discard. A dry-steam reservoir, arriving already at $x \\approx 1$, needs none of this: no throttle-to-separator, no brine, no scaling-prone flash vessels. This is the concrete reason the dry-steam cycle (Example 1) is the simplest and typically among the lowest-cost per kW for an equivalent resource. **⟦TODO-Az: this is the liquid/two-phase contrast, NOT the Darajat workflow — keep the two examples clearly separated. Prep §9.⟧**`,
+so only ~18% of the produced mass becomes turbine steam and ~82% is reinjected as brine — the liquid exergy that a flash plant must discard. This is the liquid/two-phase contrast, deliberately separate from Example 1: a dry-steam reservoir, arriving already at $x \\approx 1$, needs none of this: no throttle-to-separator, no brine, no scaling-prone flash vessels. That is the concrete reason the dry-steam cycle (Example 1) is the simplest and typically among the lowest-cost per kW for an equivalent resource.`,
         id: `**Contoh 1 — turbine dry-steam (dry-steam-safe; kasus Darajat-relevant).** Ambil saturated dry steam yang di-deliver di $8$ bara expand ke condenser di $0.10$ bara, dengan isentropic turbine efficiency $\\eta_t = 0.82$. Dari steam table: inlet $h_1 \\approx 2769$ kJ/kg, $s_1 \\approx 6.663$ kJ/kg·K; di condenser, $h_f = 191.8$, $h_{fg} = 2392.8$, $s_f = 0.649$, $s_{fg} = 7.501$.
 
 Isentropic exit: $x_{2s} = (s_1 - s_f)/s_{fg} = (6.663 - 0.649)/7.501 \\approx 0.802$, jadi $h_{2s} = 191.8 + 0.802 \\times 2392.8 \\approx 2110$ kJ/kg. Isentropic drop itu $h_1 - h_{2s} \\approx 659$ kJ/kg, dan kerja aktual
 
 $$w = \\eta_t\\,(h_1 - h_{2s}) = 0.82 \\times 659 \\approx 540\\ \\text{kJ/kg}$$
 
-Buat steam supply $\\dot m = 50$ kg/s (beberapa sumur produktif), gross power $W_{gt} = 50 \\times 540 \\approx 27$ MW, dan (gross) specific steam consumption $\\mathrm{SSC} = 3600/540 \\approx 6.7$ kg/kWh — persis di band dry-steam. Net SSC agak lebih tinggi begitu parasitic load gas extraction dikurangin. **⟦TODO-Az: angka ilustratif/author-generated; exhaust-nya wet ($x_{2s}<1$) jadi Baumann correction di-fold ke $\\eta_t$; pake inlet condition Darajat nyata + NCG fraction pas authoring. Prep §9-E.⟧**
+Buat steam supply $\\dot m = 50$ kg/s (beberapa sumur produktif), gross power $W_{gt} = 50 \\times 540 \\approx 27$ MW, dan (gross) specific steam consumption $\\mathrm{SSC} = 3600/540 \\approx 6.7$ kg/kWh — persis di band dry-steam. Net SSC agak lebih tinggi begitu parasitic load gas extraction dikurangin. Angka-angka ini ilustratif dan author-generated, bukan data plant; catat juga exhaust-nya di sini wet ($x_{2s}<1$), jadi dalam praktik koreksi Baumann-rule buat moisture di-fold ke satu nilai $\\eta_t$. **⟦TODO-Az: ganti inlet condition ilustratif dan NCG fraction dengan nilai turbine-inlet/condenser Darajat nyata pas authoring. Prep §9-E.⟧**
 
 **Contoh 2 — single flash, buat kontras (LIQUID, bukan dry-steam).** Geofluid liquid-dominated di suhu reservoir $250\\,^{\\circ}$C (saturated-liquid enthalpy $h_1 \\approx 1086$ kJ/kg) di-throttle ke separator di $8$ bara ($h_f = 720.9$, $h_{fg} = 2047.5$). Flash fraction-nya
 
 $$x = \\frac{h_1 - h_f}{h_{fg}} = \\frac{1086 - 720.9}{2047.5} \\approx 0.18$$
 
-jadi cuma ~18% massa yang diproduksi jadi turbine steam dan ~82% direinject sebagai brine — liquid exergy yang flash plant harus buang. Reservoir dry-steam, datang udah di $x \\approx 1$, gak butuh ini: gak ada throttle-to-separator, gak ada brine, gak ada flash vessel rawan-scaling. Ini alasan konkret kenapa dry-steam cycle (Contoh 1) paling sederhana dan biasanya termasuk yang biaya per kW-nya paling rendah buat sumber daya ekuivalen. **⟦TODO-Az: ini kontras liquid/two-phase, BUKAN workflow Darajat — jaga dua contoh terpisah jelas. Prep §9.⟧**`
+jadi cuma ~18% massa yang diproduksi jadi turbine steam dan ~82% direinject sebagai brine — liquid exergy yang flash plant harus buang. Ini kontras liquid/two-phase, sengaja dipisah dari Contoh 1: reservoir dry-steam, datang udah di $x \\approx 1$, gak butuh ini: gak ada throttle-to-separator, gak ada brine, gak ada flash vessel rawan-scaling. Itu alasan konkret kenapa dry-steam cycle (Contoh 1) paling sederhana dan biasanya termasuk yang biaya per kW-nya paling rendah buat sumber daya ekuivalen.`
       }
     },
 
@@ -244,7 +257,7 @@ Flash fraction $x = (h_1 - h_f)/h_{fg} = (1000 - 700)/2050 = 300/2050 \\approx 0
 **3.** First-law thermal efficiencies of geothermal plants look low (often 10–20%), yet DiPippo argues dry-steam plants are thermodynamically excellent. Resolve the apparent contradiction.
 
 <details><summary>Answer</summary>
-The two efficiencies answer different questions. First-law thermal efficiency compares net work to the total *heat* in the fluid relative to ambient, and that denominator is huge because geothermal fluid is lukewarm by power-station standards — so the ratio is small regardless of how good the plant is. Exergy (second-law / utilization) efficiency compares net work to the *available work* in the fluid — its exergy relative to the dead state — which is the work a perfect plant could extract. Dry-steam plants capture roughly half to two-thirds of that available work (η_u ≈ 50–60%), which is excellent: they are not wasting much of what was thermodynamically extractable. The low first-law number reflects a lukewarm resource, not a poor plant; exergy is the figure that isolates plant performance from resource temperature and lets cycles be compared fairly.
+The two efficiencies answer different questions. First-law thermal efficiency compares net work to the total *heat* in the fluid relative to ambient, and that denominator is huge because geothermal fluid is lukewarm by power-station standards — so the ratio is small regardless of how good the plant is. Exergy (second-law / utilization) efficiency compares net work to the *available work* in the fluid — its exergy relative to the dead state — which is the work a perfect plant could extract. Dry-steam plants capture roughly half of that available work (η_u ≈ 45–55%), which is excellent for a thermal plant of this resource grade: they are not wasting much of what was thermodynamically extractable. The low first-law number reflects a lukewarm resource, not a poor plant; exergy is the figure that isolates plant performance from resource temperature and lets cycles be compared fairly.
 </details>
 
 **4.** A developer holds three prospects: (A) a vapour-dominated field delivering dry steam at ~240 °C; (B) a liquid-dominated field at ~230 °C; (C) a liquid resource at ~120 °C. Name the power cycle each calls for and the single biggest reason.
@@ -267,7 +280,7 @@ Flash fraction $x = (h_1 - h_f)/h_{fg} = (1000 - 700)/2050 = 300/2050 \\approx 0
 **3.** First-law thermal efficiency plant geothermal keliatan rendah (sering 10–20%), tapi DiPippo berargumen dry-steam plant secara termodinamik excellent. Selesaikan kontradiksi yang keliatan ini.
 
 <details><summary>Jawaban</summary>
-Dua efficiency menjawab pertanyaan berbeda. First-law thermal efficiency ngebandingin net work ke total *heat* di fluid relatif ke ambient, dan denominator itu besar banget karena fluid geothermal suam-suam kuku menurut standar power-station — jadi rasionya kecil terlepas dari seberapa bagus plant-nya. Exergy (second-law / utilization) efficiency ngebandingin net work ke *available work* di fluid — exergy-nya relatif ke dead state — yang itu kerja yang plant sempurna bisa ekstrak. Dry-steam plant nangkep kira-kira setengah sampai dua-pertiga available work itu (η_u ≈ 50–60%), yang excellent: mereka gak buang banyak dari yang secara termodinamik extractable. Angka first-law rendah mencerminkan sumber daya suam-suam kuku, bukan plant jelek; exergy itu figure yang ngisolasi performance plant dari suhu sumber daya dan ngebikin cycle bisa dibandingin dengan adil.
+Dua efficiency menjawab pertanyaan berbeda. First-law thermal efficiency ngebandingin net work ke total *heat* di fluid relatif ke ambient, dan denominator itu besar banget karena fluid geothermal suam-suam kuku menurut standar power-station — jadi rasionya kecil terlepas dari seberapa bagus plant-nya. Exergy (second-law / utilization) efficiency ngebandingin net work ke *available work* di fluid — exergy-nya relatif ke dead state — yang itu kerja yang plant sempurna bisa ekstrak. Dry-steam plant nangkep kira-kira setengah available work itu (η_u ≈ 45–55%), yang excellent buat thermal plant kelas sumber daya ini: mereka gak buang banyak dari yang secara termodinamik extractable. Angka first-law rendah mencerminkan sumber daya suam-suam kuku, bukan plant jelek; exergy itu figure yang ngisolasi performance plant dari suhu sumber daya dan ngebikin cycle bisa dibandingin dengan adil.
 </details>
 
 **4.** Seorang developer punya tiga prospect: (A) field vapour-dominated yang deliver dry steam di ~240 °C; (B) field liquid-dominated di ~230 °C; (C) sumber daya liquid di ~120 °C. Sebutkan power cycle yang masing-masing minta dan satu alasan terbesar.
@@ -288,14 +301,14 @@ Dua efficiency menjawab pertanyaan berbeda. First-law thermal efficiency ngeband
 - **Supplied by (well scale)**: [Acuña 2008](item:acuna-2008) — dry-steam well deliverability (C_WB, PI) sets the steam mass flow and wellhead conditions that are the turbine-inlet boundary condition here. The tightest dry-steam link: Acuña is the supply curve, this is the conversion.
 - **Supplied by (reservoir scale)**: [Grant & Bixley 2011](item:grant-bixley-2011) — governs the sustainable mass/enthalpy the field can deliver over its life; DiPippo's own Ch. 4 overlaps but treats the reservoir as a boundary.
 - **Supplied by (forecast)**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) — the history-matched simulator certifies the deliverable steam/decline that determines sustained MW and capacity staging.
-- **Set up by (resource class)**: [Cumming 2009](item:cumming-2009) — the conceptual model predicts the temperature/phase class that determines which cycle is viable (Darajat vapour-dominated → dry steam). **⟦TODO-Az: Darajat's vapour-dominated/dry-steam classification is well-established but is an external fact — confirm and cite a Darajat source rather than asserting it here. Prep §9-B.⟧** Reciprocally, Cumming's own chapter appears in DiPippo's *edited* volume.
+- **Set up by (resource class)**: [Cumming 2009](item:cumming-2009) — the conceptual model predicts the temperature/phase class that determines which cycle is viable (Darajat vapour-dominated → dry steam). Reciprocally, Cumming's own chapter appears in DiPippo's *edited* volume.
 - **Foundation**: [Stober & Bucher 2021](item:stober-bucher-2021) — the survey textbook's high-enthalpy / power chapter is the survey-level version of this book's depth.`,
         id: `DiPippo itu **utilization track** katalog — root independen tanpa prerequisite, sisi demand/conversion yang ngonsumsi apa yang item subsurface suplai.
 
 - **Disuplai oleh (skala sumur)**: [Acuña 2008](item:acuna-2008) — dry-steam well deliverability (C_WB, PI) nge-set steam mass flow dan kondisi wellhead yang jadi turbine-inlet boundary condition di sini. Link dry-steam paling erat: Acuña itu supply curve, ini conversion-nya.
 - **Disuplai oleh (skala reservoir)**: [Grant & Bixley 2011](item:grant-bixley-2011) — nge-govern mass/enthalpy sustainable yang field bisa deliver sepanjang umurnya; Ch. 4 DiPippo sendiri overlap tapi treat reservoir sebagai boundary.
 - **Disuplai oleh (forecast)**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) — simulator history-matched nge-certify deliverable steam/decline yang nentuin sustained MW dan capacity staging.
-- **Disiapin oleh (resource class)**: [Cumming 2009](item:cumming-2009) — conceptual model memprediksi kelas temperature/fase yang nentuin cycle mana yang viable (Darajat vapour-dominated → dry steam). **⟦TODO-Az: klasifikasi vapour-dominated/dry-steam Darajat udah mapan tapi itu fakta eksternal — konfirmasi dan cite sumber Darajat daripada nyatain di sini. Prep §9-B.⟧** Resiprokal, chapter Cumming sendiri muncul di *edited* volume DiPippo.
+- **Disiapin oleh (resource class)**: [Cumming 2009](item:cumming-2009) — conceptual model memprediksi kelas temperature/fase yang nentuin cycle mana yang viable (Darajat vapour-dominated → dry steam). Resiprokal, chapter Cumming sendiri muncul di *edited* volume DiPippo.
 - **Fondasi**: [Stober & Bucher 2021](item:stober-bucher-2021) — chapter high-enthalpy / power textbook survey itu versi level-survey dari kedalaman buku ini.`
       }
     },

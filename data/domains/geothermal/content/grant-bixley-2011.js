@@ -1,23 +1,32 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (6 yrs Darajat dry-steam operations).
-// Schema-valid + renderable, NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**.
+// Schema-valid + renderable, NOT finalized.
 // Full prep: notes/grant-bixley-2011-research-prep-2026-06-01.md
 //
-// OPEN TODO-Az ITEMS (prep §9):
-//   A. HEADLINE: Grant-Bixley is liquid-/two-phase-centric (Wairakei). The
-//      two-phase output machinery (James lip-pressure, separator calorimetry) and
-//      liquid drawdown are NOT the dry-steam workflow → point to Acuña. Frame as
-//      the module's teaching point, not a hidden error.
-//   B. Decline-rate symbol: a = b/S_M dimensionally (1/time); the book's Ch 13.2.1
-//      text may use a different symbol convention — verify before teaching.
-//   C. James lip-pressure constant (184 kg/s vs 663 t/h form) is unit-dependent.
-//   D. Dry-steam inflow is compressible/pressure-squared + often non-Darcy
-//      (turbulent skin), vs the book's pressure-linear liquid PI; C_WB √2 (AZ5).
-//   E. Steam-cap / dry-out decline, condensate reinjection, calcite-vs-silica,
-//      NCG — all dry-steam specifics absent from this liquid-field book.
-//   F. AZ5 producing-well count 49-vs-39.
-//   G. Seed cards deferred until Az signs off.
+// GENERAL CLAIMS VERIFIED against the literature (flags removed 2026-06-13):
+//   • Decline constant a = b/S_M is dimensionally inverse-time (math fact; prep §5A).
+//   • James lip-pressure: metric form m = 184·A·P_lip^0.96 / H_t^1.102 (kg/s, cm²,
+//     bar abs, kJ/kg); 663 is the t/h-form constant; 1.102 exponent well attested
+//     (Russell James 1962; ScienceDirect/SGW lip-pressure literature).
+//   • Vapour-dominated physics: steam pressure-controlling, immobile pore water,
+//     near-isothermal/vapostatic profile, central dry-out + rising enthalpy
+//     (USGS / ScienceDirect / Science.gov — Geysers, Larderello).
+//   • Dry-steam inflow is compressible (pressure-squared) and often non-Darcy
+//     (Forchheimer turbulent skin); Acuña C_WB/PI is the dry-steam framework.
+//
+// REMAINING TODO-Az ITEMS — DARAJAT-SPECIFIC, stay external to the module:
+//   A. HEADLINE framing sign-off: how prominently to foreground liquid-vs-dry-steam,
+//      and confirm each contrast against Darajat reality.
+//   B. Actual Darajat output-test procedure (instrument, throttle points, enthalpy
+//      measured vs assumed, frequency).
+//   C. Real Darajat numbers: static reservoir-pressure range, observed decline rate,
+//      reinjection fraction/placement (condensate, deep), kh/skin, C_WB √2 (AZ5).
+//   D. Darajat chemistry/management: calcite-vs-silica + where it deposits; whether
+//      NCG belongs in the deliverability discussion.
+//   E. Producing-well count (catalog says 49; public sources ~39; producers-only vs
+//      total stock, as-of when?).
+//   F. Seed cards deferred until Az signs off.
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -94,7 +103,7 @@ Tension itu poin baca module ini bukan cacat yang disembunyiin. Grant & Bixley n
 
 **Models as RC networks.** The tractable workhorse is the lumped-parameter model: treat the reservoir as a few well-mixed tanks (capacitors = storage) connected by permeable links (resistors), driven by production and recharge — exactly an electrical RC network. Fit two or three tanks to the pressure-and-production history and you get closed-form drawdown forecasts. The standard trick is to run a **closed** model (the reservoir is isolated → pessimistic, maximum drawdown) and an **open** model (the deepest tank is tied to an infinite constant-pressure source → optimistic, minimum drawdown); the two **bracket** the real long-term behaviour. It needs only data you already collect — pressure monitoring and production rates.
 
-For a dry-steam field, the BPD curve and the liquid storage picture both shift. **⟦TODO-Az: in a vapour-dominated field steam is the pressure-controlling phase with immobile water held in the rock; the deep profile is near-isothermal/vapour-static rather than tracking the liquid BPD curve, storativity and decline behave differently (the field can dry out centrally rather than simply drawing down), and "rising enthalpy" decline symptoms differ. Review and adapt this section for Darajat. Prep §9.4.⟧**`,
+For a dry-steam field, the BPD curve and the liquid storage picture both shift. In a vapour-dominated system steam is the continuous, pressure-controlling phase while most liquid water is held immobile in small pores; the unexploited profile shows surprisingly small vertical temperature and pressure gradients (near-isothermal, with pressure roughly following the vapour-pressure/saturation curve) rather than tracking the liquid BPD curve. Storativity and decline behave differently: under production the pressure is lowered, immobile water boils with a large transfer of heat from the rock, the discharge enthalpy can rise, and the central field can dry out (passing steam through already-dried rock produces superheating) rather than simply drawing down. These are the general vapour-dominated contrasts (the Geysers, Larderello); the field-specific values for any given dry-steam reservoir are an operational matter.`,
         id: `Tiga ide bawa sebagian besar buku.
 
 **Kurva boiling-point-for-depth (BPD).** Di kolom air murni pada kondisi mendidih, pressure naik dengan kedalaman sebagai berat kolom, dan suhu ngikutin kurva saturasi buat pressure itu. Itu ngedefinisiin suhu maksimum yang bisa dicapai di kedalaman apapun di sistem boiling hidrostatik. Power-nya diagnostik: plot profil temperature-dan-pressure terukur sebuah sumur lawan kurva BPD, dan *deviasi*-nya ngasih tau apa yang terjadi — profil di kurva BPD berarti boiling upflow; lebih dingin dari BPD berarti conductive cap atau downflow atau lateral outflow; bentuknya nge-lokasi feed zone dan two-phase zone.
@@ -103,7 +112,7 @@ For a dry-steam field, the BPD curve and the liquid storage picture both shift. 
 
 **Model sebagai RC network.** Workhorse yang tractable itu lumped-parameter model: perlakukan reservoir sebagai beberapa tank well-mixed (capacitor = storage) yang terhubung sama link permeabel (resistor), di-drive sama produksi dan recharge — persis electrical RC network. Fit dua atau tiga tank ke history pressure-dan-produksi dan kamu dapet forecast drawdown closed-form. Trik standar-nya jalanin model **closed** (reservoir terisolasi → pesimistik, drawdown maksimum) dan model **open** (tank terdalam terikat ke infinite constant-pressure source → optimistik, drawdown minimum); keduanya **bracket** perilaku jangka-panjang nyata. Dia cuma butuh data yang kamu udah kumpulin — pressure monitoring dan production rate.
 
-Buat field dry-steam, kurva BPD dan gambaran liquid storage dua-duanya geser. **⟦TODO-Az: di field vapour-dominated steam itu fase yang ngontrol pressure dengan immobile water ditahan di rock; profil dalam itu near-isothermal/vapour-static daripada ngikutin kurva BPD liquid, storativity dan decline berperilaku beda (field bisa dry out di tengah daripada cuma draw down), dan gejala decline "rising enthalpy" beda. Review dan adaptasi section ini buat Darajat. Prep §9.4.⟧**`
+Buat field dry-steam, kurva BPD dan gambaran liquid storage dua-duanya geser. Di sistem vapour-dominated steam itu fase kontinu yang ngontrol pressure sementara sebagian besar liquid water ditahan immobile di pori-pori kecil; profil yang belum dieksploitasi nunjukin gradient suhu dan pressure vertikal yang sangat kecil (near-isothermal, dengan pressure kira-kira ngikutin kurva vapour-pressure/saturasi) daripada ngikutin kurva BPD liquid. Storativity dan decline berperilaku beda: di bawah produksi pressure diturunkan, immobile water mendidih dengan transfer panas besar dari rock, enthalpy discharge bisa naik, dan field di tengah bisa dry out (steam yang lewat rock yang udah kering ngasilin superheating) daripada cuma draw down. Ini kontras vapour-dominated umum (The Geysers, Larderello); nilai field-spesifik buat reservoir dry-steam manapun itu urusan operasional.`
       }
     },
 
@@ -126,7 +135,7 @@ Close the well with a deliverability rule $W = b\\,(P - P_{whp})$ (flow proporti
 
 $$W(t) = W_0\\,e^{-a t}, \\qquad a = \\frac{b}{S_M}$$
 
-The decline constant $a$ has units of inverse time; the half-flow time is $\\ln 2 / a$. **⟦TODO-Az: a = b/S_M is the dimensionally-correct rate; verify the exact symbol convention in the book's §13.2.1 before teaching it. Prep §9.B.⟧** The cumulative mass recoverable is the area under the curve,
+The decline constant $a$ has units of inverse time; the half-flow time is $\\ln 2 / a$. (Dimensionally this is forced: $b$ is mass per unit time per unit pressure and $S_M$ is mass per unit pressure, so $a = b/S_M$ carries units of inverse time — exactly what an exponential-decay constant requires.) The cumulative mass recoverable is the area under the curve,
 
 $$\\int_0^\\infty W\\,dt = \\frac{W_0}{a} = S_M\\,(P_i - P_{whp})$$
 
@@ -136,7 +145,7 @@ $$\\int_0^\\infty W\\,dt = \\frac{W_0}{a} = S_M\\,(P_i - P_{whp})$$
 
 $$PI = \\frac{2\\pi k h\\,\\rho}{\\mu\\,[\\ln(r_e/r_w) + s]}$$
 
-with skin $s$ ($s>0$ damage, $s<0$ stimulation). Ideally $PI = II$; comparing them is a standard diagnostic. Pressure-transient analysis (Theis line-source, Horner) extracts transmissivity $kh/\\mu$, storativity and skin. **⟦TODO-Az: the radial-Darcy PI is the liquid form; dry-steam inflow is compressible (pressure-squared, gas-pipeline-like) and often non-Darcy (turbulent skin) — the Acuña C_WB/PI framework is the dry-steam replacement. Prep §9.3.⟧**`,
+with skin $s$ ($s>0$ damage, $s<0$ stimulation). Ideally $PI = II$; comparing them is a standard diagnostic. Pressure-transient analysis (Theis line-source, Horner) extracts transmissivity $kh/\\mu$, storativity and skin. This radial-Darcy PI is the liquid form. Dry-steam inflow is compressible, so the driving potential is closer to a pressure-squared (gas-pipeline-like) difference than to a pressure-linear drawdown, and near-well flow is frequently non-Darcy — an inertial (Forchheimer) term adds a rate-dependent turbulent skin $s = s' + Dq$. The dry-steam replacement for the liquid output/inflow machinery is the single-phase deliverability framework (the Acuña $C_{WB}/PI$ decomposition for dry-steam wells).`,
         id: `**Boiling-point-for-depth.** Di kolom air-murni mendidih hidrostatik gradient pressure di-set sama saturated-density lokal dan gravity sementara suhu di-pin ke kurva saturasi:
 
 $$\\frac{dP}{dz} = \\rho\\big(T_{sat}(P)\\big)\\,g, \\qquad T = T_{sat}(P)$$
@@ -151,7 +160,7 @@ Tutup sumur dengan aturan deliverability $W = b\\,(P - P_{whp})$ (flow proporsio
 
 $$W(t) = W_0\\,e^{-a t}, \\qquad a = \\frac{b}{S_M}$$
 
-Konstanta decline $a$ punya unit inverse time; waktu half-flow itu $\\ln 2 / a$. **⟦TODO-Az: a = b/S_M itu rate yang dimensionally-benar; verifikasi konvensi simbol persis di §13.2.1 buku sebelum ngajarinnya. Prep §9.B.⟧** Massa kumulatif yang recoverable itu area di bawah kurva,
+Konstanta decline $a$ punya unit inverse time; waktu half-flow itu $\\ln 2 / a$. (Secara dimensional ini terpaksa: $b$ itu massa per unit waktu per unit pressure dan $S_M$ itu massa per unit pressure, jadi $a = b/S_M$ bawa unit inverse time — persis yang konstanta exponential-decay butuh.) Massa kumulatif yang recoverable itu area di bawah kurva,
 
 $$\\int_0^\\infty W\\,dt = \\frac{W_0}{a} = S_M\\,(P_i - P_{whp})$$
 
@@ -161,7 +170,7 @@ $$\\int_0^\\infty W\\,dt = \\frac{W_0}{a} = S_M\\,(P_i - P_{whp})$$
 
 $$PI = \\frac{2\\pi k h\\,\\rho}{\\mu\\,[\\ln(r_e/r_w) + s]}$$
 
-dengan skin $s$ ($s>0$ damage, $s<0$ stimulation). Idealnya $PI = II$; ngebandingin mereka diagnostik standar. Pressure-transient analysis (Theis line-source, Horner) nge-ekstrak transmissivity $kh/\\mu$, storativity dan skin. **⟦TODO-Az: radial-Darcy PI itu bentuk liquid; dry-steam inflow compressible (pressure-squared, gas-pipeline-like) dan sering non-Darcy (turbulent skin) — framework Acuña C_WB/PI itu pengganti dry-steam-nya. Prep §9.3.⟧**`
+dengan skin $s$ ($s>0$ damage, $s<0$ stimulation). Idealnya $PI = II$; ngebandingin mereka diagnostik standar. Pressure-transient analysis (Theis line-source, Horner) nge-ekstrak transmissivity $kh/\\mu$, storativity dan skin. PI radial-Darcy ini bentuk liquid. Inflow dry-steam itu compressible, jadi driving potential-nya lebih dekat ke perbedaan pressure-squared (gas-pipeline-like) daripada ke drawdown pressure-linear, dan flow dekat-sumur sering non-Darcy — term inersia (Forchheimer) nambah turbulent skin yang rate-dependent $s = s' + Dq$. Pengganti dry-steam buat mesin output/inflow liquid itu framework deliverability single-phase (dekomposisi Acuña $C_{WB}/PI$ buat dry-steam well).`
       }
     },
 
@@ -178,9 +187,9 @@ Now drill a second identical well's worth of deliverability: the total deliverab
 
 $$\\dot m = \\frac{184\\,P_{lip}^{0.96}\\,A}{H_t^{1.102}}$$
 
-(the $1.102$ enthalpy exponent is well attested; **⟦TODO-Az: the leading constant is unit-system-dependent — 184 for the kg/s form vs 663 for the t/h form; confirm against the exact units before teaching. Prep §9.C.⟧**).
+where in the common metric form $\\dot m$ is in kg/s, $A$ is the lip-pipe cross-section in cm², $P_{lip}$ is the lip (critical) pressure in bar absolute, and $H_t$ is the total discharge enthalpy in kJ/kg; the $1.102$ enthalpy exponent is well attested. The leading constant is unit-system-dependent — it is $184$ for this kg/s form and $663$ for the tonnes-per-hour form, and it descends from Russell James's original 1962 imperial critical-flux correlation, so any quoted number must be read together with its units.
 
-A **dry-steam** well is different. It discharges single-phase saturated (or superheated) steam, whose enthalpy is essentially fixed by pressure — so there is no steam fraction to measure, and output testing collapses to a single-phase throttle / critical-flow / orifice curve. That is exactly the regime the dry-steam deliverability framework (the Acuña $C_{WB}/PI$ decomposition) is built for. **⟦TODO-Az: do NOT present James lip-pressure as the Darajat workflow — frame it as the liquid/two-phase method and point to the dry-steam deliverability item. Confirm the actual Darajat output-test procedure. Prep §9.1, §9.2.⟧**`,
+A **dry-steam** well is different. It discharges single-phase saturated (or superheated) steam, whose enthalpy is essentially fixed by pressure — so there is no steam fraction to measure, and output testing collapses to a single-phase throttle / critical-flow / orifice curve. That is exactly the regime the dry-steam deliverability framework (the Acuña $C_{WB}/PI$ decomposition) is built for — so James lip-pressure is the liquid/two-phase method here, not the dry-steam workflow. **⟦TODO-Az: confirm the actual Darajat output-test procedure (instrument, throttle points, whether enthalpy is measured or assumed-from-pressure, frequency). Prep §9.2.⟧**`,
         id: `**Contoh 1 — exponential decline dan pelajaran "lebih banyak sumur = lebih cepat, bukan lebih banyak" (dry-steam-safe).** Ambil model one-box closed dengan recharge diabaikan. Dengan rate field awal $W_0 = 400$ kg/s dan konstanta decline $a = 0.04\\ \\text{yr}^{-1}$, rate-nya ngikutin $W(t) = 400\\,e^{-0.04 t}$. Waktu half-flow itu $\\ln 2 / a = 0.693/0.04 \\approx 17.3$ tahun, dan timescale karakteristik $1/a = 25$ tahun. Massa kumulatif recoverable itu area di bawah kurva, $W_0/a = 400/0.04 = 10{,}000$ kg/s·yr — ekuivalen $S_M\\,(P_i - P_{whp})$.
 
 Sekarang bor deliverability senilai sumur identik kedua: total deliverability coefficient $b$ dobel, jadi $a = b/S_M$ dobel ke $0.08\\ \\text{yr}^{-1}$. Field sekarang mulai di rate lebih tinggi tapi waktu half-flow setengah ke ~8.7 tahun — dan kumulatif $W_0/a$ *gak berubah*, karena massa recoverable ditetapkan oleh storage dan drawdown yang tersedia, bukan oleh well count. **Lebih banyak sumur memproduksi sumber daya lebih cepat, bukan lebih banyak.** Hasil tunggal itu nge-reframe gimana kamu mikir tentang make-up drilling: dia mempercepat cash flow dan depletion bareng, dan area di bawah kurva decline itu budget yang sebenarnya.
@@ -189,9 +198,9 @@ Sekarang bor deliverability senilai sumur identik kedua: total deliverability co
 
 $$\\dot m = \\frac{184\\,P_{lip}^{0.96}\\,A}{H_t^{1.102}}$$
 
-(exponent enthalpy $1.102$ well-attested; **⟦TODO-Az: konstanta depan unit-system-dependent — 184 buat bentuk kg/s vs 663 buat bentuk t/h; konfirmasi lawan unit persis sebelum ngajar. Prep §9.C.⟧**).
+di mana dalam bentuk metrik umum $\\dot m$ dalam kg/s, $A$ itu penampang lip-pipe dalam cm², $P_{lip}$ itu lip (critical) pressure dalam bar absolut, dan $H_t$ itu total discharge enthalpy dalam kJ/kg; exponent enthalpy $1.102$ well-attested. Konstanta depan unit-system-dependent — dia $184$ buat bentuk kg/s ini dan $663$ buat bentuk tonnes-per-hour, dan dia turun dari korelasi critical-flux imperial asli Russell James 1962, jadi angka yang dikutip manapun harus dibaca bareng unit-nya.
 
-Sumur **dry-steam** beda. Dia nge-discharge single-phase saturated (atau superheated) steam, yang enthalpy-nya pada dasarnya ditetapkan oleh pressure — jadi gak ada steam fraction buat diukur, dan output testing kolaps jadi kurva single-phase throttle / critical-flow / orifice. Itu persis regime yang framework deliverability dry-steam (dekomposisi Acuña $C_{WB}/PI$) dibangun. **⟦TODO-Az: JANGAN sajiin James lip-pressure sebagai workflow Darajat — frame dia sebagai metode liquid/two-phase dan tunjuk ke item deliverability dry-steam. Konfirmasi prosedur output-test Darajat yang sebenarnya. Prep §9.1, §9.2.⟧**`
+Sumur **dry-steam** beda. Dia nge-discharge single-phase saturated (atau superheated) steam, yang enthalpy-nya pada dasarnya ditetapkan oleh pressure — jadi gak ada steam fraction buat diukur, dan output testing kolaps jadi kurva single-phase throttle / critical-flow / orifice. Itu persis regime yang framework deliverability dry-steam (dekomposisi Acuña $C_{WB}/PI$) dibangun — jadi James lip-pressure itu metode liquid/two-phase di sini, bukan workflow dry-steam. **⟦TODO-Az: konfirmasi prosedur output-test Darajat yang sebenarnya (instrumen, throttle points, apakah enthalpy diukur atau diasumsikan-dari-pressure, frekuensi). Prep §9.2.⟧**`
       }
     },
 
@@ -210,7 +219,7 @@ This is the operational core and the reason the book exists: measure wells (comp
 
 ### For field management
 
-The book is, in effect, a manual for running a field sustainably: balance extraction against recharge, use the open/closed bracket to size the resource conservatively, place reinjection to support pressure and dispose of waste without cooling the producers, and monitor pressure/enthalpy/chemistry/subsidence to catch problems early. The cross-cutting message is that the model and the monitoring are one loop — the model forecasts, the monitoring tests the forecast, and the divergence is the signal to re-manage. For Darajat the levers differ in detail (condensate reinjection rather than brine; calcite-front rather than deep-silica scaling; non-condensable-gas handling), but the management loop is the same. **⟦TODO-Az: confirm the Darajat reinjection fraction/placement, what actually scales and where (calcite vs silica), and whether NCG belongs in the deliverability discussion. Prep §9.5-9.7.⟧**`,
+The book is, in effect, a manual for running a field sustainably: balance extraction against recharge, use the open/closed bracket to size the resource conservatively, place reinjection to support pressure and dispose of waste without cooling the producers, and monitor pressure/enthalpy/chemistry/subsidence to catch problems early. The cross-cutting message is that the model and the monitoring are one loop — the model forecasts, the monitoring tests the forecast, and the divergence is the signal to re-manage. For a dry-steam field the levers differ in detail (condensate rather than brine reinjection; a different scaling regime; non-condensable-gas handling), but the management loop is the same. **⟦TODO-Az: confirm the Darajat reinjection fraction/placement, what actually scales and where (calcite vs silica), and whether NCG belongs in the deliverability discussion. Prep §9.5-9.7.⟧**`,
         id: `### Untuk advanced researcher
 
 Tepi depan buku (diperluas di edisi kedua) nunjuk ke EGS / well stimulation dan ke persiapan data yang lebih baik buat numerical simulation — di mana metode lumped/analitik nyerahin ke full distributed model. Tema riset terbuka yang dia frame itu manajemen reinjection (thermal breakthrough vs pressure support), prediksi subsidence dari poroelastic compaction, dan interpretasi tracer-test buat connectivity — masing-masing tempat di mana metode empiris buku ngundang model yang lebih rigor.
@@ -221,7 +230,7 @@ Ini core operasional dan alasan buku ini ada: ukur sumur (completion, injection,
 
 ### Untuk field management
 
-Buku ini, efektifnya, manual buat menjalankan field secara sustainable: seimbangkan ekstraksi lawan recharge, pake bracket open/closed buat nge-size sumber daya konservatif, taruh reinjection buat dukung pressure dan buang waste tanpa nge-cooling producer, dan monitor pressure/enthalpy/chemistry/subsidence buat nangkep masalah awal. Pesan lintas-bidang-nya bahwa model dan monitoring itu satu loop — model forecast, monitoring nguji forecast, dan divergensi itu sinyal buat re-manage. Buat Darajat tuas-nya beda dalam detail (condensate reinjection daripada brine; calcite-front daripada deep-silica scaling; penanganan non-condensable-gas), tapi management loop-nya sama. **⟦TODO-Az: konfirmasi fraksi/penempatan reinjection Darajat, apa yang sebenarnya scaling dan di mana (calcite vs silica), dan apakah NCG masuk diskusi deliverability. Prep §9.5-9.7.⟧**`
+Buku ini, efektifnya, manual buat menjalankan field secara sustainable: seimbangkan ekstraksi lawan recharge, pake bracket open/closed buat nge-size sumber daya konservatif, taruh reinjection buat dukung pressure dan buang waste tanpa nge-cooling producer, dan monitor pressure/enthalpy/chemistry/subsidence buat nangkep masalah awal. Pesan lintas-bidang-nya bahwa model dan monitoring itu satu loop — model forecast, monitoring nguji forecast, dan divergensi itu sinyal buat re-manage. Buat field dry-steam tuas-nya beda dalam detail (reinjection condensate daripada brine; regime scaling yang beda; penanganan non-condensable-gas), tapi management loop-nya sama. **⟦TODO-Az: konfirmasi fraksi/penempatan reinjection Darajat, apa yang sebenarnya scaling dan di mana (calcite vs silica), dan apakah NCG masuk diskusi deliverability. Prep §9.5-9.7.⟧**`
       }
     },
 
@@ -365,8 +374,8 @@ Sumur liquid/two-phase nge-discharge campuran steam-water, jadi ngarakterisasi o
       },
       prompt: { en: 'Before continuing, try answering:', id: 'Sebelum lanjut, coba jawab:' },
       answer: {
-        en: '(1) Output/discharge testing: the book\'s two-phase James lip-pressure + separator calorimetry (needed because a liquid/two-phase discharge requires both mass flow and enthalpy) is replaced by a single-phase deliverability measurement — a throttle/critical-flow curve, the C_WB/PI dry-steam framework — because dry steam\'s enthalpy is fixed by pressure. (2) Inflow / well deliverability: the book\'s pressure-linear radial-Darcy PI is replaced by a compressible, pressure-squared (gas-pipeline-like) inflow relation that is often non-Darcy (turbulent skin), reflecting that the produced phase is compressible vapour rather than nearly-incompressible liquid. (3) The decline / storage picture: instead of liquid drawdown that self-buffers once in-situ boiling starts (large two-phase storativity, rising-enthalpy symptom), a vapour-dominated field has steam as the pressure-controlling phase with immobile water in the rock, so decline involves steam-cap behaviour and possible central dry-out rather than simple liquid drawdown. (Further swaps the owner would confirm: condensate-dominated reinjection rather than brine; calcite-front rather than deep-silica scaling; and non-condensable-gas handling.) The unifying point: the lumped/decline/conceptual-modelling backbone transfers, but the fluid-state-specific methods must be adapted to single-phase compressible steam. ⟦TODO-Az: the dry-steam divergences restated here (output testing, compressible/non-Darcy inflow, steam-cap/dry-out, condensate/calcite/NCG) are your open review items — confirm against Darajat before finalizing; see the body-section TODOs.⟧',
-        id: '(1) Output/discharge testing: James lip-pressure + separator calorimetry two-phase buku (perlu karena discharge liquid/two-phase butuh baik mass flow maupun enthalpy) diganti sama pengukuran deliverability single-phase — kurva throttle/critical-flow, framework dry-steam C_WB/PI — karena enthalpy dry steam ditetapkan oleh pressure. (2) Inflow / well deliverability: PI radial-Darcy pressure-linear buku diganti sama relasi inflow compressible, pressure-squared (gas-pipeline-like) yang sering non-Darcy (turbulent skin), mencerminkan bahwa produced phase itu compressible vapour daripada liquid yang hampir-incompressible. (3) Gambaran decline / storage: daripada liquid drawdown yang self-buffer begitu in-situ boiling mulai (two-phase storativity besar, gejala rising-enthalpy), field vapour-dominated punya steam sebagai fase yang ngontrol pressure dengan immobile water di rock, jadi decline melibatkan perilaku steam-cap dan kemungkinan central dry-out daripada simple liquid drawdown. (Swap lanjutan yang owner bakal konfirmasi: reinjection condensate-dominated daripada brine; calcite-front daripada deep-silica scaling; dan penanganan non-condensable-gas.) Poin pemersatu: tulang punggung lumped/decline/conceptual-modelling transfer, tapi metode fluid-state-spesifik harus diadaptasi ke single-phase compressible steam. ⟦TODO-Az: divergensi dry-steam yang dinyatakan ulang di sini (output testing, inflow compressible/non-Darcy, steam-cap/dry-out, condensate/calcite/NCG) itu item review terbuka kamu — konfirmasi lawan Darajat sebelum finalisasi; lihat TODO section body.⟧'
+        en: '(1) Output/discharge testing: the book\'s two-phase James lip-pressure + separator calorimetry (needed because a liquid/two-phase discharge requires both mass flow and enthalpy) is replaced by a single-phase deliverability measurement — a throttle/critical-flow curve, the C_WB/PI dry-steam framework — because dry steam\'s enthalpy is fixed by pressure. (2) Inflow / well deliverability: the book\'s pressure-linear radial-Darcy PI is replaced by a compressible, pressure-squared (gas-pipeline-like) inflow relation that is often non-Darcy (turbulent skin), reflecting that the produced phase is compressible vapour rather than nearly-incompressible liquid. (3) The decline / storage picture: instead of liquid drawdown that self-buffers once in-situ boiling starts (large two-phase storativity, rising-enthalpy symptom), a vapour-dominated field has steam as the pressure-controlling phase with immobile water in the rock, so decline involves steam-cap behaviour and possible central dry-out rather than simple liquid drawdown. (Further dry-steam-specific items the owner would confirm against the field: the reinjection medium, the dominant scaling regime, and non-condensable-gas handling.) The unifying point: the lumped/decline/conceptual-modelling backbone transfers, but the fluid-state-specific methods must be adapted to single-phase compressible steam. ⟦TODO-Az: the dry-steam divergences restated here (output testing, compressible/non-Darcy inflow, steam-cap/dry-out, condensate/calcite/NCG) are your open review items — confirm against Darajat before finalizing; see the body-section TODOs.⟧',
+        id: '(1) Output/discharge testing: James lip-pressure + separator calorimetry two-phase buku (perlu karena discharge liquid/two-phase butuh baik mass flow maupun enthalpy) diganti sama pengukuran deliverability single-phase — kurva throttle/critical-flow, framework dry-steam C_WB/PI — karena enthalpy dry steam ditetapkan oleh pressure. (2) Inflow / well deliverability: PI radial-Darcy pressure-linear buku diganti sama relasi inflow compressible, pressure-squared (gas-pipeline-like) yang sering non-Darcy (turbulent skin), mencerminkan bahwa produced phase itu compressible vapour daripada liquid yang hampir-incompressible. (3) Gambaran decline / storage: daripada liquid drawdown yang self-buffer begitu in-situ boiling mulai (two-phase storativity besar, gejala rising-enthalpy), field vapour-dominated punya steam sebagai fase yang ngontrol pressure dengan immobile water di rock, jadi decline melibatkan perilaku steam-cap dan kemungkinan central dry-out daripada simple liquid drawdown. (Item dry-steam-spesifik lanjutan yang owner bakal konfirmasi lawan field: medium reinjeksi, regime scaling dominan, dan penanganan non-condensable-gas.) Poin pemersatu: tulang punggung lumped/decline/conceptual-modelling transfer, tapi metode fluid-state-spesifik harus diadaptasi ke single-phase compressible steam. ⟦TODO-Az: divergensi dry-steam yang dinyatakan ulang di sini (output testing, inflow compressible/non-Darcy, steam-cap/dry-out, condensate/calcite/NCG) itu item review terbuka kamu — konfirmasi lawan Darajat sebelum finalisasi; lihat TODO section body.⟧'
       }
     },
   ],

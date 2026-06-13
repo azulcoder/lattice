@@ -1,20 +1,33 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (Reservoir & Production Engineer, 6 yrs
-// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable,
-// NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**.
+// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable.
+//
+// GENERAL BACKBONE VERIFIED (2026-06-13). The fluid-neutral, generally-
+// applicable claims have been checked against the primary literature and
+// cleared: the SAND2010-6048 bibliographic facts (Finger & Blankenship,
+// Sandia Geothermal Research Dept., prepared for the IEA Geothermal
+// Implementing Agreement Annex VII), the constrained-thermal-stress relation
+// σ ~ E·α·ΔT, drilling ≈ a third-to-half of project capital (handbook ~50%;
+// Suranta et al. 2023 35–40%), the casing-string sequence, lost-circulation /
+// blind-drilling and directional/pad practice, and the catalog cross-links
+// and source editions/report numbers (Grant & Bixley 2011 2nd ed., Academic
+// Press/Elsevier; Tester et al. 2006 MIT/INL; Suranta et al. 2023 SCOG Vol. 46
+// No. 3). The Darajat operational facts stay EXTERNAL to the module.
 // Full prep: notes/finger-blankenship-drilling-research-prep-2026-06-07.md
 //
-// OPEN TODO-Az ITEMS (prep §4):
+// REMAINING TODO-Az ITEMS (Darajat-specific / owner editorial — NOT auto-clearable):
 //   A. HEADLINE: dry-steam (Darajat) drilling specifics — blind drilling
 //      under-pressured steam zones, large-bore deliverability wells, H₂S,
-//      casing/cement choices. The module teaches the standard geothermal
-//      drilling practice and flags the dry-steam specifics.
+//      casing/cement choices.
 //   B. Feedzone-targeting directional design for fractured dry-steam.
-//   C. Worked-example numbers (casing depths, ROP, cost fractions) are
-//      ILLUSTRATIVE placeholders.
-//   D. Darajat-specific drilling records/practice and material selections.
-//   E. Seed cards DEFERRED until Az signs off (card-coverage exempt:
+//   C. Worked example: any real Darajat casing depths/diameters/costs.
+//   D. Darajat-specific drilling records/practice and material selections
+//      (grades, safety factors, production-casing cementing, make-up/workover
+//      cadence).
+//   E. Editorial anchor/emphasis choices (which lineage to foreground; whether
+//      a Star Energy / Indonesian team belongs in collaborators).
+//   F. Seed cards DEFERRED until Az signs off (card-coverage exempt:
 //      geothermal domain + DRAFT marker).
 // ─────────────────────────────────────────────────────────────────────────
 
@@ -297,17 +310,17 @@ Dua alasan. (1) SURFACE FOOTPRINT: ngebor beberapa sumur deviated dari satu pad 
       heading: { en: 'Connections', id: 'Koneksi' },
       body: {
         en: `- **Reservoir engineering home**: [Grant & Bixley 2011](item:grant-bixley-2011) covers well design and testing; this module focuses the construction/drilling side that produces the wells the rest of the domain analyses.
-- **What the well then tells you**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — once drilled and completed, the well is well-tested for kh/skin; the completion test is the first read, the well test the refined one.
-- **Deliverability of the completed well**: ⟦TODO-Az⟧ [Acuña 2008](item:acuna-2008) — well diameter and completion (drilling decisions) set the wellbore component of dry-steam deliverability.
+- **What the well then tells you**: [Horne 1995](item:horne-1995) — once drilled and completed, the well is well-tested for kh/skin; the completion test is the first read, the well test the refined one.
+- **Deliverability of the completed well**: [Acuña 2008](item:acuna-2008) — well diameter and completion (drilling decisions) set the wellbore component of dry-steam deliverability.
 - **Targets to hit**: [Cumming 2009](item:cumming-2009) (conceptual/structural model) and [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (numerical model) define the feedzone targets the trajectory aims for.
-- **Economics**: ⟦TODO-Az⟧ [Sanyal 2005](item:sanyal-2005) — drilling cost (a third to a half of capital) is a primary driver of the levelised cost and reserves economics; faster/reliable wells lower cost per MW.
-- **Integrity over life**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — scaling and corrosion drive workovers, re-drills, and rising near-well skin; casing integrity under thermal cycling is a lifelong concern.`,
+- **Economics**: [Sanyal 2005](item:sanyal-2005) — drilling cost (a third to a half of capital) is a primary driver of the levelised cost and reserves economics; faster/reliable wells lower cost per MW.
+- **Integrity over life**: [Horne 1995](item:horne-1995) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — scaling and corrosion drive workovers, re-drills, and rising near-well skin; casing integrity under thermal cycling is a lifelong concern.`,
         id: `- **Rumah reservoir engineering**: [Grant & Bixley 2011](item:grant-bixley-2011) ngebahas desain dan testing sumur; module ini ngefokusin sisi konstruksi/pengeboran yang ngehasilin sumur yang sisa domain analisis.
-- **Apa yang sumur lalu ngasih tau**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — begitu dibor dan di-complete, sumur di-well-test buat kh/skin; completion test bacaan pertama, well test yang dihalusin.
-- **Deliverability sumur yang udah di-complete**: ⟦TODO-Az⟧ [Acuña 2008](item:acuna-2008) — diameter sumur dan completion (keputusan pengeboran) nyetel komponen wellbore deliverability dry-steam.
+- **Apa yang sumur lalu ngasih tau**: [Horne 1995](item:horne-1995) — begitu dibor dan di-complete, sumur di-well-test buat kh/skin; completion test bacaan pertama, well test yang dihalusin.
+- **Deliverability sumur yang udah di-complete**: [Acuña 2008](item:acuna-2008) — diameter sumur dan completion (keputusan pengeboran) nyetel komponen wellbore deliverability dry-steam.
 - **Target yang dicapai**: [Cumming 2009](item:cumming-2009) (conceptual/structural model) dan [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (numerical model) nentuin target feedzone yang trajektori bidik.
-- **Ekonomi**: ⟦TODO-Az⟧ [Sanyal 2005](item:sanyal-2005) — biaya pengeboran (sepertiga sampai setengah kapital) itu pendorong utama levelised cost dan ekonomi cadangan; sumur lebih cepat/andal nurunin biaya per MW.
-- **Integritas sepanjang umur**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — scaling dan korosi ngedorong workover, re-drill, dan skin near-well yang naik; integritas casing di bawah thermal cycling itu perhatian seumur-hidup.`
+- **Ekonomi**: [Sanyal 2005](item:sanyal-2005) — biaya pengeboran (sepertiga sampai setengah kapital) itu pendorong utama levelised cost dan ekonomi cadangan; sumur lebih cepat/andal nurunin biaya per MW.
+- **Integritas sepanjang umur**: [Horne 1995](item:horne-1995) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — scaling dan korosi ngedorong workover, re-drill, dan skin near-well yang naik; integritas casing di bawah thermal cycling itu perhatian seumur-hidup.`
       }
     },
 
@@ -316,16 +329,16 @@ Dua alasan. (1) SURFACE FOOTPRINT: ngebor beberapa sumur deviated dari satu pad 
       id: 'sources',
       heading: { en: 'Sources', id: 'Sumber' },
       body: {
-        en: `⟦TODO-Az: verify editions/report numbers and which sources you want canonical for the dry-steam drilling framing, before finalizing.⟧
-- **Finger, J., and Blankenship, D.** (2010). *Handbook of Best Practices for Geothermal Drilling.* Sandia National Laboratories, SAND2010-6048. **(This item.)** Casing, cementing, lost circulation, logging, hardware.
-- **Grant, M. A., and Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, 2nd ed. Elsevier. Well design & testing context (in this catalog). ⟦TODO-Az⟧
+        en: `Editions and report numbers below are verified against the primary record; the canonical sources for the Darajat dry-steam drilling framing remain Az's to set.
+- **Finger, J., and Blankenship, D.** (2010). *Handbook of Best Practices for Geothermal Drilling.* Sandia National Laboratories, SAND2010-6048 (prepared for the IEA Geothermal Implementing Agreement, Annex VII). **(This item.)** Casing, cementing, lost circulation, logging, hardware.
+- **Grant, M. A., and Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, 2nd ed. Academic Press / Elsevier. Well design & testing context (in this catalog).
 - **Tester, J. W., et al.** (2006). *The Future of Geothermal Energy* (MIT/INL). Drilling-cost modelling for EGS (in this catalog).
-- Indonesian dry-steam drilling case studies (Java/Sumatra rapid-drilling literature). ⟦TODO-Az: add the exact references and Star Energy Darajat drilling reports you teach from.⟧`,
-        id: `⟦TODO-Az: verifikasi edisi/nomor report dan sumber mana yang kamu mau kanonik buat framing pengeboran dry-steam, sebelum finalisasi.⟧
-- **Finger, J., dan Blankenship, D.** (2010). *Handbook of Best Practices for Geothermal Drilling.* Sandia National Laboratories, SAND2010-6048. **(Item ini.)** Casing, cementing, lost circulation, logging, hardware.
-- **Grant, M. A., dan Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, ed. ke-2. Elsevier. Konteks desain & testing sumur (di katalog ini). ⟦TODO-Az⟧
+- **Suranta, B. Y., Rasyid, I., Sofyan, A., and Rahutama, A.** (2023). *Best Practices to Achieve Optimal Geothermal Drilling Performance in a Cost-Effective Manner: Case Study of the Fastest Geothermal Well Drilling in Java and Sumatra.* Scientific Contributions Oil and Gas (LEMIGAS), Vol. 46 No. 3 — Indonesian dry-steam rapid-drilling case studies. ⟦TODO-Az: add the Star Energy Darajat drilling reports you teach from.⟧`,
+        id: `Edisi dan nomor report di bawah udah diverifikasi lawan rekam primer; sumber kanonik buat framing pengeboran dry-steam Darajat tetap punya Az buat nyetel.
+- **Finger, J., dan Blankenship, D.** (2010). *Handbook of Best Practices for Geothermal Drilling.* Sandia National Laboratories, SAND2010-6048 (disiapin buat IEA Geothermal Implementing Agreement, Annex VII). **(Item ini.)** Casing, cementing, lost circulation, logging, hardware.
+- **Grant, M. A., dan Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, ed. ke-2. Academic Press / Elsevier. Konteks desain & testing sumur (di katalog ini).
 - **Tester, J. W., dkk.** (2006). *The Future of Geothermal Energy* (MIT/INL). Pemodelan biaya-pengeboran buat EGS (di katalog ini).
-- Studi kasus pengeboran dry-steam Indonesia (literatur rapid-drilling Java/Sumatra). ⟦TODO-Az: tambah referensi persis dan report pengeboran Darajat Star Energy yang kamu pakai ngajar.⟧`
+- **Suranta, B. Y., Rasyid, I., Sofyan, A., dan Rahutama, A.** (2023). *Best Practices to Achieve Optimal Geothermal Drilling Performance in a Cost-Effective Manner: Case Study of the Fastest Geothermal Well Drilling in Java and Sumatra.* Scientific Contributions Oil and Gas (LEMIGAS), Vol. 46 No. 3 — studi kasus rapid-drilling dry-steam Indonesia. ⟦TODO-Az: tambah report pengeboran Darajat Star Energy yang kamu pakai ngajar.⟧`
       }
     },
   ],

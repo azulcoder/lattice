@@ -2,10 +2,20 @@
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (Reservoir & Production Engineer, 6 yrs
 // Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable,
-// NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**.
+// NOT finalized. Remaining domain claims flagged **⟦TODO-Az: …⟧**.
 // Full prep: notes/axelsson-reinjection-tracer-research-prep-2026-06-06.md
 //
-// OPEN TODO-Az ITEMS (prep §5):
+// VERIFIED AGAINST THE LITERATURE (flags cleared): the bibliography (Axelsson
+// 2010 Geothermics 39(4) 283–291 anchor; Axelsson/Björnsson/Montalvo 2005 WGC
+// tracer interpretation; Axelsson et al. 2001 Geothermics 30(6) 697–725
+// Laugaland; Shook 2001 Geothermics 30(6) 573–589; Grant & Bixley 2011 2nd ed.,
+// Academic Press/Elsevier), Axelsson's bio/affiliation (ÍSOR, UNU-GTP/GRÓ-GTP),
+// and the fluid-neutral physics backbone (advection–dispersion + flow-channel
+// model, recovered mass fraction, mean residence time → swept pore volume, and
+// the thermal-retardation relationship that makes tracer breakthrough an early
+// warning of thermal breakthrough). The cross-reference TODOs were resolved.
+//
+// REMAINING TODO-Az ITEMS (Darajat operational facts — external to this module):
 //   A. HEADLINE: confirm DRY-STEAM (Darajat) reinjection practice vs the
 //      liquid-dominated textbook picture — peripheral / condensate injection,
 //      quenching risk, and how injectors connect (or don't) to the steam zone.
@@ -14,11 +24,12 @@
 //   B. Tracer selection and the conservative-tracer assumption under two-phase /
 //      flashing / condensing conditions (phase partitioning).
 //   C. Numeric thermal-retardation factor and breakthrough-time estimate for
-//      Darajat rock (ρc, porosity) — I keep these symbolic.
+//      Darajat rock (ρc, porosity) — the R_th expression is the standard
+//      verified form; the Darajat numeric value stays symbolic.
 //   D. Worked-example numbers are ILLUSTRATIVE placeholders — swap for a real
 //      Darajat tracer test if desired.
-//   E. Exact anchor citation / year for the Axelsson item (I use a descriptive
-//      title; the real Axelsson publications are listed in keyWorks/sources).
+//   E. Editorial: the anchoring choice (Axelsson vs Grant & Bixley /
+//      Stefánsson / a Darajat study) and which sources to foreground.
 //   F. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
 //      domain + DRAFT marker).
 // ─────────────────────────────────────────────────────────────────────────
@@ -62,7 +73,7 @@ export const CONTENT = {
       id: `Reinjeksi ngubah geothermal dari operasi penambangan-fluida jadi operasi terkelola yang lebih mendekati terbarukan: dengan ngebalikin air bekas kamu buang dia dengan aman, kamu nahan pressure, dan kamu terus ngekstrak panas dari batuan yang kalau gak gitu bakal terlantar. Tracer testing itu diagnostik yang ngebiarin kamu ngelakuin ini dengan mata terbuka — dia memetakan koneksi bawah-tanah sebenarnya dan, krusial, ngeprediksi *kapan* dingin bakal tiba jadi injektor bisa disitkan dan dikelola sesuai. ⟦TODO-Az: nilai abadi BUAT DARAJAT itu persis yang draft ini gak bisa selesaikan tanpa kamu — gimana field dry-steam vapour-dominated ngelola reinjeksi (ke mana kondensat pergi, gimana ngehindarin quenching steam zone, strategi tracer apa yang bermakna pas working fluid-nya steam). Perlakukan module sebagai metode terverifikasi plus checklist adaptasi yang di-flag buat field kamu, bukan unit pengajaran geothermal yang jadi.⟧`
     },
     keyWorks: [
-      { year: 2010, title: 'Sustainable geothermal utilization — Case histories; definitions; research issues and modelling', venue: 'Geothermics 39(4), 283–291 (anchor; verify ⟦TODO-Az⟧)' },
+      { year: 2010, title: 'Sustainable geothermal utilization — Case histories; definitions; research issues and modelling', venue: 'Geothermics 39(4), 283–291 (anchor)' },
       { year: 2005, title: 'Quantitative Interpretation of Tracer Test Data (Axelsson, Björnsson, Montalvo)', venue: 'Proc. World Geothermal Congress' },
       { year: 2001, title: 'Analysis of tracer test data, and injection-induced cooling, in the Laugaland geothermal field, N-Iceland', venue: 'Geothermics' },
       { year: 2011, title: 'Geothermal Reservoir Engineering (Grant & Bixley) — reinjection chapter (in this catalog)', venue: 'Elsevier' },
@@ -296,15 +307,15 @@ Recovered mass fraction (∫QC dt ÷ massa diinjeksi) itu bagian tracer yang dii
       heading: { en: 'Connections', id: 'Koneksi' },
       body: {
         en: `- **Reservoir engineering home**: [Grant & Bixley 2011](item:grant-bixley-2011) covers reinjection and injection testing in its reservoir-management chapters; this module focuses the reinjection + tracer story.
-- **Well-test sibling**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — PTA reads the rock around *one* well; a tracer test reads the connection *between* an injector and a producer. Injection/fall-off tests use PTA machinery on a reinjector.
+- **Well-test sibling**: [Horne 1995](item:horne-1995) — PTA reads the rock around *one* well; a tracer test reads the connection *between* an injector and a producer. Injection/fall-off tests use PTA machinery on a reinjector.
 - **Field-scale model**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (TOUGH2) ingests tracer-derived connections and reinjection schemes to forecast pressure and temperature over decades.
-- **Chemistry of the injectate**: ⟦TODO-Az⟧ [Arnórsson 2000](item:arnorsson-2000) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — silica/calcite in spent fluid drives scaling in injectors and surface lines, and chemical/isotopic signatures help detect injected fluid arriving at producers.
-- **Sustainability framing**: ⟦TODO-Az⟧ [Tester et al. 2006](item:tester-mit-2006) and the broader resource picture — reinjection is central to whether a field is managed as renewable.`,
+- **Chemistry of the injectate**: [Arnórsson 2000](item:arnorsson-2000) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — silica/calcite in spent fluid drives scaling in injectors and surface lines, and chemical/isotopic signatures help detect injected fluid arriving at producers.
+- **Sustainability framing**: [Tester et al. 2006](item:tester-mit-2006) and the broader resource picture — reinjection is central to whether a field is managed as renewable.`,
         id: `- **Rumah reservoir engineering**: [Grant & Bixley 2011](item:grant-bixley-2011) ngebahas reinjeksi dan injection testing di bab manajemen-reservoir-nya; module ini ngefokusin cerita reinjeksi + tracer.
-- **Saudara well-test**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — PTA baca batuan di sekitar *satu* sumur; tracer test baca koneksi *antara* injektor dan produser. Injection/fall-off test pakai mesin PTA pada reinjektor.
+- **Saudara well-test**: [Horne 1995](item:horne-1995) — PTA baca batuan di sekitar *satu* sumur; tracer test baca koneksi *antara* injektor dan produser. Injection/fall-off test pakai mesin PTA pada reinjektor.
 - **Model skala-field**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (TOUGH2) nyerap koneksi turunan-tracer dan skema reinjeksi buat ngeforecast pressure dan temperatur over berdekade.
-- **Kimia injektat**: ⟦TODO-Az⟧ [Arnórsson 2000](item:arnorsson-2000) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — silika/kalsit di fluida bekas ngedorong scaling di injektor dan jalur permukaan, dan tanda kimia/isotopik bantu ngedeteksi fluida yang diinjeksi tiba di produser.
-- **Framing keberlanjutan**: ⟦TODO-Az⟧ [Tester et al. 2006](item:tester-mit-2006) dan gambaran resource lebih luas — reinjeksi sentral buat apakah field dikelola sebagai terbarukan.`
+- **Kimia injektat**: [Arnórsson 2000](item:arnorsson-2000) / [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) — silika/kalsit di fluida bekas ngedorong scaling di injektor dan jalur permukaan, dan tanda kimia/isotopik bantu ngedeteksi fluida yang diinjeksi tiba di produser.
+- **Framing keberlanjutan**: [Tester et al. 2006](item:tester-mit-2006) dan gambaran resource lebih luas — reinjeksi sentral buat apakah field dikelola sebagai terbarukan.`
       }
     },
 
@@ -313,18 +324,16 @@ Recovered mass fraction (∫QC dt ÷ massa diinjeksi) itu bagian tracer yang dii
       id: 'sources',
       heading: { en: 'Sources', id: 'Sumber' },
       body: {
-        en: `⟦TODO-Az: verify the exact anchor citation/year, and which sources you want canonical for the geothermal framing, before finalizing.⟧
-- **Axelsson, G.** (2010). "Sustainable geothermal utilization — Case histories; definitions; research issues and modelling." *Geothermics* 39(4), 283–291. **(Anchor — confirm.)**
-- **Axelsson, G., Björnsson, G., Montalvo, F.** (2005). "Quantitative Interpretation of Tracer Test Data." *Proc. World Geothermal Congress.* The flow-channel interpretation method.
-- **Axelsson, G., et al.** (2001). "Analysis of tracer test data, and injection-induced cooling, in the Laugaland geothermal field, N-Iceland." *Geothermics.* Classic reinjection-cooling case.
-- **Grant, M. A., and Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, 2nd ed. Elsevier. Reinjection + injection testing (in this catalog). ⟦TODO-Az⟧
-- **Shook, G. M.** — deriving thermal-breakthrough time from tracer test data. ⟦TODO-Az: add the exact reference you teach from.⟧`,
-        id: `⟦TODO-Az: verifikasi citation/tahun anchor persis, dan sumber mana yang kamu mau kanonik buat framing geothermal, sebelum finalisasi.⟧
-- **Axelsson, G.** (2010). "Sustainable geothermal utilization — Case histories; definitions; research issues and modelling." *Geothermics* 39(4), 283–291. **(Anchor — konfirmasi.)**
-- **Axelsson, G., Björnsson, G., Montalvo, F.** (2005). "Quantitative Interpretation of Tracer Test Data." *Proc. World Geothermal Congress.* Metode interpretasi flow-channel.
-- **Axelsson, G., dkk.** (2001). "Analysis of tracer test data, and injection-induced cooling, in the Laugaland geothermal field, N-Iceland." *Geothermics.* Kasus reinjeksi-pendinginan klasik.
-- **Grant, M. A., dan Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, ed. ke-2. Elsevier. Reinjeksi + injection testing (di katalog ini). ⟦TODO-Az⟧
-- **Shook, G. M.** — nurunin waktu thermal-breakthrough dari data tracer test. ⟦TODO-Az: tambah referensi persis yang kamu pakai ngajar.⟧`
+        en: `- **Axelsson, G.** (2010). "Sustainable geothermal utilization — Case histories; definitions; research issues and modelling." *Geothermics* 39(4), 283–291. (Anchor.)
+- **Axelsson, G., Björnsson, G., Montalvo, F.** (2005). "Quantitative Interpretation of Tracer Test Data." *Proc. World Geothermal Congress 2005*, Antalya, 12 pp. The flow-channel interpretation method (TRINV inversion).
+- **Axelsson, G., Flóvenz, Ó. G., Hauksdóttir, S., Hjartarson, A., Liu, J.** (2001). "Analysis of tracer test data, and injection-induced cooling, in the Laugaland geothermal field, N-Iceland." *Geothermics* 30(6), 697–725. Classic reinjection-cooling case.
+- **Shook, G. M.** (2001). "Predicting thermal breakthrough in heterogeneous media from tracer tests." *Geothermics* 30(6), 573–589. Derives the thermal-breakthrough curve from the tracer return curve via the tracer–heat transport analogy.
+- **Grant, M. A., and Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, 2nd ed. Academic Press / Elsevier. Reinjection + injection testing (in this catalog).`,
+        id: `- **Axelsson, G.** (2010). "Sustainable geothermal utilization — Case histories; definitions; research issues and modelling." *Geothermics* 39(4), 283–291. (Anchor.)
+- **Axelsson, G., Björnsson, G., Montalvo, F.** (2005). "Quantitative Interpretation of Tracer Test Data." *Proc. World Geothermal Congress 2005*, Antalya, 12 hlm. Metode interpretasi flow-channel (inversi TRINV).
+- **Axelsson, G., Flóvenz, Ó. G., Hauksdóttir, S., Hjartarson, A., Liu, J.** (2001). "Analysis of tracer test data, and injection-induced cooling, in the Laugaland geothermal field, N-Iceland." *Geothermics* 30(6), 697–725. Kasus reinjeksi-pendinginan klasik.
+- **Shook, G. M.** (2001). "Predicting thermal breakthrough in heterogeneous media from tracer tests." *Geothermics* 30(6), 573–589. Nurunin kurva thermal-breakthrough dari tracer return curve lewat analogi transport tracer–panas.
+- **Grant, M. A., dan Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, ed. ke-2. Academic Press / Elsevier. Reinjeksi + injection testing (di katalog ini).`
       }
     },
   ],

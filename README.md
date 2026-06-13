@@ -60,7 +60,7 @@ Built bottom-up across ~17 phase commits + 4 infrastructure runs. Each phase shi
 
 ## Current state
 
-**Content (44 rich modules + 15 drafts + catalog of 59 items across 3 domains — 19 microstructure + 17 geothermal + 23 trading; all 59 catalog items now have content modules — microstructure all rich; geothermal Acuña + Stober-Bucher rich + 15 audited drafts; trading = 23 attributed practitioner/quant modules with cards):**
+**Content (45 rich modules + 14 drafts + catalog of 59 items across 3 domains — 19 microstructure + 17 geothermal + 23 trading; all 59 catalog items now have content modules — microstructure all rich; geothermal Acuña + Stober-Bucher + Tester-MIT finalized + 14 audited drafts; trading = 23 attributed practitioner/quant modules with cards):**
 
 **20 rich modules** (full bilingual content, all 8 sections, ≥13 SRS cards each):
 
@@ -235,7 +235,7 @@ node scripts/verify-all.mjs --quiet      # CI-friendly summary
 node scripts/verify-acuna-prep.mjs       # 96 checks (Acuña solver)
 node scripts/verify-gm-sim.mjs           # 143 checks (GM Bayesian theory)
 node scripts/verify-roll-sim.mjs         # 30 checks (Roll statistical theory)
-node scripts/verify-content-schema.mjs   # 4414 checks (59 content modules: 44 final + 15 drafts)
+node scripts/verify-content-schema.mjs   # 4414 checks (59 content modules: 45 final + 14 drafts)
 node scripts/verify-reference.mjs        # 24 checks (glossary + notation, all domains; KaTeX-parses every symbol)
 
 # Filter to one section

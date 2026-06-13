@@ -1,26 +1,37 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (Reservoir & Production Engineer, 6 yrs
-// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable,
-// NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**. Geochemistry is deep
-// domain; the dry-steam adaptation in particular is squarely Az's.
-// Full prep: notes/giggenbach-production-geochemistry-research-prep-2026-06-06.md
+// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable.
 //
-// OPEN TODO-Az ITEMS (prep §5):
-//   A. HEADLINE: the DRY-STEAM adaptation — when the wellhead fluid is steam +
-//      non-condensable gas (not liquid), the SOLUTE geothermometers (Na-K,
-//      silica) do not directly apply; reservoir-temperature and process
-//      monitoring lean on GAS geothermometry + steam/condensate chemistry. The
-//      module teaches the standard (liquid) solute machinery and the Na-K-Mg
-//      diagram, and flags the dry-steam/gas pathway as the teaching point.
-//   B. Exact geothermometer constants/conventions (Na-K, silica) and which
-//      calibration to teach — I give the Giggenbach Na-K form and flag it.
+// GENERAL CLAIMS VERIFIED AGAINST THE LITERATURE (2026-06-13): the Giggenbach
+// (1988) Na-K geothermometer form T = 1390/(1.75 + log[Na/K]) − 273.15 (Na, K by
+// weight; best for T ≳ 180 °C), its difference from the Fournier (1979) Na-K
+// calibration, the Na-K-Mg geoindicator diagram (vertices Na/1000, K/100, √Mg;
+// fully-equilibrated / partially-equilibrated / immature classes), the silica
+// (quartz, Fournier) and gas-equilibrium (CO₂-H₂S-H₂-CH₄) geothermometry
+// principle, and the author-bio backbone (Giggenbach, DSIR/IGNS New Zealand,
+// d. 1997 at Rabaul) are all confirmed against multiple sources.
+//
+// DARAJAT / SITE-SPECIFIC FACTS STAY EXTERNAL TO THE MODULE — they are Az's and
+// remain flagged **⟦TODO-Az: …⟧**. Open items still requiring Az:
+//   A. HEADLINE: the DRY-STEAM adaptation — at a vapour-dominated wellhead the
+//      fluid is steam + non-condensable gas (not liquid), so the SOLUTE
+//      geothermometers (Na-K, silica) do not directly apply; reservoir-T and
+//      process monitoring lean on GAS geothermometry + steam/condensate
+//      chemistry. The module teaches the standard (liquid) solute machinery and
+//      the Na-K-Mg diagram, and flags the dry-steam/gas pathway as Az's.
+//   B. WHICH calibrations Star Energy trusts for the field, and the silica
+//      boiling/steam-loss correction to teach (the equations themselves are
+//      verified above; the field choice is Az's).
 //   C. Steam/condensate/gas sampling protocol for a Darajat dry-steam well.
 //   D. Scaling & NCG specifics for the field; worked-example numbers are
-//      ILLUSTRATIVE placeholders.
-//   E. Overlap boundaries with the Henley-Truesdell-Barton and Arnórsson drafts.
-//   F. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
+//      ILLUSTRATIVE placeholders, not Darajat values.
+//   E. Reinjection-return monitoring and PTA/simulation integration AT DARAJAT.
+//   F. Anchor/lineage curation (Giggenbach vs Arnórsson/Fournier/HTB) and the
+//      overlap boundaries with the sibling drafts — editorial calls for Az.
+//   G. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
 //      domain + DRAFT marker).
+// Full prep: notes/giggenbach-production-geochemistry-research-prep-2026-06-06.md
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -132,7 +143,7 @@ Kimia yang sama ngingetin kamu soal **scaling**. Seiring fluida dalam naik dan m
 - **Silica (quartz)**: $T$ is an increasing function of dissolved $[\\mathrm{SiO_2}]$ (quartz solubility). ⟦TODO-Az: exact calibration (Fournier) and the conductive-vs-adiabatic/steam-loss correction are yours.⟧
 - **Na-K**: the canonical Giggenbach form is
 $$T(^{\\circ}\\mathrm{C}) \\;=\\; \\frac{1390}{1.75 + \\log_{10}(\\mathrm{Na}/\\mathrm{K})} \\;-\\; 273.15,$$
-with Na, K by weight; best for $T \\gtrsim 180\\,^{\\circ}\\mathrm{C}$, and (being slow to re-equilibrate) it tends to record the deepest, hottest equilibrium. ⟦TODO-Az: confirm the exact constants and ratio convention you teach — calibrations differ (Fournier 1979 vs Giggenbach 1988).⟧
+with Na, K by weight; best for $T \\gtrsim 180\\,^{\\circ}\\mathrm{C}$, and (being slow to re-equilibrate) it tends to record the deepest, hottest equilibrium. (Other published Na-K calibrations — e.g. Fournier 1979 — use slightly different constants; this is the Giggenbach 1988 form.)
 - **K-Mg**: fast-equilibrating; records a shallower/last temperature, useful read alongside Na-K to detect re-equilibration.
 
 **The Na-K-Mg geoindicator diagram (Giggenbach 1988).** Plot each water on a ternary with vertices proportional to $\\mathrm{Na}/1000$, $\\mathrm{K}/100$, and $\\sqrt{\\mathrm{Mg}}$. Three domains:
@@ -154,7 +165,7 @@ The solute geothermometry + Na-K-Mg diagram + gas-equilibrium principle above ar
 - **Silika (kuarsa)**: $T$ itu fungsi naik dari $[\\mathrm{SiO_2}]$ terlarut (kelarutan kuarsa). ⟦TODO-Az: kalibrasi persis (Fournier) dan koreksi conductive-vs-adiabatic/steam-loss itu punya kamu.⟧
 - **Na-K**: bentuk Giggenbach kanonik itu
 $$T(^{\\circ}\\mathrm{C}) \\;=\\; \\frac{1390}{1.75 + \\log_{10}(\\mathrm{Na}/\\mathrm{K})} \\;-\\; 273.15,$$
-dengan Na, K by weight; terbaik buat $T \\gtrsim 180\\,^{\\circ}\\mathrm{C}$, dan (karena lambat re-equilibrasi) dia cenderung ngerekam kesetimbangan terdalam, terpanas. ⟦TODO-Az: konfirmasi konstanta persis dan konvensi rasio yang kamu ajarin — kalibrasi beda (Fournier 1979 vs Giggenbach 1988).⟧
+dengan Na, K by weight; terbaik buat $T \\gtrsim 180\\,^{\\circ}\\mathrm{C}$, dan (karena lambat re-equilibrasi) dia cenderung ngerekam kesetimbangan terdalam, terpanas. (Kalibrasi Na-K lain yang dipublikasi — misal Fournier 1979 — pakai konstanta sedikit beda; ini bentuk Giggenbach 1988.)
 - **K-Mg**: cepat-equilibrasi; ngerekam temperatur lebih dangkal/terakhir, berguna dibaca di samping Na-K buat ngedeteksi re-equilibrasi.
 
 **Diagram geoindicator Na-K-Mg (Giggenbach 1988).** Plot tiap air di terner dengan vertex proporsional ke $\\mathrm{Na}/1000$, $\\mathrm{K}/100$, dan $\\sqrt{\\mathrm{Mg}}$. Tiga domain:
@@ -247,7 +258,7 @@ Because a geothermometer is only valid if the water actually reached equilibrium
 **2.** Na-K and K-Mg geothermometers can disagree. Why, and what does the disagreement tell you?
 
 <details><summary>Answer</summary>
-Because they equilibrate at different speeds. Na-K is SLOW to re-equilibrate, so it "remembers" the deepest, hottest equilibrium even as the fluid ascends and cools — it records the deep reservoir temperature. K-Mg is FAST, re-equilibrating readily at shallower, cooler conditions, so it records a more recent/shallower temperature. If they agree, the fluid ascended quickly without much re-equilibration. If K-Mg reads well below Na-K, the water partially re-equilibrated on the way up — Na-K still gives the deep value, and the gap quantifies the shallow cooling/mixing. The two clocks together are more informative than either alone. ⟦TODO-Az: confirm the calibrations you teach.⟧
+Because they equilibrate at different speeds. Na-K is SLOW to re-equilibrate, so it "remembers" the deepest, hottest equilibrium even as the fluid ascends and cools — it records the deep reservoir temperature. K-Mg is FAST, re-equilibrating readily at shallower, cooler conditions, so it records a more recent/shallower temperature. If they agree, the fluid ascended quickly without much re-equilibration. If K-Mg reads well below Na-K, the water partially re-equilibrated on the way up — Na-K still gives the deep value, and the gap quantifies the shallow cooling/mixing. The two clocks together are more informative than either alone.
 </details>
 
 **3.** A produced water's silica geothermometer reads lower than its Na-K. Give two physical explanations.
@@ -272,7 +283,7 @@ Karena geothermometer cuma valid kalau airnya beneran nyampe kesetimbangan denga
 **2.** Geothermometer Na-K dan K-Mg bisa gak sepakat. Kenapa, dan apa yang ketidaksepakatannya ngasih tau kamu?
 
 <details><summary>Jawaban</summary>
-Karena mereka equilibrasi di kecepatan berbeda. Na-K itu LAMBAT re-equilibrasi, jadi dia "inget" kesetimbangan terdalam, terpanas bahkan saat fluida naik dan mendingin — dia ngerekam temperatur reservoir dalam. K-Mg itu CEPAT, re-equilibrasi dengan mudah di kondisi lebih dangkal, lebih dingin, jadi dia ngerekam temperatur lebih baru/lebih dangkal. Kalau mereka sepakat, fluidanya naik cepat tanpa banyak re-equilibrasi. Kalau K-Mg baca jauh di bawah Na-K, airnya sebagian re-equilibrasi dalam perjalanan naik — Na-K masih ngasih nilai dalam, dan gap-nya ngukur cooling/mixing dangkal. Dua jam bareng lebih informatif dari salah satu sendirian. ⟦TODO-Az: konfirmasi kalibrasi yang kamu ajarin.⟧
+Karena mereka equilibrasi di kecepatan berbeda. Na-K itu LAMBAT re-equilibrasi, jadi dia "inget" kesetimbangan terdalam, terpanas bahkan saat fluida naik dan mendingin — dia ngerekam temperatur reservoir dalam. K-Mg itu CEPAT, re-equilibrasi dengan mudah di kondisi lebih dangkal, lebih dingin, jadi dia ngerekam temperatur lebih baru/lebih dangkal. Kalau mereka sepakat, fluidanya naik cepat tanpa banyak re-equilibrasi. Kalau K-Mg baca jauh di bawah Na-K, airnya sebagian re-equilibrasi dalam perjalanan naik — Na-K masih ngasih nilai dalam, dan gap-nya ngukur cooling/mixing dangkal. Dua jam bareng lebih informatif dari salah satu sendirian.
 </details>
 
 **3.** Geothermometer silika air yang diproduksi baca lebih rendah dari Na-K-nya. Kasih dua penjelasan fisik.

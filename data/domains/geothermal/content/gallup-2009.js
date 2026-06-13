@@ -1,24 +1,36 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored (Reservoir & Production Engineer, 6 yrs
-// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable,
-// NOT finalized. Domain claims flagged **⟦TODO-Az: …⟧**. The dry-steam
-// adaptation here is squarely Az's.
-// Full prep: notes/gallup-scaling-corrosion-research-prep-2026-06-07.md
+// Star Energy Geothermal Darajat — dry-steam). Schema-valid + renderable.
 //
-// OPEN TODO-Az ITEMS (prep §5):
-//   A. HEADLINE: the dry-steam adaptation — a vapour-dominated field produces
-//      steam + NCG, NOT brine, so condensate chemistry + H₂S/NCG abatement +
-//      line corrosion dominate; brine silica/calcite scaling much less so. Most
-//      of Gallup's review is liquid/brine fields. The module teaches the
-//      standard (liquid-field) scaling/corrosion engineering and flags the
-//      dry-steam shift as the teaching point.
+// VERIFIED (general claims cleared against the literature, 2026-06-13):
+//   The liquid-field scaling/corrosion backbone — amorphous-silica solubility
+//   vs temperature, flashing concentration ~1/(1−y) and kinetically-controlled
+//   polymerisation, residence-time / pH-modification (lower pH ~5–6) controls;
+//   retrograde calcite at the flash/gas-breakout horizon from CO₂ loss and the
+//   downhole-capillary inhibitor fix; corrosion drivers (H₂S, CO₂, chloride,
+//   trace O₂ → pitting/SSC); NCG/H₂S abatement — is confirmed across primary
+//   sources. All bibliographic facts (Gallup 2009 Geothermics 38(3) 326–334;
+//   Gallup 2002 Geothermics 31(4) 415–430; Gallup 1996 GRC pH-mod; Gallup's
+//   Texaco→Unocal→Chevron→Thermochem bio + pH-mod/Salton Sea; HTB 1984,
+//   Giggenbach 1988 citations; catalog cross-references) are verified.
+//   Darajat operational facts stay external to the module.
+//
+// OPEN TODO-Az ITEMS (Darajat/dry-steam — owner's alone):
+//   A. HEADLINE dry-steam adaptation: a vapour-dominated field produces steam +
+//      NCG, NOT brine, so condensate chemistry + H₂S/NCG abatement + line
+//      corrosion dominate; brine silica/calcite scaling much less so. The module
+//      teaches the verified liquid-field engineering and flags the dry-steam
+//      shift as Az's teaching point.
 //   B. Darajat scaling/corrosion problems, NCG/H₂S load, chemical-treatment program.
-//   C. pH-mod / inhibitor program relevance to a dry-steam field.
+//   C. pH-mod / inhibitor program relevance + set-points for a dry-steam field.
 //   D. Worked-example numbers are ILLUSTRATIVE placeholders.
-//   E. Reinjection-side scaling coupling (Axelsson).
-//   F. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
+//   E. Reinjection-side scaling coupling + injector chemistry (Axelsson).
+//   F. Catalog-emphasis / lineage curation and whether Star Energy / Indonesian
+//      production-chemistry colleagues belong (intellectual-lineage, collaborators).
+//   G. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
 //      domain + DRAFT marker).
+// Full prep: notes/gallup-scaling-corrosion-research-prep-2026-06-07.md
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -38,10 +50,10 @@ export const CONTENT = {
     bio: {
       en: `Darrell Gallup spent decades on the unglamorous problem that decides whether a geothermal field actually keeps running: the chemistry of the produced fluid as it cools, flashes, and is reinjected. Across Unocal, Chevron Geothermal, and later Thermochem he worked the full span of geothermal **flow assurance** — silica and calcite **scaling**, **corrosion** by H₂S/CO₂/chloride, and **non-condensable-gas** handling — and is best known as the inventor of the **pH-modification process** for controlling silica scale (patented at Unocal and applied at the Salton Sea, one of the most chemically hostile brines in the industry). His 2009 *Geothermics* review, "Production engineering in geothermal technology," surveys the field's practical chemistry challenges and their controls.
 
-⟦TODO-Az: bio/affiliation are from public record; confirm before finalizing. Anchoring a scaling/corrosion module on Gallup is a drafting choice, and a deliberate one — his career is the production-chemistry counterweight to the *equilibrium* geochemistry of Henley/Giggenbach/Arnórsson already in this catalog. Tell me if you would rather anchor on a specific scaling-control paper or on Star Energy's own chemical-treatment practice.⟧`,
+Anchoring a scaling/corrosion module on Gallup is a deliberate choice: his career is the production-chemistry counterweight to the *equilibrium* geochemistry of Henley/Giggenbach/Arnórsson already in this catalog.`,
       id: `Darrell Gallup ngabisin puluhan tahun di masalah gak-glamor yang nentuin apakah field geothermal beneran terus jalan: kimia fluida yang diproduksi seiring dia mendingin, flash, dan direinjeksi. Lintas Unocal, Chevron Geothermal, dan kemudian Thermochem dia ngerjain rentang penuh **flow assurance** geothermal — **scaling** silika dan kalsit, **korosi** oleh H₂S/CO₂/klorida, dan penanganan **non-condensable-gas** — dan paling dikenal sebagai penemu **proses pH-modification** buat ngontrol silica scale (dipatenin di Unocal dan diterapin di Salton Sea, salah satu brine paling hostil secara kimia di industri). Review *Geothermics* 2009-nya, "Production engineering in geothermal technology," nyurvei tantangan kimia praktis field dan kontrolnya.
 
-⟦TODO-Az: bio/afiliasi dari public record; konfirmasi sebelum finalisasi. Nge-anchor module scaling/korosi ke Gallup itu pilihan drafting, dan disengaja — karirnya itu penyeimbang kimia-produksi buat geokimia *kesetimbangan* Henley/Giggenbach/Arnórsson yang udah di katalog ini. Bilang kalau kamu lebih mau nge-anchor ke paper kontrol-scaling spesifik atau ke praktik chemical-treatment Star Energy sendiri.⟧`
+Nge-anchor module scaling/korosi ke Gallup itu pilihan yang disengaja: karirnya itu penyeimbang kimia-produksi buat geokimia *kesetimbangan* Henley/Giggenbach/Arnórsson yang udah di katalog ini.`
     },
     focus: {
       en: `Geochemistry has two faces in a geothermal field. One reads the fluid to learn about the reservoir (geothermometry — the Giggenbach module). The other fights the fluid to keep the field running, because the same dissolved load, once the fluid cools and flashes on its way up and through the plant, comes out of solution and attacks the hardware. **Production chemistry** is that second face — the engineering of **scaling**, **corrosion**, and **gas handling**:
@@ -71,8 +83,8 @@ Kontrolnya toolkit chemist: jaga fluida di atas saturation, kelola residence tim
     },
     keyWorks: [
       { year: 2009, title: 'Production engineering in geothermal technology: A review (this item)', venue: 'Geothermics 38(3), 326–334' },
-      { year: 2002, title: 'Investigations of organic inhibitors for silica scale control from geothermal brines', venue: 'Geothermics ⟦TODO-Az: confirm year/volume⟧' },
-      { year: 1996, title: 'pH-modification ("pH-mod") process for silica-scale control (Unocal; Salton Sea)', venue: 'Unocal patent / GRC ⟦TODO-Az: confirm⟧' },
+      { year: 2002, title: 'Investigations of organic inhibitors for silica scale control from geothermal brines', venue: 'Geothermics 31(4), 415–430' },
+      { year: 1996, title: 'Brine pH modification scale control technology (pH-mod for silica scale; Unocal-patented process, Salton Sea)', venue: 'GRC Transactions' },
       { year: 1984, title: 'Fluid-Mineral Equilibria in Hydrothermal Systems (Henley, Truesdell, Barton) — the scaling thermodynamics root (in this catalog)', venue: 'SEG Reviews' },
       { year: 1988, title: 'Geothermal solute equilibria (Giggenbach) — the fluid chemistry behind the scaling (in this catalog)', venue: 'Geochimica et Cosmochimica Acta' },
     ],
@@ -296,17 +308,17 @@ Fluida yang dikirim balik turun oleh reinjeksi (topik Axelsson) itu stream palin
       id: 'connections',
       heading: { en: 'Connections', id: 'Koneksi' },
       body: {
-        en: `- **Equilibrium-chemistry root**: [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) supplies the fluid-mineral equilibrium thermodynamics behind silica/calcite saturation; this module is its production-engineering application. ⟦TODO-Az⟧
-- **The fluid being managed**: ⟦TODO-Az⟧ [Giggenbach 1988](item:giggenbach-1988) / [Arnórsson 2000](item:arnorsson-2000) — the same dissolved load read as a geothermometer is what scales and corrodes here; two faces of one chemistry.
-- **Scale ↔ skin**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — silica/calcite deposition near the wellbore is a physical driver of rising skin over a well's life; the well test detects it.
-- **Reinjection coupling**: ⟦TODO-Az⟧ [Axelsson 2010](item:axelsson-2010) — the cooled, concentrated reinjectate is the most scale-prone stream; injector chemistry and the reinjection scheme are designed together.
-- **Well integrity**: ⟦TODO-Az⟧ [Finger-Blankenship 2010](item:finger-blankenship-2010) — corrosion and scale drive workovers and casing-integrity concerns over the well's life.
+        en: `- **Equilibrium-chemistry root**: [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) supplies the fluid-mineral equilibrium thermodynamics behind silica/calcite saturation; this module is its production-engineering application.
+- **The fluid being managed**: [Giggenbach 1988](item:giggenbach-1988) / [Arnórsson 2000](item:arnorsson-2000) — the same dissolved load read as a geothermometer is what scales and corrodes here; two faces of one chemistry.
+- **Scale ↔ skin**: [Horne 1995](item:horne-1995) — silica/calcite deposition near the wellbore is a physical driver of rising skin over a well's life; the well test detects it.
+- **Reinjection coupling**: [Axelsson 2010](item:axelsson-2010) — the cooled, concentrated reinjectate is the most scale-prone stream; injector chemistry and the reinjection scheme are designed together.
+- **Well integrity**: [Finger-Blankenship 2010](item:finger-blankenship-2010) — corrosion and scale drive workovers and casing-integrity concerns over the well's life.
 - **Plant & NCG**: [DiPippo 2016](item:dipippo-2016) — the non-condensable gases and corrosive condensate are handled in the surface plant (condenser, gas extraction, H₂S abatement).`,
-        id: `- **Akar kimia-kesetimbangan**: [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) nyuplai termodinamika kesetimbangan fluida-mineral di balik silica/calcite saturation; module ini aplikasi production-engineering-nya. ⟦TODO-Az⟧
-- **Fluida yang dikelola**: ⟦TODO-Az⟧ [Giggenbach 1988](item:giggenbach-1988) / [Arnórsson 2000](item:arnorsson-2000) — muatan terlarut yang sama yang dibaca sebagai geothermometer itu yang nge-scale dan ngorosi di sini; dua wajah satu kimia.
-- **Scale ↔ skin**: ⟦TODO-Az⟧ [Horne 1995](item:horne-1995) — deposisi silika/calcite near-wellbore itu pendorong fisik skin yang naik sepanjang umur sumur; well test ngedeteksinya.
-- **Coupling reinjeksi**: ⟦TODO-Az⟧ [Axelsson 2010](item:axelsson-2010) — reinjektat yang didinginin, dikonsentrasi itu stream paling rawan-scale; kimia injektor dan skema reinjeksi didesain bareng.
-- **Integritas sumur**: ⟦TODO-Az⟧ [Finger-Blankenship 2010](item:finger-blankenship-2010) — korosi dan scale ngedorong workover dan perhatian integritas-casing sepanjang umur sumur.
+        id: `- **Akar kimia-kesetimbangan**: [Henley-Truesdell-Barton 1984](item:henley-truesdell-barton-1984) nyuplai termodinamika kesetimbangan fluida-mineral di balik silica/calcite saturation; module ini aplikasi production-engineering-nya.
+- **Fluida yang dikelola**: [Giggenbach 1988](item:giggenbach-1988) / [Arnórsson 2000](item:arnorsson-2000) — muatan terlarut yang sama yang dibaca sebagai geothermometer itu yang nge-scale dan ngorosi di sini; dua wajah satu kimia.
+- **Scale ↔ skin**: [Horne 1995](item:horne-1995) — deposisi silika/calcite near-wellbore itu pendorong fisik skin yang naik sepanjang umur sumur; well test ngedeteksinya.
+- **Coupling reinjeksi**: [Axelsson 2010](item:axelsson-2010) — reinjektat yang didinginin, dikonsentrasi itu stream paling rawan-scale; kimia injektor dan skema reinjeksi didesain bareng.
+- **Integritas sumur**: [Finger-Blankenship 2010](item:finger-blankenship-2010) — korosi dan scale ngedorong workover dan perhatian integritas-casing sepanjang umur sumur.
 - **Plant & NCG**: [DiPippo 2016](item:dipippo-2016) — non-condensable gas dan condensate korosif ditangani di surface plant (condenser, gas extraction, H₂S abatement).`
       }
     },
@@ -316,17 +328,15 @@ Fluida yang dikirim balik turun oleh reinjeksi (topik Axelsson) itu stream palin
       id: 'sources',
       heading: { en: 'Sources', id: 'Sumber' },
       body: {
-        en: `⟦TODO-Az: verify exact citations/years and which sources you want canonical for the dry-steam framing, before finalizing.⟧
-- **Gallup, D. L.** (2009). "Production engineering in geothermal technology: A review." *Geothermics* 38(3), 326–334. **(This item.)** Scaling, corrosion, gas, and their controls.
-- **Gallup, D. L.** — organic inhibitors for silica-scale control from geothermal brines (*Geothermics*); and the **pH-modification process** (Unocal; Salton Sea). ⟦TODO-Az: pin the exact references.⟧
-- **Henley, R. W., Truesdell, A. H., and Barton, P. B.** (1984). *Fluid-Mineral Equilibria in Hydrothermal Systems.* SEG. Scaling thermodynamics root (in this catalog). ⟦TODO-Az⟧
-- **Giggenbach, W. F.** (1988). *Geothermal solute equilibria.* GCA. The fluid chemistry (in this catalog). ⟦TODO-Az⟧
+        en: `- **Gallup, D. L.** (2009). "Production engineering in geothermal technology: A review." *Geothermics* 38(3), 326–334. **(This item.)** Scaling, corrosion, gas, and their controls.
+- **Gallup, D. L.** (2002). "Investigations of organic inhibitors for silica scale control from geothermal brines." *Geothermics* 31(4), 415–430. And **Gallup, D. L.** (1996). "Brine pH modification scale control technology." *GRC Transactions* — the Unocal-patented **pH-modification process** for silica scale (Salton Sea).
+- **Henley, R. W., Truesdell, A. H., and Barton, P. B.** (1984). *Fluid-Mineral Equilibria in Hydrothermal Systems.* Reviews in Economic Geology vol. 1, SEG. Scaling thermodynamics root (in this catalog).
+- **Giggenbach, W. F.** (1988). "Geothermal solute equilibria. Derivation of Na-K-Mg-Ca geoindicators." *Geochimica et Cosmochimica Acta* 52(12), 2749–2765. The fluid chemistry (in this catalog).
 - **DiPippo, R.** (2016). *Geothermal Power Plants*, 4th ed. Elsevier. Plant-side gas/condensate handling (in this catalog).`,
-        id: `⟦TODO-Az: verifikasi citation/tahun persis dan sumber mana yang kamu mau kanonik buat framing dry-steam, sebelum finalisasi.⟧
-- **Gallup, D. L.** (2009). "Production engineering in geothermal technology: A review." *Geothermics* 38(3), 326–334. **(Item ini.)** Scaling, korosi, gas, dan kontrolnya.
-- **Gallup, D. L.** — inhibitor organik buat kontrol silica-scale dari brine geothermal (*Geothermics*); dan **proses pH-modification** (Unocal; Salton Sea). ⟦TODO-Az: pin referensi persisnya.⟧
-- **Henley, R. W., Truesdell, A. H., dan Barton, P. B.** (1984). *Fluid-Mineral Equilibria in Hydrothermal Systems.* SEG. Akar termodinamika scaling (di katalog ini). ⟦TODO-Az⟧
-- **Giggenbach, W. F.** (1988). *Geothermal solute equilibria.* GCA. Kimia fluida (di katalog ini). ⟦TODO-Az⟧
+        id: `- **Gallup, D. L.** (2009). "Production engineering in geothermal technology: A review." *Geothermics* 38(3), 326–334. **(Item ini.)** Scaling, korosi, gas, dan kontrolnya.
+- **Gallup, D. L.** (2002). "Investigations of organic inhibitors for silica scale control from geothermal brines." *Geothermics* 31(4), 415–430. Dan **Gallup, D. L.** (1996). "Brine pH modification scale control technology." *GRC Transactions* — **proses pH-modification** yang dipatenin Unocal buat silica scale (Salton Sea).
+- **Henley, R. W., Truesdell, A. H., dan Barton, P. B.** (1984). *Fluid-Mineral Equilibria in Hydrothermal Systems.* Reviews in Economic Geology vol. 1, SEG. Akar termodinamika scaling (di katalog ini).
+- **Giggenbach, W. F.** (1988). "Geothermal solute equilibria. Derivation of Na-K-Mg-Ca geoindicators." *Geochimica et Cosmochimica Acta* 52(12), 2749–2765. Kimia fluida (di katalog ini).
 - **DiPippo, R.** (2016). *Geothermal Power Plants*, ed. ke-4. Elsevier. Penanganan gas/condensate sisi-plant (di katalog ini).`
       }
     },

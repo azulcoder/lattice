@@ -1,20 +1,24 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored. Schema-valid + renderable, NOT finalized.
-// Domain claims flagged inline **⟦TODO-Az: …⟧**.
+// General (physics/math/bibliographic/literature-convention) claims have been
+// verified against the literature; the GENERAL flags are cleared. The remaining
+// **⟦TODO-Az: …⟧** flags are DARAJAT-SPECIFIC and stay external to the module —
+// only Az can supply or confirm site/operational facts.
 // Full prep: notes/arnorsson-2000-research-prep-2026-06-02.md
 //
-// OPEN TODO-Az ITEMS (prep §9):
-//   A. Stefán Arnórsson life status UNCONFIRMED (no obituary; active into 2010s →
-//      likely living/emeritus but not positively verified) — neutral/accomplishment
-//      tense, assert neither "is" nor "the late" (Pruess posture).
-//   B. Co-principal author = Franco D'Amore (verifier corrected my "Ármannsson" seed).
-//   C. DRY-STEAM: a vapour-dominated field samples fumarole STEAM/CONDENSATE/GAS,
-//      not a deep liquid → gas geothermometry + reconstruction; liquid examples
-//      are the general case.
-//   D. Worked-example isotope numbers illustrative; use Darajat's actual δD/δ18O.
-//   E. Verify Craig 1961 (Science 133, 1702-1703) + GCA 1982 I (46(9), 1513-1532).
-//   F. Seed cards deferred until Az signs off.
+// VERIFIED & CLEARED (general):
+//   • Craig 1961 GMWL citation — Science 133(3465), 1702-1703 (δD = 8·δ¹⁸O + 10).
+//   • Tritium half-life 12.32 yr; altitude-effect δD range ≈ 1.5–4 ‰ / 100 m.
+//   • GCA 1982 I citation — 46(9), 1513-1532 (ADS 1982GeCoA..46.1513A).
+//   • Oxygen-18-shift physics (δD conserved, rock has little exchangeable H).
+//   • Dry-steam framing as the GENERAL vapour-dominated case (steam/condensate).
+//
+// REMAINING DARAJAT-SPECIFIC TODO-Az ITEMS (Az's alone):
+//   C. Darajat's actual sampling/isotope/gas practice for a vapour-dominated field.
+//   D. Worked-example isotope numbers are illustrative; Az's actual δD/δ¹⁸O.
+//   F. Darajat produced-fluid/gas/isotope monitoring + reinjection-tracing practice.
+//   (Note: Arnórsson life status stays neutral-tense; seed cards deferred per prep.)
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -131,7 +135,7 @@ at essentially **constant δD** (rock has little exchangeable hydrogen). The mag
 
 **Tritium.** ³H decays with a half-life of **12.32 years**, so $A(t) = A_0\\,2^{-t/12.32}$ (activity in Tritium Units). Bomb-pulse tritium dates "young" water; tritium-dead water is old/well-isolated.
 
-For a two-phase (wet-steam) well, the produced enthalpy plus the separated water and steam compositions are combined to **reconstruct the deep aquifer fluid** before any geothermometer or isotope interpretation — the QA discipline the volume insists on. **⟦TODO-Az: verify Craig 1961 (Science 133, 1702-1703) and the altitude-effect range; for a dry-steam field the isotopes are read on steam/condensate, not a deep liquid. Prep §9-C, §9-E.⟧**`,
+For a two-phase (wet-steam) well, the produced enthalpy plus the separated water and steam compositions are combined to **reconstruct the deep aquifer fluid** before any geothermometer or isotope interpretation — the QA discipline the volume insists on. For a vapour-dominated (dry-steam) field there is no deep liquid to sample directly, so in general these isotope relations are applied to the steam and its condensate rather than to a liquid.`,
         id: `**Delta notation (skala VSMOW).** Rasio stable water-isotope di-report sebagai deviasi per-mille (‰) dari Vienna Standard Mean Ocean Water:
 
 $$\\delta = \\left(\\frac{R_{sample}}{R_{VSMOW}} - 1\\right)\\times 1000$$
@@ -154,7 +158,7 @@ di **δD yang pada dasarnya konstan** (rock punya sedikit exchangeable hidrogen)
 
 **Tritium.** ³H meluruh dengan half-life **12.32 tahun**, jadi $A(t) = A_0\\,2^{-t/12.32}$ (activity dalam Tritium Unit). Bomb-pulse tritium nge-date air "young"; air tritium-dead itu tua/well-isolated.
 
-Buat two-phase (wet-steam) well, enthalpy yang diproduksi plus komposisi separated water dan steam digabung buat **merekonstruksi deep aquifer fluid** sebelum interpretasi geothermometer atau isotop apapun — disiplin QA yang volume bersikeras. **⟦TODO-Az: verifikasi Craig 1961 (Science 133, 1702-1703) dan range altitude-effect; buat field dry-steam isotop dibaca di steam/condensate, bukan deep liquid. Prep §9-C, §9-E.⟧**`
+Buat two-phase (wet-steam) well, enthalpy yang diproduksi plus komposisi separated water dan steam digabung buat **merekonstruksi deep aquifer fluid** sebelum interpretasi geothermometer atau isotop apapun — disiplin QA yang volume bersikeras. Buat field vapour-dominated (dry-steam) gak ada deep liquid buat disampel langsung, jadi secara general relasi isotop ini diterapkan ke steam dan condensate-nya daripada ke liquid.`
       }
     },
 

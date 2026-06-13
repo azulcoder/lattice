@@ -13,7 +13,16 @@
 // of in-place water as pressure drops, heat mined from the rock — is the
 // domain refinement and is ⟦TODO-Az⟧-flagged throughout.
 //
-// OPEN TODO-Az ITEMS:
+// GENERAL claims have been verified against the literature (2026-06-13): the
+// Whiting-Ramey 1969 citation (JPT 21(7), 893–900; demonstrated on Wairakei),
+// the Schilthuis 1936 and Havlena-Odeh 1963 petroleum-material-balance lineage,
+// the Axelsson 1989 lumped-parameter citation (Proc. 14th Workshop on Geothermal
+// Reservoir Engineering, Stanford Univ., 257–263), and the author-bio /
+// Ramey→Horne Stanford lineage facts. The math backbone is verified by harness.
+// What REMAINS flagged is Darajat operational / dry-steam domain knowledge,
+// which stays external to this module and is Az's to supply at finalization.
+//
+// OPEN TODO-Az ITEMS (Darajat / domain only):
 //   A. HEADLINE: the dry-steam material/energy balance. The interactive tank
 //      uses a simple LIQUID storativity κ and a linear recharge a(p0−p). A
 //      vapour-dominated reservoir (Darajat) follows the Whiting-Ramey STEAM
@@ -24,8 +33,9 @@
 //   B. Real κ, a, recharge character (open vs closed) and reinjection coupling
 //      for Darajat; the sim's units are illustrative (pressure in % of initial).
 //   C. Worked-example numbers are ILLUSTRATIVE placeholders.
-//   D. Whether to anchor on Whiting-Ramey (steam) vs a lumped-parameter paper
-//      (Axelsson/Sarak) — drafting choice.
+//   D. Editorial: anchor on Whiting-Ramey (steam) vs a lumped-parameter paper
+//      (Axelsson/Sarak) or Grant & Bixley — the citations themselves are now
+//      verified; this is a drafting-emphasis choice, not a fact gap.
 //   E. Seed cards DEFERRED until Az signs off (card-coverage exempt: geothermal
 //      domain + DRAFT marker).
 // ─────────────────────────────────────────────────────────────────────────
@@ -47,10 +57,10 @@ export const CONTENT = {
     bio: {
       en: `Henry J. Ramey Jr. is one of the towering figures of reservoir engineering; at Stanford he built the program that ties petroleum and geothermal reservoir analysis together — the same lineage from which Roland Horne (well-test analysis, already in this catalog) comes. With Robert Whiting he published, in 1969, the paper that first applied the petroleum engineer's **material and energy balance** to a geothermal field, demonstrating it on **Wairakei** (New Zealand). The move was conceptually decisive: treat the reservoir as a single control volume ("lumped"), write down conservation of mass and energy for the fluid (and, crucially for steam, the heat stored in the rock), and you can match a field's production-and-pressure history and forecast its future — without resolving the spatial detail.
 
-⟦TODO-Az: bio/affiliation are from public record (incl. life status); confirm before finalizing. Anchoring a lumped-parameter / material-balance module on Whiting-Ramey is a deliberate choice — it is the geothermal *origin* of the method and is specifically a STEAM balance, which matters for Darajat. Tell me if you would rather anchor on a modern lumped-parameter modelling paper (Axelsson 1989; Sarak et al. 2003) or on Grant & Bixley's lumped-model chapters.⟧`,
+⟦TODO-Az: editorial choice only — anchoring a lumped-parameter / material-balance module on Whiting-Ramey is deliberate: it is the geothermal *origin* of the method and is specifically a STEAM balance, which matters for Darajat. Tell me if you would rather anchor instead on a modern lumped-parameter modelling paper (Axelsson 1989; Sarak et al. 2003) or on Grant & Bixley's lumped-model chapters. (Bio/affiliation facts verified against the public record.)⟧`,
       id: `Henry J. Ramey Jr. salah satu figur menjulang reservoir engineering; di Stanford dia ngebangun program yang ngiket analisis reservoir petroleum dan geothermal bareng — garis keturunan yang sama dari mana Roland Horne (well-test analysis, udah di katalog ini) datang. Sama Robert Whiting dia nerbitin, di 1969, paper yang pertama nerapin **material dan energy balance** petroleum engineer ke field geothermal, ngedemoin di **Wairakei** (Selandia Baru). Langkahnya konseptual menentukan: perlakukan reservoir sebagai satu control volume ("lumped"), tulis konservasi massa dan energi buat fluida (dan, krusial buat steam, panas yang tersimpan di batuan), dan kamu bisa nyocokin sejarah produksi-dan-tekanan field dan ngeforecast masa depannya — tanpa nyelesaiin detail spasial.
 
-⟦TODO-Az: bio/afiliasi dari public record (termasuk status hidup); konfirmasi sebelum finalisasi. Nge-anchor module lumped-parameter / material-balance ke Whiting-Ramey itu pilihan disengaja — dia *asal* geothermal dari metode itu dan khusus balance STEAM, yang penting buat Darajat. Bilang kalau kamu lebih mau nge-anchor ke paper pemodelan lumped-parameter modern (Axelsson 1989; Sarak dkk. 2003) atau ke bab lumped-model Grant & Bixley.⟧`
+⟦TODO-Az: pilihan editorial aja — nge-anchor module lumped-parameter / material-balance ke Whiting-Ramey itu disengaja: dia *asal* geothermal dari metode itu dan khusus balance STEAM, yang penting buat Darajat. Bilang kalau kamu lebih mau nge-anchor ke paper pemodelan lumped-parameter modern (Axelsson 1989; Sarak dkk. 2003) atau ke bab lumped-model Grant & Bixley. (Fakta bio/afiliasi udah diverifikasi lawan public record.)⟧`
     },
     focus: {
       en: `A well test (Horne) is a microscope on one well; a **material balance** is a wide-angle lens on the entire reservoir. The idea is conservation: treat the reservoir as one well-mixed tank, and over any period the change in what it holds equals what came in minus what went out. Track the **average reservoir pressure** as the single state variable, and three flows govern it — **production** (mass withdrawn), **reinjection** (mass returned), and **natural recharge** (inflow from the surrounding aquifer, which grows as the reservoir is drawn down). The simplest honest model is a **lumped-parameter** balance: a first-order differential equation whose solution says whether the field stabilises at a new steady pressure (recharge and reinjection eventually balance production — sustainable) or declines without bound (a closed reservoir being mined — unsustainable). Fit the model to history (history-matching) and it forecasts decades ahead. ⟦TODO-Az: the dry-steam point is the headline. Whiting & Ramey's balance is a STEAM material/energy balance: in a vapour-dominated field like Darajat, as pressure drops the water held in the pores BOILS, drawing latent heat from the rock, so the reservoir "gives up" mass and energy through vaporisation rather than simple liquid expansion. The interactive tank below uses a simple liquid storativity to build intuition; the real Darajat balance is the steam/heat version, and that framing is yours to confirm.⟧`,
@@ -72,7 +82,7 @@ export const CONTENT = {
       { year: 1969, title: 'Application of Material and Energy Balances to Geothermal Steam Production (this item) — demonstrated on Wairakei', venue: 'Journal of Petroleum Technology 21(7), 893–900' },
       { year: 1936, title: 'Active Oil and Reservoir Energy (Schilthuis) — the petroleum material balance this descends from', venue: 'Trans. AIME' },
       { year: 2011, title: 'Geothermal Reservoir Engineering (Grant & Bixley) — lumped-parameter models (in this catalog)', venue: 'Elsevier' },
-      { year: 1989, title: 'Simulation of pressure response data from geothermal reservoirs by lumped parameter models (Axelsson)', venue: 'Proc. Stanford Geothermal Workshop ⟦TODO-Az: confirm⟧' },
+      { year: 1989, title: 'Simulation of pressure response data from geothermal reservoirs by lumped parameter models (Axelsson)', venue: 'Proc. 14th Workshop on Geothermal Reservoir Engineering, Stanford University, 257–263' },
       { year: 2001, title: 'State of the Art of Geothermal Reservoir Simulation (O\'Sullivan-Pruess-Lippmann) — the distributed counterpart (in this catalog)', venue: 'Geothermics' },
     ],
   },
@@ -347,13 +357,13 @@ Karena satu tangki sengaja ngasumsiin seluruh reservoir duduk di SATU tekanan ra
 - **Whiting, R. L., and Ramey, H. J. Jr.** (1969). "Application of Material and Energy Balances to Geothermal Steam Production." *Journal of Petroleum Technology* 21(7), 893–900. **(This item.)** Demonstrated on Wairakei.
 - **Schilthuis, R. J.** (1936). "Active Oil and Reservoir Energy." *Trans. AIME.* The petroleum material balance this descends from.
 - **Grant, M. A., and Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, 2nd ed. Elsevier. Lumped-parameter models (in this catalog). ⟦TODO-Az⟧
-- **Axelsson, G.** (1989). "Simulation of pressure response data from geothermal reservoirs by lumped parameter models." *Proc. Stanford Geothermal Workshop.* ⟦TODO-Az: confirm.⟧
+- **Axelsson, G.** (1989). "Simulation of pressure response data from geothermal reservoirs by lumped parameter models." *Proc. 14th Workshop on Geothermal Reservoir Engineering*, Stanford University, 257–263.
 - **O'Sullivan, M. J., Pruess, K., and Lippmann, M. J.** (2001). "State of the Art of Geothermal Reservoir Simulation." *Geothermics.* The distributed counterpart (in this catalog).`,
         id: `⟦TODO-Az: verifikasi citation persis dan sumber mana yang kamu mau kanonik buat balance dry-steam, sebelum finalisasi.⟧
 - **Whiting, R. L., dan Ramey, H. J. Jr.** (1969). "Application of Material and Energy Balances to Geothermal Steam Production." *Journal of Petroleum Technology* 21(7), 893–900. **(Item ini.)** Didemoin di Wairakei.
 - **Schilthuis, R. J.** (1936). "Active Oil and Reservoir Energy." *Trans. AIME.* Material balance petroleum yang ini turun darinya.
 - **Grant, M. A., dan Bixley, P. F.** (2011). *Geothermal Reservoir Engineering*, ed. ke-2. Elsevier. Lumped-parameter model (di katalog ini). ⟦TODO-Az⟧
-- **Axelsson, G.** (1989). "Simulation of pressure response data from geothermal reservoirs by lumped parameter models." *Proc. Stanford Geothermal Workshop.* ⟦TODO-Az: konfirmasi.⟧
+- **Axelsson, G.** (1989). "Simulation of pressure response data from geothermal reservoirs by lumped parameter models." *Proc. 14th Workshop on Geothermal Reservoir Engineering*, Stanford University, 257–263.
 - **O'Sullivan, M. J., Pruess, K., dan Lippmann, M. J.** (2001). "State of the Art of Geothermal Reservoir Simulation." *Geothermics.* Counterpart terdistribusi (di katalog ini).`
       }
     },

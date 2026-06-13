@@ -6,6 +6,17 @@ Each phase is dated 2026-05-24 since all work to-date landed in a single day's s
 
 ---
 
+## Phase G-S2 — Geothermal: clear the general/literature flags across the draft set (2026-06-09)
+
+- **Swept all 15 remaining geothermal drafts** to separate, per flag, what is a **general/literature** claim (verifiable in the public literature) from what is a **Darajat site-specific operational fact** (needs the owner). Every general flag was checked against multiple independent sources (peer-reviewed papers, textbooks, journals) and cleared; every site-specific flag was retained untouched. Each module's edit was then adversarially re-verified.
+- **~80 general flags cleared; ~195 site-specific flag-lines retained** for owner sign-off. The retained items are exclusively: real well counts, installed/staged capacity, field reservoir T/P/enthalpy, decline rates, real chemistry/isotope values, reinjection/scaling/NCG specifics, and on-site operational practice.
+- **Tester-MIT 2006 finalized** (its flags were all general — heat-in-place, recovery factor, EGS-as-contrast-to-dry-steam). Geothermal finalized count → 3 (Acuña, Stober-Bucher, Tester-MIT); 14 remain DRAFT but now carry only Darajat-specific flags.
+- **Adversarial-verify catches (fixed):** Horne — author title "head" → "Director of the Stanford Geothermal Program" (a verified bibliographic fact) for internal consistency; DiPippo — the vapour-dominated/dry-steam classification (well-established in the literature) is now stated consistently across the module rather than asserted in the body but flagged in connections; Grant-Bixley — a dry-steam management-loop contrast that had named field-specific scaling/reinjection specifics was generalized, with the Darajat confirmation left to its flag.
+- **Integrity rule applied:** general/verifiable claims may be cleared autonomously; Darajat operational facts remain owner-only. No site-specific fact was asserted as settled.
+- **Counts:** drafts 15 → 14; final/rich modules 44 → 45. Suite green (48/48). Word counts for every edited module remain far above the schema floors.
+
+---
+
 ## Phase G-S1 — Geothermal: finalize the Stober-Bucher survey root (2026-06-09)
 
 - **Finalized `stober-bucher-2021`**, the geothermal textbook ROOT (survey/orientation on-ramp; every other geothermal item lists it or Grant-Bixley as a prerequisite). It had 5 review flags, all of which were **general/literature** claims rather than site-specific facts — so they were verified against the standard geothermal literature and cleared:

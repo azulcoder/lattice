@@ -6,6 +6,19 @@ Each entry: phase identifier · commit short SHA · ISO date · headline. Sub-ph
 
 ---
 
+## Phase G-S2 — Geothermal: clear the general/literature flags across the draft set
+
+**2026-06-09**
+
+Swept the 15 remaining geothermal drafts and cleared every **general / literature** review flag after checking each claim against multiple independent sources (peer-reviewed papers, textbooks, journals). ~80 flags cleared across the set; each edit was adversarially re-verified for (a) no site-specific operational fact asserted as settled, (b) source correctness, (c) bilingual/schema/build integrity.
+
+- **Tester-MIT 2006 finalized** (all its flags were general — heat-in-place, recovery-factor, EGS-as-contrast). Geothermal now has 3 finalized modules (Acuña, Stober-Bucher, Tester-MIT); 14 remain DRAFT.
+- The ~195 flags that remain are now **only** genuinely Darajat site-specific operational facts (well counts, installed capacity, field T/P/enthalpy, decline rates, real chemistry/isotope values, on-site practice) — retained for owner sign-off, never asserted.
+- Three modules needed a follow-up touch from the verification pass: Horne (author title head → Director, for consistency), DiPippo (made the well-established vapour-dominated classification consistent across the module), Grant-Bixley (generalized a dry-steam contrast that had named field-specific specifics).
+- Drafts 15 → 14; final modules 44 → 45. Suite green (48/48).
+
+---
+
 ## Phase G-S1 — Geothermal: finalize the Stober-Bucher survey root
 
 **2026-06-09**

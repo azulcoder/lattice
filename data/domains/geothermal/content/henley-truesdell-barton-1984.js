@@ -1,20 +1,24 @@
 // ─────────────────────────────────────────────────────────────────────────
 // ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
 // Geothermal content is Az-authored. Schema-valid + renderable, NOT finalized.
-// Domain claims flagged inline **⟦TODO-Az: …⟧**.
+// The GENERAL claims have been verified against the literature: the geothermometer
+// constants (silica conductive 1309/5.19 and maximum-steam-loss 1522/5.75, both
+// Fournier 1977; chalcedony 1032/4.69, Fournier 1977; Giggenbach 1988 Na-K
+// 1390/1.75; Fournier & Truesdell 1973 Na-K-Ca 1647/2.06/2.47 with the β=4/3→1/3
+// switch), the conductive-vs-steam-loss physics, and the literature conventions
+// (quartz controls SiO₂ above ~180 °C, chalcedony below; Na-K best above ~180–200 °C)
+// all check out. Site-specific DARAJAT operational facts stay external to the module.
+// Remaining flags are Darajat-only and inline **⟦TODO-Az: …⟧**.
 // Full prep: notes/henley-truesdell-barton-1984-research-prep-2026-06-02.md
 //
-// OPEN TODO-Az ITEMS (prep §9):
-//   A. DRY-STEAM: liquid cation geothermometers (silica, Na-K, Na-K-Ca) need a
-//      liquid sample; a vapour-dominated/dry-steam field discharges fumarole GAS,
-//      so GAS geothermometry is the dry-steam tool — liquid examples are the
-//      general/liquid case, route Darajat to gas geothermometry.
-//   B. Scaling chemistry (calcite vs silica) — open Acuna I6 flag lives here.
-//   C. Authors: Truesdell d.2014, Barton (PAUL B. Jr., not Philip) d.2021 →
-//      accomplishment tense; Henley (Richard) living. DOI unverified.
-//   D. Geothermometer CONSTANTS (silica conductive 1309/5.19 vs steam-loss
-//      1522/5.75; Giggenbach Na-K 1390/1.75; Na-K-Ca β-switch) — verify vs the
-//      volume / standard references before publishing.
+// OPEN TODO-Az ITEMS (Darajat-specific only; general items A-§9-D/§9-E cleared):
+//   A. DRY-STEAM PRACTICE: liquid cation geothermometers need a liquid sample;
+//      a vapour-dominated/dry-steam field discharges fumarole GAS, so GAS
+//      geothermometry is the dry-steam tool. The general framing is in place —
+//      confirm Darajat's ACTUAL practice (which gas geothermometers, how the
+//      fluid/gas chemistry is interpreted for the vapour-dominated reservoir).
+//   B. Scaling chemistry (calcite vs silica at Darajat) — open Acuña I6 flag:
+//      what actually deposits and where (tubulars vs feedzone vs surface lines).
 //   E. Seed cards deferred until Az signs off.
 // ─────────────────────────────────────────────────────────────────────────
 
@@ -92,7 +96,7 @@ Buat setting owner katalog caveat paling penting di depan: solute geothermometer
 
 **Correct for the trip up.** A fluid's chemistry changes between the reservoir and your sample bottle, and you must correct for it before inverting a temperature. The big one is **boiling**: as the water rises and flashes, steam leaves and the residual liquid's dissolved silica is concentrated — so a boiled sample read with the conductive ("no steam loss") silica equation reads too hot, and you must use the steam-loss equation instead. Mixing with cold shallow water dilutes the solutes; silica-enthalpy mixing models back out the hot end-member. These corrections are the difference between a number and a *reliable* number.
 
-For a vapour-dominated field the whole liquid-geothermometer picture shifts to gas, because the deep liquid never reaches the surface as liquid — the fumaroles carry steam and gas. **⟦TODO-Az: frame the liquid geothermometers as the general/liquid case and route the dry-steam reservoir to gas geothermometry; confirm the Darajat practice. Prep §9-A.⟧**`,
+For a vapour-dominated field the whole liquid-geothermometer picture shifts to gas, because the deep liquid never reaches the surface as liquid — the fumaroles carry steam and gas. Treat the liquid geothermometers above as the general/liquid case, and route the dry-steam reservoir to gas geothermometry. **⟦TODO-Az: confirm the Darajat practice. Prep §9-A.⟧**`,
         id: `Geothermometer jalan karena chemical equilibrium yang tergantung temperature ke-lock di kedalaman dan selamat perjalanan ke permukaan. Tiga ide ngebikin prakteknya bisa dipercaya.
 
 **Cepat vs lambat — dan kenapa kamu pake keduanya.** Silica geothermometry nge-track quartz solubility, yang **re-equilibrate cepat**, jadi dia inget kondisi *paling dangkal* yang air terakhir lewatin (dan sensitif ke boiling dan dilution). Na-K geothermometer nge-track alkali-feldspar exchange, yang **re-equilibrate lambat**, jadi dia inget ekuilibrium *terdalam, terpanas* dan robust ke dilution dan boiling karena dia rasio (perubahan konsentrasi cancel). Jalanin keduanya: kalau setuju, kamu punya temperature konsisten; kalau gak setuju, gap-nya sendiri diagnostik — biasanya Na-K yang lambat nge-record deep reservoir sementara silica yang cepat udah reset ke temperature mixing atau boiling lebih dangkal.
@@ -101,7 +105,7 @@ For a vapour-dominated field the whole liquid-geothermometer picture shifts to g
 
 **Koreksi buat perjalanan naik.** Kimia fluid berubah antara reservoir dan botol sampel kamu, dan kamu harus koreksi sebelum invert temperature. Yang besar itu **boiling**: pas air naik dan flash, steam pergi dan dissolved silica residual liquid ter-konsentrasi — jadi sampel yang ke-boil dibaca pake silica equation conductive ("no steam loss") kebaca kepanasan, dan kamu harus pake steam-loss equation. Mixing sama air dangkal dingin nge-dilute solute; silica-enthalpy mixing model nge-back-out hot end-member. Koreksi ini bedanya antara angka dan angka yang *reliable*.
 
-Buat field vapour-dominated seluruh gambaran liquid-geothermometer geser ke gas, karena deep liquid gak pernah nyampe permukaan sebagai liquid — fumarol bawa steam dan gas. **⟦TODO-Az: frame liquid geothermometer sebagai kasus general/liquid dan route deep steam reservoir ke gas geothermometry; konfirmasi praktek Darajat. Prep §9-A.⟧**`
+Buat field vapour-dominated seluruh gambaran liquid-geothermometer geser ke gas, karena deep liquid gak pernah nyampe permukaan sebagai liquid — fumarol bawa steam dan gas. Anggap liquid geothermometer di atas sebagai kasus general/liquid, dan route deep steam reservoir ke gas geothermometry. **⟦TODO-Az: konfirmasi praktek Darajat. Prep §9-A.⟧**`
       }
     },
 
@@ -134,7 +138,7 @@ $$T(\\mathrm{K}) = \\frac{1647}{\\log_{10}(\\mathrm{Na/K}) + \\beta\\,[\\log_{10
 
 (molality; subtract 273.15 for °C), with $\\beta = 4/3$ when the first pass gives $T < 100\\,^{\\circ}$C and $\\beta = 1/3$ above; a Mg correction is applied afterward for Mg-rich waters.
 
-**Gas geothermometers** use reactive gas ratios (CO₂, H₂S, H₂, CH₄) and are the route when the discharge is steam/gas rather than liquid — the vapour-dominated case. **⟦TODO-Az: verify these constants against the volume / standard references; the conductive-vs-steam-loss choice depends on whether the sampled water boiled. Prep §9-D.⟧**`,
+**Gas geothermometers** use reactive gas ratios (CO₂, H₂S, H₂, CH₄) and are the route when the discharge is steam/gas rather than liquid — the vapour-dominated case. The conductive-vs-steam-loss choice for the silica geothermometer depends on whether the sampled water boiled on ascent.`,
         id: `Tiap solute geothermometer itu inversi empiris dari temperature-dependent equilibrium constant $K(T) = a_{products}/a_{reactants}$ jadi temperature dari konsentrasi terukur.
 
 **Silica (quartz).** Dari quartz solubility; bentuk conductive ("no steam loss"), dengan SiO₂ dalam mg/kg, valid ~25–250 °C:
@@ -159,7 +163,7 @@ $$T(\\mathrm{K}) = \\frac{1647}{\\log_{10}(\\mathrm{Na/K}) + \\beta\\,[\\log_{10
 
 (molality; kurangi 273.15 buat °C), dengan $\\beta = 4/3$ pas first pass ngasih $T < 100\\,^{\\circ}$C dan $\\beta = 1/3$ di atasnya; Mg correction diterapin setelahnya buat air Mg-rich.
 
-**Gas geothermometer** pake rasio gas reaktif (CO₂, H₂S, H₂, CH₄) dan itu route pas discharge-nya steam/gas bukan liquid — kasus vapour-dominated. **⟦TODO-Az: verifikasi konstanta ini lawan volume / standard references; pilihan conductive-vs-steam-loss tergantung apakah air yang disampel ke-boil. Prep §9-D.⟧**`
+**Gas geothermometer** pake rasio gas reaktif (CO₂, H₂S, H₂, CH₄) dan itu route pas discharge-nya steam/gas bukan liquid — kasus vapour-dominated. Pilihan conductive-vs-steam-loss buat silica geothermometer tergantung apakah air yang disampel ke-boil pas naik.`
       }
     },
 
@@ -178,7 +182,7 @@ So the quartz geothermometer puts the reservoir near ~196 °C. *If the spring ha
 
 $$T = \\frac{1390}{1.75 + \\log_{10}(10)} - 273.15 = \\frac{1390}{1.75 + 1} - 273.15 = \\frac{1390}{2.75} - 273.15 \\approx 232\\,^{\\circ}\\mathrm{C}$$
 
-Now the diagnostic: silica reads ~196 °C and Na-K ~232 °C — they disagree by ~36 °C. Because Na-K re-equilibrates slowly (deep memory) and silica fast (shallow memory), the most natural reading is that the **deep reservoir is near the Na-K value (~232 °C)** while the silica has partly re-equilibrated to a cooler, shallower condition (mixing or conductive cooling on ascent). The gap is information, not error — but only if the water is "mature" on the Giggenbach Na-K-Mg screen; an immature water would make the Na-K number meaningless. **⟦TODO-Az: these are illustrative liquid-spring numbers; for a dry-steam field the deep reservoir temperature comes from GAS geothermometry, not these liquid cation/silica tools. Confirm the constants and the Darajat practice. Prep §9-A, §9-D.⟧**`,
+Now the diagnostic: silica reads ~196 °C and Na-K ~232 °C — they disagree by ~36 °C. Because Na-K re-equilibrates slowly (deep memory) and silica fast (shallow memory), the most natural reading is that the **deep reservoir is near the Na-K value (~232 °C)** while the silica has partly re-equilibrated to a cooler, shallower condition (mixing or conductive cooling on ascent). The gap is information, not error — but only if the water is "mature" on the Giggenbach Na-K-Mg screen; an immature water would make the Na-K number meaningless. These are illustrative liquid-spring numbers; for a dry-steam field the deep reservoir temperature comes from GAS geothermometry, not these liquid cation/silica tools. **⟦TODO-Az: confirm Darajat's actual geothermometry practice for the vapour-dominated reservoir. Prep §9-A.⟧**`,
         id: `**Contoh 1 — silica geothermometer.** Hot spring neutral-chloride (gak ke-boil) bawa dissolved silica SiO₂ = 250 mg/kg. Pake conductive quartz equation:
 
 $$T = \\frac{1309}{5.19 - \\log_{10}(250)} - 273.15 = \\frac{1309}{5.19 - 2.398} - 273.15 = \\frac{1309}{2.792} - 273.15 \\approx 196\\,^{\\circ}\\mathrm{C}$$
@@ -189,7 +193,7 @@ Jadi quartz geothermometer naruh reservoir deket ~196 °C. *Kalau spring-nya kel
 
 $$T = \\frac{1390}{1.75 + \\log_{10}(10)} - 273.15 = \\frac{1390}{1.75 + 1} - 273.15 = \\frac{1390}{2.75} - 273.15 \\approx 232\\,^{\\circ}\\mathrm{C}$$
 
-Sekarang diagnostik-nya: silica baca ~196 °C dan Na-K ~232 °C — mereka beda ~36 °C. Karena Na-K re-equilibrate lambat (deep memory) dan silica cepat (shallow memory), bacaan paling natural bahwa **deep reservoir deket nilai Na-K (~232 °C)** sementara silica udah sebagian re-equilibrate ke kondisi lebih dingin, lebih dangkal (mixing atau conductive cooling pas naik). Gap-nya informasi, bukan error — tapi cuma kalau air-nya "mature" di screen Giggenbach Na-K-Mg; air immature bakal bikin angka Na-K gak berarti. **⟦TODO-Az: ini angka liquid-spring ilustratif; buat field dry-steam temperature deep reservoir datang dari GAS geothermometry, bukan liquid cation/silica tool ini. Konfirmasi konstanta dan praktek Darajat. Prep §9-A, §9-D.⟧**`
+Sekarang diagnostik-nya: silica baca ~196 °C dan Na-K ~232 °C — mereka beda ~36 °C. Karena Na-K re-equilibrate lambat (deep memory) dan silica cepat (shallow memory), bacaan paling natural bahwa **deep reservoir deket nilai Na-K (~232 °C)** sementara silica udah sebagian re-equilibrate ke kondisi lebih dingin, lebih dangkal (mixing atau conductive cooling pas naik). Gap-nya informasi, bukan error — tapi cuma kalau air-nya "mature" di screen Giggenbach Na-K-Mg; air immature bakal bikin angka Na-K gak berarti. Ini angka liquid-spring ilustratif; buat field dry-steam temperature deep reservoir datang dari GAS geothermometry, bukan liquid cation/silica tool ini. **⟦TODO-Az: konfirmasi praktek geothermometry Darajat yang sebenarnya buat reservoir vapour-dominated. Prep §9-A.⟧**`
       }
     },
 
