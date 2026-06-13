@@ -1,17 +1,20 @@
 // ─────────────────────────────────────────────────────────────────────────
-// ⚠ DRAFT — AWAITING AZ DOMAIN REVIEW (option (b): "I draft, you correct").
-// Geothermal content is Az-authored. Schema-valid + renderable, NOT finalized.
-// Survey/orientation format (this is the catalog's geothermal textbook ROOT).
-// Domain claims flagged inline **⟦TODO-Az: …⟧**.
-// Full prep: notes/stober-bucher-2021-research-prep-2026-06-02.md
-//
-// OPEN TODO-Az ITEMS (prep §9):
-//   A. Survey-depth — don't cite as primary for geochem/reservoir specifics.
-//   B. Enthalpy class thresholds vary (150/190/200C) — no specific cutoff asserted.
-//   C. 2nd-ed page count + whether the book names Darajat by name: unconfirmed.
-//   D. Darajat operational facts (271 MWe etc.) are EXTERNAL to this book; AZ5
-//      49-vs-39 wells still open.
-//   E. Seed cards deferred until Az signs off.
+// Geothermal textbook ROOT — survey/orientation format (the catalog's entry
+// point into the geothermal track). General claims verified against the
+// standard geothermal literature:
+//   - Dry-steam (vapour-dominated) type examples: Larderello & The Geysers
+//     (canonical); Indonesia (Kamojang, Darajat) is also vapour-dominated.
+//     The book is NOT cited as naming specific Indonesian fields.
+//   - Enthalpy classes have NO single standard cutoff: authors differ
+//     (Muffler-Cataldi 150 C, Sanyal 190 C, Benderitter 200 C, Hochstein
+//     225 C); no specific threshold is attributed to the book.
+//   - Heat-flow figures (q=k*dT/dz -> ~90 / ~66 mW/m2; ~65 continental,
+//     ~100 oceanic; 25-30 C/km) and the ~240 C main-reservoir temperature are
+//     standard, correct, illustrative values.
+//   - Survey-depth only: Henley/Arnorsson & Grant-Bixley carry the depth.
+// Darajat operational facts (capacity, well count -- open AZ5) are EXTERNAL to
+// this survey and belong to the specialist dry-steam items, not here.
+// Prep: notes/stober-bucher-2021-research-prep-2026-06-02.md
 // ─────────────────────────────────────────────────────────────────────────
 
 export const CONTENT = {
@@ -66,12 +69,12 @@ export const CONTENT = {
 
 That orientation matters because the links are easy to confuse without the map. Is a given resource shallow or deep? Hydrothermal (it already contains hot mobile fluid) or petrothermal (the heat is locked in low-permeability rock and must be engineered out)? Low-enthalpy (good for district heating via a heat pump) or high-enthalpy (hot enough to spin a turbine)? Liquid-dominated (it will flash to steam at the surface) or vapour-dominated (it already delivers dry steam)? These classifications are not academic — each one routes you to a completely different technology, a different economics, and a different set of the specialized references.
 
-The book's value for this catalog is precisely that it situates everything else. When you read the dry-steam deliverability item, or the conceptual-modelling item, or the reservoir-simulation item, you are looking at one leaf; this survey is the trunk. For the vapour-dominated, high-enthalpy class that the catalog's owner works in, the book is the context-setter that places that rare system type within the full taxonomy — even though the dry-steam depth lives in the specialized items, not here. **⟦TODO-Az: the book is German-authored and may use Larderello/The Geysers (not Darajat/Kamojang) as its dry-steam exemplars; confirm before stating it names the Indonesian fields. Prep §9-C.⟧**`,
+The book's value for this catalog is precisely that it situates everything else. When you read the dry-steam deliverability item, or the conceptual-modelling item, or the reservoir-simulation item, you are looking at one leaf; this survey is the trunk. For the vapour-dominated, high-enthalpy class that the catalog's owner works in, the book is the context-setter that places that rare system type within the full taxonomy — even though the dry-steam depth lives in the specialized items, not here.`,
         id: `Energi geothermal itu rantai nilai panjang: panas dibangkitkan dan disimpan di Bumi, dibawa (atau tidak) oleh fluid yang bersirkulasi lewat rock permeabel, ditemukan dan dikarakterisasi oleh eksplorasi permukaan dan drilling, diproduksi lewat sumur, dan akhirnya dikonversi jadi panas atau listrik di permukaan. Tiap item belakangan di katalog ini menyelam dalam ke satu mata rantai itu — conceptual modelling, reservoir engineering, numerical simulation, deliverability, geokimia fluid, power-plant cycle. Textbook Stober & Bucher itu item yang nahan seluruh rantai dalam pandangan sekaligus.
 
 Orientasi itu penting karena mata-rantainya gampang ketuker tanpa peta. Apakah sumber daya tertentu itu dangkal atau dalam? Hydrothermal (dia udah punya hot mobile fluid) atau petrothermal (panasnya terkunci di rock low-permeability dan harus di-engineer keluar)? Low-enthalpy (bagus buat district heating via heat pump) atau high-enthalpy (cukup panas buat muter turbine)? Liquid-dominated (dia bakal flash jadi steam di permukaan) atau vapour-dominated (dia udah deliver dry steam)? Klasifikasi ini bukan akademis — masing-masing nge-route kamu ke teknologi yang sama sekali beda, ekonomi yang beda, dan set referensi spesialis yang beda.
 
-Nilai buku ini buat katalog ini persis bahwa dia nempatin semua yang lain. Pas kamu baca item dry-steam deliverability, atau item conceptual-modelling, atau item reservoir-simulation, kamu lagi lihat satu daun; survey ini batangnya. Buat kelas vapour-dominated, high-enthalpy yang owner katalog ini kerjain, buku ini context-setter yang nempatin tipe sistem langka itu dalam taksonomi penuh — walaupun kedalaman dry-steam-nya hidup di item spesialis, bukan di sini. **⟦TODO-Az: buku ini di-authored Jerman dan mungkin pake Larderello/The Geysers (bukan Darajat/Kamojang) sebagai exemplar dry-steam-nya; konfirmasi sebelum bilang dia nyebut field Indonesia. Prep §9-C.⟧**`
+Nilai buku ini buat katalog ini persis bahwa dia nempatin semua yang lain. Pas kamu baca item dry-steam deliverability, atau item conceptual-modelling, atau item reservoir-simulation, kamu lagi lihat satu daun; survey ini batangnya. Buat kelas vapour-dominated, high-enthalpy yang owner katalog ini kerjain, buku ini context-setter yang nempatin tipe sistem langka itu dalam taksonomi penuh — walaupun kedalaman dry-steam-nya hidup di item spesialis, bukan di sini.`
       }
     },
 
@@ -124,7 +127,7 @@ $$\\mathrm{Pe} = \\frac{\\rho_f c_f\\, v\\, L}{\\lambda}$$
 
 **Darcy flow and transmissivity.** Fluid delivery follows Darcy's law, $q = -(k/\\mu)\\nabla P$; for an aquifer of thickness $b$, transmissivity $T = K b$ (with hydraulic conductivity $K = k\\rho g/\\mu$) sets the deliverability measured in hydraulic well tests.
 
-**Enthalpy classes and the heat pump.** Resources are graded low / medium / high enthalpy (electricity needs high enthalpy); enthalpy $h = h_f + x\\,h_{fg}$ captures any steam fraction $x$, which is why enthalpy — not temperature alone — is the rigorous classifier. Shallow systems use a heat pump whose coefficient of performance $\\mathrm{COP} = \\dot Q_{heat}/\\dot W$ is bounded above by the Carnot limit $T_{hot}/(T_{hot}-T_{cold})$. **⟦TODO-Az: exact low/high-enthalpy temperature cutoffs are not standardized (150/190/200 °C) — don't attribute a single numeric threshold to the book. Prep §9-B.⟧**
+**Enthalpy classes and the heat pump.** Resources are graded low / medium / high enthalpy (electricity needs high enthalpy); enthalpy $h = h_f + x\\,h_{fg}$ captures any steam fraction $x$, which is why enthalpy — not temperature alone — is the rigorous classifier. Shallow systems use a heat pump whose coefficient of performance $\\mathrm{COP} = \\dot Q_{heat}/\\dot W$ is bounded above by the Carnot limit $T_{hot}/(T_{hot}-T_{cold})$.
 
 **Water-rock interaction and solute geothermometry.** Deep fluids equilibrate with reservoir rock, which both sets scaling/corrosion risk and lets a measured solute concentration invert back to reservoir temperature — e.g. the quartz geothermometer $T(^{\\circ}\\mathrm{C}) = 1309/(5.19 - \\log_{10}[\\mathrm{SiO_2}]) - 273.15$.`,
         id: `Sebuah survey diikat sama beberapa persamaan yang berulang di mana-mana di hilir.
@@ -149,7 +152,7 @@ $$\\mathrm{Pe} = \\frac{\\rho_f c_f\\, v\\, L}{\\lambda}$$
 
 **Darcy flow dan transmissivity.** Pengiriman fluid ngikutin hukum Darcy, $q = -(k/\\mu)\\nabla P$; buat aquifer ketebalan $b$, transmissivity $T = K b$ (dengan hydraulic conductivity $K = k\\rho g/\\mu$) nge-set deliverability yang diukur di hydraulic well test.
 
-**Enthalpy class dan heat pump.** Sumber daya digradein low / medium / high enthalpy (listrik butuh high enthalpy); enthalpy $h = h_f + x\\,h_{fg}$ nangkep steam fraction $x$ apapun, itu kenapa enthalpy — bukan suhu doang — classifier yang rigor. Sistem dangkal pake heat pump yang coefficient of performance $\\mathrm{COP} = \\dot Q_{heat}/\\dot W$ dibatasi atas sama limit Carnot $T_{hot}/(T_{hot}-T_{cold})$. **⟦TODO-Az: cutoff suhu low/high-enthalpy persis gak standar (150/190/200 °C) — jangan attribute satu threshold numerik ke buku. Prep §9-B.⟧**
+**Enthalpy class dan heat pump.** Sumber daya digradein low / medium / high enthalpy (listrik butuh high enthalpy); enthalpy $h = h_f + x\\,h_{fg}$ nangkep steam fraction $x$ apapun, itu kenapa enthalpy — bukan suhu doang — classifier yang rigor. Sistem dangkal pake heat pump yang coefficient of performance $\\mathrm{COP} = \\dot Q_{heat}/\\dot W$ dibatasi atas sama limit Carnot $T_{hot}/(T_{hot}-T_{cold})$.
 
 **Water-rock interaction dan solute geothermometry.** Deep fluid ber-ekuilibrium sama reservoir rock, yang baik nge-set risiko scaling/corrosion maupun ngebikin concentration solute terukur bisa di-invert balik ke suhu reservoir — misalnya quartz geothermometer $T(^{\\circ}\\mathrm{C}) = 1309/(5.19 - \\log_{10}[\\mathrm{SiO_2}]) - 273.15$.`
       }
@@ -160,7 +163,7 @@ $$\\mathrm{Pe} = \\frac{\\rho_f c_f\\, v\\, L}{\\lambda}$$
       id: 'worked-example',
       heading: { en: 'Worked example', id: 'Contoh kerjaan' },
       body: {
-        en: `Three short calculations exercise the foundational equations; all are dry-steam-applicable. **⟦TODO-Az: illustrative teaching numbers.⟧**
+        en: `Three short calculations exercise the foundational equations; all are dry-steam-applicable.
 
 **Example 1 — heat-flow density from a measured gradient.** A borehole in granitic crust shows a gradient $dT/dz = 30$ °C/km $= 0.030$ K/m, and the rock's thermal conductivity is $k = 3.0$ W m⁻¹ K⁻¹. By Fourier's law,
 
@@ -174,8 +177,8 @@ $$T(4\\,\\text{km}) = 12 + 30 \\times 4 = 132\\ ^{\\circ}\\text{C}$$
 
 — medium-enthalpy, marginal for power, good for deep direct-heat. (A *convecting* system would be far hotter at this depth — which is exactly why a hot, shallow upflow is the prize.)
 
-**Example 3 — classifying a dry-steam field.** A reservoir reported at roughly 240 °C that produces dry/superheated steam classifies cleanly: **high-enthalpy** (well above the ~150 °C electricity threshold), **hydrothermal** (it contains natural mobile fluid), **vapour-dominated** (dry steam, not liquid that flashes at surface). The technology that follows is a **direct dry-steam turbine** — conventionally the simplest geothermal power cycle, with no separator needed (unlike a flash plant for a liquid-dominated field). Dry-steam fields are globally rare (classically Larderello and The Geysers; Indonesia hosts dry-steam fields too), which is why this catalog treats the type as a specialized leaf. **⟦TODO-Az: 240 °C is illustrative; cite Darajat's field-specific reservoir temperature when authored. The dry-steam operational facts (capacity, well count) are external to this textbook — see prep §9-D and the open AZ5 49-vs-39 well-count item.⟧**`,
-        id: `Tiga perhitungan pendek ngelatih persamaan fondasional; semuanya dry-steam-applicable. **⟦TODO-Az: angka pengajaran ilustratif.⟧**
+**Example 3 — classifying a dry-steam field.** A reservoir reported at roughly 240 °C that produces dry/superheated steam classifies cleanly: **high-enthalpy** (well above the ~150 °C electricity threshold), **hydrothermal** (it contains natural mobile fluid), **vapour-dominated** (dry steam, not liquid that flashes at surface). The technology that follows is a **direct dry-steam turbine** — conventionally the simplest geothermal power cycle, with no separator needed (unlike a flash plant for a liquid-dominated field). Dry-steam fields are globally rare (classically Larderello and The Geysers; Indonesia hosts dry-steam fields too), which is why this catalog treats the type as a specialized leaf.`,
+        id: `Tiga perhitungan pendek ngelatih persamaan fondasional; semuanya dry-steam-applicable.
 
 **Contoh 1 — heat-flow density dari gradient terukur.** Sebuah borehole di kerak granitik nunjukin gradient $dT/dz = 30$ °C/km $= 0.030$ K/m, dan thermal conductivity rock-nya $k = 3.0$ W m⁻¹ K⁻¹. Lewat hukum Fourier,
 
@@ -189,7 +192,7 @@ $$T(4\\,\\text{km}) = 12 + 30 \\times 4 = 132\\ ^{\\circ}\\text{C}$$
 
 — medium-enthalpy, marginal buat power, bagus buat deep direct-heat. (Sistem *konvektif* bakal jauh lebih panas di kedalaman ini — persis kenapa hot, shallow upflow itu hadiahnya.)
 
-**Contoh 3 — mengklasifikasi field dry-steam.** Reservoir yang dilaporin sekitar 240 °C yang produksi dry/superheated steam terklasifikasi bersih: **high-enthalpy** (jauh di atas threshold listrik ~150 °C), **hydrothermal** (dia berisi natural mobile fluid), **vapour-dominated** (dry steam, bukan liquid yang flash di permukaan). Teknologi yang ngikutin itu **direct dry-steam turbine** — secara konvensional power cycle geothermal paling sederhana, gak butuh separator (gak kayak flash plant buat field liquid-dominated). Field dry-steam langka secara global (klasiknya Larderello dan The Geysers; Indonesia juga punya field dry-steam), itu kenapa katalog ini nganggep tipe ini daun spesialis. **⟦TODO-Az: 240 °C ilustratif; cite suhu reservoir spesifik-Darajat pas di-author. Fakta operasional dry-steam (kapasitas, well count) eksternal ke textbook ini — lihat prep §9-D dan item AZ5 49-vs-39 well-count yang terbuka.⟧**`
+**Contoh 3 — mengklasifikasi field dry-steam.** Reservoir yang dilaporin sekitar 240 °C yang produksi dry/superheated steam terklasifikasi bersih: **high-enthalpy** (jauh di atas threshold listrik ~150 °C), **hydrothermal** (dia berisi natural mobile fluid), **vapour-dominated** (dry steam, bukan liquid yang flash di permukaan). Teknologi yang ngikutin itu **direct dry-steam turbine** — secara konvensional power cycle geothermal paling sederhana, gak butuh separator (gak kayak flash plant buat field liquid-dominated). Field dry-steam langka secara global (klasiknya Larderello dan The Geysers; Indonesia juga punya field dry-steam), itu kenapa katalog ini nganggep tipe ini daun spesialis.`
       }
     },
 
@@ -288,14 +291,14 @@ $\\log_{10}(250) = 2.398$, jadi $5.19 - 2.398 = 2.792$; $1309/2.792 = 468.8$ K; 
 - **Direct prereq of**: [Grant & Bixley 2011](item:grant-bixley-2011) — reservoir engineering deepens this book's reservoir-physics and well-testing chapters; Grant & Bixley in turn roots the numerical-simulation, reservoir-property and dry-steam-deliverability items, so this survey is their foundational grandparent.
 - **Foundational to (downstream)**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (simulation), [Acuña 2008](item:acuna-2008) (dry-steam deliverability) — reached via Grant & Bixley.
 - **Complementary root**: [DiPippo 2016](item:dipippo-2016) — the independent surface/power-plant track; the two meet at the enthalpy-class → power-cycle boundary (high-enthalpy vapour-dominated → dry-steam turbine; liquid-dominated → flash/binary).
-- **Survey-level on-ramp to the geochemistry track** (Bucher's half of the book): the deeper fluid-mineral-equilibria and isotope references. **⟦TODO-Az: don't cite this survey as the primary source for geochemistry specifics — it is the on-ramp, not the depth. Prep §9-A.⟧**`,
+- **Survey-level on-ramp to the geochemistry track** (Bucher's half of the book): the deeper fluid-mineral-equilibria and isotope references.`,
         id: `Survey ini **root** textbook domain geothermal — orientasi yang item spesialis bercabang darinya. Per graph katalog, dia prerequisite *langsung* dari dua item dan latar fondasional buat sisanya:
 
 - **Prereq langsung dari**: [Cumming 2009](item:cumming-2009) — surface-exploration conceptual modelling bangun di bab geofisika, geokimia dan sistem buku ini.
 - **Prereq langsung dari**: [Grant & Bixley 2011](item:grant-bixley-2011) — reservoir engineering perdalam bab reservoir-physics dan well-testing buku ini; Grant & Bixley gilirannya nge-root item numerical-simulation, reservoir-property dan dry-steam-deliverability, jadi survey ini grandparent fondasional mereka.
 - **Fondasional ke (downstream)**: [O'Sullivan-Pruess-Lippmann 2001](item:osullivan-pruess-lippmann-2001) (simulation), [Acuña 2008](item:acuna-2008) (dry-steam deliverability) — dicapai via Grant & Bixley.
 - **Root komplementer**: [DiPippo 2016](item:dipippo-2016) — track surface/power-plant independen; keduanya ketemu di boundary enthalpy-class → power-cycle (high-enthalpy vapour-dominated → dry-steam turbine; liquid-dominated → flash/binary).
-- **On-ramp level-survey ke track geokimia** (separuh buku Bucher): referensi fluid-mineral-equilibria dan isotop yang lebih dalam. **⟦TODO-Az: jangan cite survey ini sebagai sumber primer buat spesifik geokimia — dia on-ramp, bukan kedalaman. Prep §9-A.⟧**`
+- **On-ramp level-survey ke track geokimia** (separuh buku Bucher): referensi fluid-mineral-equilibria dan isotop yang lebih dalam.`
       }
     },
 

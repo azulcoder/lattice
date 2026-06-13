@@ -6,6 +6,19 @@ Each phase is dated 2026-05-24 since all work to-date landed in a single day's s
 
 ---
 
+## Phase G-S1 — Geothermal: finalize the Stober-Bucher survey root (2026-06-09)
+
+- **Finalized `stober-bucher-2021`**, the geothermal textbook ROOT (survey/orientation on-ramp; every other geothermal item lists it or Grant-Bixley as a prerequisite). It had 5 review flags, all of which were **general/literature** claims rather than site-specific facts — so they were verified against the standard geothermal literature and cleared:
+  1. **Dry-steam exemplars** — Larderello (Italy) & The Geysers (USA) are the canonical vapour-dominated examples; Kamojang/Darajat (Indonesia) are also vapour-dominated. The survey is *not* cited as naming the Indonesian fields (kept conservative).
+  2. **Enthalpy classes** — no single standardized cutoff exists; conventions genuinely differ (Muffler-Cataldi 150 °C, Sanyal 190 °C, Benderitter-Cormy 200 °C, Hochstein 225 °C). No threshold attributed to the book.
+  3. **Heat-flow physics** — `q = k·dT/dz` → ~90 mW/m² (k=3.0) / ~66 (k=2.2); ~65 continental, ~100 oceanic; 25–30 °C/km. All standard and arithmetically exact.
+  4. **~240 °C reservoir temperature** — the canonical pre-exploitation main-reservoir condition of vapour-dominated systems (near the max-enthalpy saturation point ~236 °C); kept as a representative illustrative value.
+  5. **Survey-not-primary framing** — retained; the geochemistry (Henley/Arnórsson) and reservoir-engineering (Grant-Bixley) specialist modules carry the depth.
+- **Out of scope (unchanged):** Darajat operational facts (installed capacity, well count) are external to this survey and stay with the specialist dry-steam items.
+- **Counts:** geothermal drafts 16 → 15; final/rich modules 43 → 44. Header updated DRAFT → finalized. Word counts 2111 EN / 1913 ID (≥ schema minimums). Suite green (48/48).
+
+---
+
 ## Phase T17 — Trading: comprehensive glossary + notation expansion + a reference-layer harness (2026-06-09)
 
 - **Az asked whether the glossary + notation cover everything.** They didn't yet: the trading reference layer was authored at Phase T4 (31 glossary terms / 8 notation entries, when the domain had ~9 modules) and never grew as T8–T16 added 14 more modules + the 5 practitioner playbooks. So options Greeks, expectancy/Kelly/risk-of-ruin, the deflated-Sharpe family, the VRP/variance-swap machinery, CVD/order-flow, portfolio diversification and the whole stat-arb/pairs vocabulary had modules but no reference entries.

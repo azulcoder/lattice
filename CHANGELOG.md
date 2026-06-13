@@ -6,6 +6,20 @@ Each entry: phase identifier · commit short SHA · ISO date · headline. Sub-ph
 
 ---
 
+## Phase G-S1 — Geothermal: finalize the Stober-Bucher survey root
+
+**2026-06-09**
+
+Finalized `stober-bucher-2021` (the geothermal textbook root / survey on-ramp). Its five review flags were all general/literature claims — verified against the standard geothermal literature and cleared:
+- dry-steam (vapour-dominated) exemplars Larderello & The Geysers are canonical; the survey is not cited as naming specific Indonesian fields;
+- enthalpy classes have no single standard cutoff (authors differ: 150 / 190 / 200 / 225 °C) — no threshold attributed to the book;
+- heat-flow figures (q = k·dT/dz → ~90 / ~66 mW/m²; ~65 continental / ~100 oceanic; 25–30 °C/km) and the ~240 °C main-reservoir temperature are standard, correct, illustrative values;
+- survey-depth framing kept (the geochemistry/reservoir specialist modules carry the depth).
+
+Darajat-specific operational facts (capacity, well count — open item) remain external to this survey. Drafts 16 → 15; final modules 43 → 44. Suite green (48/48).
+
+---
+
 ## Phase T17 — Trading: comprehensive glossary + notation expansion + a reference-layer harness
 
 **2026-06-09**
